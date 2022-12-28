@@ -1,0 +1,679 @@
+/usr/bin/qemu-system-i386
+[31;40mSIGNATURE: 53616c7465645f5f2286438218b129c5e92a09b8043acfabc6fbcfe63a19159722db186089544854f88d49a5867b03ae
+[0m[*] create vmmap
+[*] create vmmap
+finish creating init proc1
+[*] create vmmap
+pframe alloc mmobj=0xcfe874b8, mmo_nrespages=1
+pframe fill page addr 0xcfe6a000
+sched switch from pid = 0 to pid = 2
+sched switch from pid = 2 to pid = 0
+finish fill page addr 0xcfe6a000
+pframe alloc mmobj=0xcfe874b8, mmo_nrespages=2
+pframe fill page addr 0xcfe69000
+sched switch from pid = 0 to pid = 0
+finish fill page addr 0xcfe69000
+[36;40mfs/vnode.c:208 vget(): vget: 0xcfe13004, 0xcfe87518 ino 0 refcount set to 1, nrespages=0
+[0m[31;40mtest/kshell/kshell.c:98 kshell_add_command(): Added help command
+[0m[31;40mtest/kshell/kshell.c:98 kshell_add_command(): Added echo command
+[0m[31;40mtest/kshell/kshell.c:98 kshell_add_command(): Added cat command
+[0m[31;40mtest/kshell/kshell.c:98 kshell_add_command(): Added ls command
+[0m[31;40mtest/kshell/kshell.c:98 kshell_add_command(): Added cd command
+[0m[31;40mtest/kshell/kshell.c:98 kshell_add_command(): Added rm command
+[0m[31;40mtest/kshell/kshell.c:98 kshell_add_command(): Added link command
+[0m[31;40mtest/kshell/kshell.c:98 kshell_add_command(): Added rmdir command
+[0m[31;40mtest/kshell/kshell.c:98 kshell_add_command(): Added mkdir command
+[0m[31;40mtest/kshell/kshell.c:98 kshell_add_command(): Added stat command
+[0m[31;40mtest/kshell/kshell.c:98 kshell_add_command(): Added exit command
+[0m[36;40mfs/vnode.c:121 vref(): vref: 0xcfe13004, 0xcfe87518 ino 0 up to 2, nrespages=0
+[0mfinish creating init proc2
+[36;40mfs/vnode.c:121 vref(): vref: 0xcfe13004, 0xcfe87518 ino 0 up to 3, nrespages=0
+[0m[*] do_mkdir make dir /dev
+[*] in dir_namev try to resolve absolute /dev
+1
+7
+do mkdir try to search dev
+[36;40mfs/vnode.c:121 vref(): vref: 0xcfe13004, 0xcfe87518 ino 0 up to 4, nrespages=0
+[0mpframe alloc mmobj=0xcfe1300c, mmo_nrespages=1
+pframe fill page addr 0xcfe68000
+vreadpage
+sched switch from pid = 0 to pid = 0
+finish fill page addr 0xcfe68000
+[*] lookup dev find status -2
+do mkdir make dir /dev
+pframe alloc mmobj=0xcfe874b8, mmo_nrespages=3
+pframe fill page addr 0xcfe67000
+sched switch from pid = 0 to pid = 0
+finish fill page addr 0xcfe67000
+[36;40mfs/vnode.c:208 vget(): vget: 0xcfe13080, 0xcfe87518 ino 39 refcount set to 1, nrespages=0
+[0m[36;40mfs/vnode.c:121 vref(): vref: 0xcfe13080, 0xcfe87518 ino 39 up to 2, nrespages=0
+[0mpframe alloc mmobj=0xcfe13088, mmo_nrespages=1
+pframe fill page addr 0xcfe12000
+vreadpage
+finish fill page addr 0xcfe12000
+[36;40mfs/vnode.c:247 vput(): vput: 0xcfe13080, 0xcfe87518 ino 39, down to 1, nrespages = 1
+[0m[*] do_mkdir make dir /dev success
+do_mkdir caught here with result 0
+[*] do_mknod make special device /dev/tty0
+[*] in dir_namev try to resolve absolute /dev/tty0
+1
+2
+3
+[36;40mfs/vnode.c:121 vref(): vref: 0xcfe13080, 0xcfe87518 ino 39 up to 2, nrespages=1
+[0m[*] lookup dev find status 0 vnode 39 add cfe13080
+4
+7
+[36;40mfs/vnode.c:247 vput(): vput: 0xcfe13080, 0xcfe87518 ino 39, down to 1, nrespages = 1
+[0m[*] lookup tty0 find status -2
+[36;40mfs/vnode.c:208 vget(): vget: 0xcfe130fc, 0xcfe87518 ino 40 refcount set to 1, nrespages=0
+[0m[36;40mfs/vnode.c:247 vput(): vput: 0xcfe130fc, 0xcfe87518 ino 40, down to 0, nrespages = 0
+[0m[*] do_mknod make special device /dev/zero
+[*] in dir_namev try to resolve absolute /dev/zero
+1
+2
+3
+[36;40mfs/vnode.c:121 vref(): vref: 0xcfe13080, 0xcfe87518 ino 39 up to 2, nrespages=1
+[0m[*] lookup dev find status 0 vnode 39 add cfe13080
+4
+7
+[36;40mfs/vnode.c:247 vput(): vput: 0xcfe13080, 0xcfe87518 ino 39, down to 1, nrespages = 1
+[0m[*] lookup zero find status -2
+[36;40mfs/vnode.c:208 vget(): vget: 0xcfe130fc, 0xcfe87518 ino 41 refcount set to 1, nrespages=0
+[0m[36;40mfs/vnode.c:247 vput(): vput: 0xcfe130fc, 0xcfe87518 ino 41, down to 0, nrespages = 0
+[0m[*] do_mknod make special device /dev/null
+[*] in dir_namev try to resolve absolute /dev/null
+1
+2
+3
+[36;40mfs/vnode.c:121 vref(): vref: 0xcfe13080, 0xcfe87518 ino 39 up to 2, nrespages=1
+[0m[*] lookup dev find status 0 vnode 39 add cfe13080
+4
+7
+[36;40mfs/vnode.c:247 vput(): vput: 0xcfe13080, 0xcfe87518 ino 39, down to 1, nrespages = 1
+[0m[*] lookup null find status -2
+[36;40mfs/vnode.c:208 vget(): vget: 0xcfe130fc, 0xcfe87518 ino 42 refcount set to 1, nrespages=0
+[0m[36;40mfs/vnode.c:247 vput(): vput: 0xcfe130fc, 0xcfe87518 ino 42, down to 0, nrespages = 0
+[0min do_waitpid pid 0 wait for -1
+do wait sched sleep
+sched switch from pid = 0 to pid = 1
+[*] in do_open try to open /dev/tty0
+[35;40mfs/file.c:64 fref(): fref: 0xcfe11004 up to 1
+[0m[*] in open_namev try to create /dev/tty0
+[*] in dir_namev try to resolve absolute /dev/tty0
+1
+2
+3
+[36;40mfs/vnode.c:121 vref(): vref: 0xcfe13080, 0xcfe87518 ino 39 up to 2, nrespages=1
+[0m[*] lookup dev find status 0 vnode 39 add cfe13080
+4
+7
+[36;40mfs/vnode.c:208 vget(): vget: 0xcfe130fc, 0xcfe87518 ino 40 refcount set to 1, nrespages=0
+[0m[*] lookup tty0 find status 0 vnode 40 add cfe130fc
+open namev 1
+[36;40mfs/vnode.c:247 vput(): vput: 0xcfe13080, 0xcfe87518 ino 39, down to 1, nrespages = 1
+[0m[*] in open_namev found the file 
+[*] in open_namev return value 1
+[*] in do_open created file /dev/tty0
+[*] in do_open finsih open /dev/tty0
+[*] in do_open try to open /dev/tty0
+[35;40mfs/file.c:64 fref(): fref: 0xcfe11024 up to 1
+[0m[*] in open_namev try to create /dev/tty0
+[*] in dir_namev try to resolve absolute /dev/tty0
+1
+2
+3
+[36;40mfs/vnode.c:121 vref(): vref: 0xcfe13080, 0xcfe87518 ino 39 up to 2, nrespages=1
+[0m[*] lookup dev find status 0 vnode 39 add cfe13080
+4
+7
+[36;40mfs/vnode.c:121 vref(): vref: 0xcfe130fc, 0xcfe87518 ino 40 up to 2, nrespages=0
+[0m[*] lookup tty0 find status 0 vnode 40 add cfe130fc
+open namev 1
+[36;40mfs/vnode.c:247 vput(): vput: 0xcfe13080, 0xcfe87518 ino 39, down to 1, nrespages = 1
+[0m[*] in open_namev found the file 
+[*] in open_namev return value 1
+[*] in do_open created file /dev/tty0
+[*] in do_open finsih open /dev/tty0
+[*] in do_open try to open /sbin/init
+[35;40mfs/file.c:64 fref(): fref: 0xcfe11044 up to 1
+[0m[*] in open_namev try to create /sbin/init
+[*] in dir_namev try to resolve absolute /sbin/init
+1
+2
+3
+[36;40mfs/vnode.c:208 vget(): vget: 0xcfe13178, 0xcfe87518 ino 4 refcount set to 1, nrespages=0
+[0m[*] lookup sbin find status 0 vnode 4 add cfe13178
+4
+7
+[36;40mfs/vnode.c:121 vref(): vref: 0xcfe13178, 0xcfe87518 ino 4 up to 2, nrespages=0
+[0mpframe alloc mmobj=0xcfe13180, mmo_nrespages=1
+pframe fill page addr 0xcfe10000
+vreadpage
+sched switch from pid = 1 to pid = 1
+finish fill page addr 0xcfe10000
+[36;40mfs/vnode.c:208 vget(): vget: 0xcfe131f4, 0xcfe87518 ino 10 refcount set to 1, nrespages=0
+[0m[*] lookup init find status 0 vnode 10 add cfe131f4
+open namev 1
+[36;40mfs/vnode.c:247 vput(): vput: 0xcfe13178, 0xcfe87518 ino 4, down to 1, nrespages = 1
+[0m[*] in open_namev found the file 
+[*] in open_namev return value 1
+[*] in do_open created file /sbin/init
+[*] in do_open finsih open /sbin/init
+[35;40mfs/file.c:62 fref(): fref: 0xcfe11044, 0xcfe87518 ino 10, refcount(f) up to 2, refcount(vnode) at 1
+[0m[35;40mfs/file.c:117 fput(): fput: 0xcfe11044, 0xcfe87518 ino 10, refcount(f) down to 1, refcount(vnode) at 1
+[0m[35;40mfs/file.c:62 fref(): fref: 0xcfe11044, 0xcfe87518 ino 10, refcount(f) up to 2, refcount(vnode) at 1
+[0mdo read fd = 2
+[35;40mfs/file.c:62 fref(): fref: 0xcfe11044, 0xcfe87518 ino 10, refcount(f) up to 3, refcount(vnode) at 1
+[0m[36;40mfs/vnode.c:121 vref(): vref: 0xcfe131f4, 0xcfe87518 ino 10 up to 2, nrespages=0
+[0mpframe alloc mmobj=0xcfe131fc, mmo_nrespages=1
+pframe fill page addr 0xcfe0f000
+vreadpage
+sched switch from pid = 1 to pid = 1
+finish fill page addr 0xcfe0f000
+[35;40mfs/file.c:117 fput(): fput: 0xcfe11044, 0xcfe87518 ino 10, refcount(f) down to 2, refcount(vnode) at 2
+[0m[*] create vmmap
+do read fd = 2
+[35;40mfs/file.c:62 fref(): fref: 0xcfe11044, 0xcfe87518 ino 10, refcount(f) up to 3, refcount(vnode) at 2
+[0m[35;40mfs/file.c:117 fput(): fput: 0xcfe11044, 0xcfe87518 ino 10, refcount(f) down to 2, refcount(vnode) at 2
+[0m[36;40mfs/vnode.c:121 vref(): vref: 0xcfe131f4, 0xcfe87518 ino 10 up to 3, nrespages=1
+[0m[36;40mfs/vnode.c:121 vref(): vref: 0xcfe131f4, 0xcfe87518 ino 10 up to 4, nrespages=1
+[0m[36;40mfs/vnode.c:247 vput(): vput: 0xcfe131f4, 0xcfe87518 ino 10, down to 3, nrespages = 1
+[0m[36;40mfs/vnode.c:121 vref(): vref: 0xcfe131f4, 0xcfe87518 ino 10 up to 4, nrespages=1
+[0mpframe alloc mmobj=0xcfe131fc, mmo_nrespages=2
+pframe fill page addr 0xcfe0a000
+vreadpage
+sched switch from pid = 1 to pid = 1
+finish fill page addr 0xcfe0a000
+pframe alloc mmobj=0xcfe0d004, mmo_nrespages=1
+pframe fill page addr 0xcfe09000
+search bottom obj
+pframe alloc mmobj=0xcfe0c004, mmo_nrespages=1
+pframe fill page addr 0xcfe08000
+[*] dirty anon object page
+finish fill page addr 0xcfe08000
+[*] dirty anon object page
+finish fill page addr 0xcfe09000
+dirty pframe 0xcfe17244 in shadow obj
+pframe alloc mmobj=0xcfe0d034, mmo_nrespages=1
+pframe fill page addr 0xcfe0b000
+search bottom obj
+pframe alloc mmobj=0xcfe0c034, mmo_nrespages=1
+pframe fill page addr 0xcfe07000
+[*] dirty anon object page
+finish fill page addr 0xcfe07000
+[*] dirty anon object page
+finish fill page addr 0xcfe0b000
+dirty pframe 0xcfe172d4 in shadow obj
+[35;40mfs/file.c:117 fput(): fput: 0xcfe11044, 0xcfe87518 ino 10, refcount(f) down to 1, refcount(vnode) at 4
+[0m[*] do_close file 2 add cfe131f4
+[35;40mfs/file.c:117 fput(): fput: 0xcfe11044, 0xcfe87518 ino 10, refcount(f) down to 0, refcount(vnode) at 4
+[0m[36;40mfs/vnode.c:247 vput(): vput: 0xcfe131f4, 0xcfe87518 ino 10, down to 3, nrespages = 2
+[0m[*] handle pagefault 0x804832f, 0x000004, pid=1
+[*] handle pagefault with pt_map
+[*] handle pagefault 0x8047fcc, 0x000006, pid=1
+[*] handle pagefault with pt_map
+[*] handle pagefault 0x80490c5, 0x000004, pid=1
+[36;40mfs/vnode.c:121 vref(): vref: 0xcfe131f4, 0xcfe87518 ino 10 up to 4, nrespages=2
+[0mpframe alloc mmobj=0xcfe131fc, mmo_nrespages=3
+pframe fill page addr 0xcfe05000
+vreadpage
+sched switch from pid = 1 to pid = 1
+finish fill page addr 0xcfe05000
+[*] handle pagefault with pt_map
+[*] do_close file 0 add cfe130fc
+[35;40mfs/file.c:117 fput(): fput: 0xcfe11004, 0xcfe87518 ino 40, refcount(f) down to 0, refcount(vnode) at 2
+[0m[36;40mfs/vnode.c:247 vput(): vput: 0xcfe130fc, 0xcfe87518 ino 40, down to 1, nrespages = 0
+[0m[*] handle pagefault 0x804f2a4, 0x000006, pid=1
+[*] handle pagefault with pt_map
+[*] do_close file 1 add cfe130fc
+[35;40mfs/file.c:117 fput(): fput: 0xcfe11024, 0xcfe87518 ino 40, refcount(f) down to 0, refcount(vnode) at 1
+[0m[36;40mfs/vnode.c:247 vput(): vput: 0xcfe130fc, 0xcfe87518 ino 40, down to 0, nrespages = 0
+[0m[*] handle pagefault 0x804cfd9, 0x000004, pid=1
+[36;40mfs/vnode.c:121 vref(): vref: 0xcfe131f4, 0xcfe87518 ino 10 up to 5, nrespages=3
+[0mpframe alloc mmobj=0xcfe131fc, mmo_nrespages=4
+pframe fill page addr 0xcfe04000
+vreadpage
+sched switch from pid = 1 to pid = 1
+finish fill page addr 0xcfe04000
+[*] handle pagefault with pt_map
+[*] in do_open try to open /dev/tty0
+[35;40mfs/file.c:64 fref(): fref: 0xcfe11024 up to 1
+[0m[*] in open_namev try to create /dev/tty0
+[*] in dir_namev try to resolve absolute /dev/tty0
+1
+2
+3
+[36;40mfs/vnode.c:121 vref(): vref: 0xcfe13080, 0xcfe87518 ino 39 up to 2, nrespages=1
+[0m[*] lookup dev find status 0 vnode 39 add cfe13080
+4
+7
+[36;40mfs/vnode.c:208 vget(): vget: 0xcfe130fc, 0xcfe87518 ino 40 refcount set to 1, nrespages=0
+[0m[*] lookup tty0 find status 0 vnode 40 add cfe130fc
+open namev 1
+[36;40mfs/vnode.c:247 vput(): vput: 0xcfe13080, 0xcfe87518 ino 39, down to 1, nrespages = 1
+[0m[*] in open_namev found the file 
+[*] in open_namev return value 1
+[*] in do_open created file /dev/tty0
+[*] in do_open finsih open /dev/tty0
+[*] in do_open try to open /dev/tty0
+[35;40mfs/file.c:64 fref(): fref: 0xcfe11004 up to 1
+[0m[*] in open_namev try to create /dev/tty0
+[*] in dir_namev try to resolve absolute /dev/tty0
+1
+2
+3
+[36;40mfs/vnode.c:121 vref(): vref: 0xcfe13080, 0xcfe87518 ino 39 up to 2, nrespages=1
+[0m[*] lookup dev find status 0 vnode 39 add cfe13080
+4
+7
+[36;40mfs/vnode.c:121 vref(): vref: 0xcfe130fc, 0xcfe87518 ino 40 up to 2, nrespages=0
+[0m[*] lookup tty0 find status 0 vnode 40 add cfe130fc
+open namev 1
+[36;40mfs/vnode.c:247 vput(): vput: 0xcfe13080, 0xcfe87518 ino 39, down to 1, nrespages = 1
+[0m[*] in open_namev found the file 
+[*] in open_namev return value 1
+[*] in do_open created file /dev/tty0
+[*] in do_open finsih open /dev/tty0
+old file to dup fd 1
+[35;40mfs/file.c:62 fref(): fref: 0xcfe11004, 0xcfe87518 ino 40, refcount(f) up to 2, refcount(vnode) at 2
+[0mnext empty if 2[*] do_chdir change dir to /dev
+[*] in dir_namev try to resolve absolute /dev
+1
+7
+[36;40mfs/vnode.c:121 vref(): vref: 0xcfe13080, 0xcfe87518 ino 39 up to 2, nrespages=1
+[0m[*] lookup dev find status 0 vnode 39 add cfe13080
+[36;40mfs/vnode.c:247 vput(): vput: 0xcfe13004, 0xcfe87518 ino 0, down to 3, nrespages = 1
+[0m[*] do_chdir changed to /dev with 0
+[*] in do_open try to open /dev
+[35;40mfs/file.c:64 fref(): fref: 0xcfe11044 up to 1
+[0m[*] in open_namev try to create /dev
+[*] in dir_namev try to resolve absolute /dev
+1
+7
+[36;40mfs/vnode.c:121 vref(): vref: 0xcfe13080, 0xcfe87518 ino 39 up to 3, nrespages=1
+[0m[*] lookup dev find status 0 vnode 39 add cfe13080
+open namev 1
+[*] in open_namev found the file 
+[*] in open_namev return value 1
+[*] in do_open created file /dev
+[*] in do_open finsih open /dev
+[*] enter sys_getdents
+[35;40mfs/file.c:62 fref(): fref: 0xcfe11044, 0xcfe87518 ino 39, refcount(f) up to 2, refcount(vnode) at 3
+[0m[35;40mfs/file.c:117 fput(): fput: 0xcfe11044, 0xcfe87518 ino 39, refcount(f) down to 1, refcount(vnode) at 3
+[0mdirty pframe 0xcfe172d4 in shadow obj
+[*] exit sys_getdents successful
+[*] enter sys_getdents
+[35;40mfs/file.c:62 fref(): fref: 0xcfe11044, 0xcfe87518 ino 39, refcount(f) up to 2, refcount(vnode) at 3
+[0m[35;40mfs/file.c:117 fput(): fput: 0xcfe11044, 0xcfe87518 ino 39, refcount(f) down to 1, refcount(vnode) at 3
+[0mdirty pframe 0xcfe172d4 in shadow obj
+[*] exit sys_getdents successful
+[*] enter sys_getdents
+[35;40mfs/file.c:62 fref(): fref: 0xcfe11044, 0xcfe87518 ino 39, refcount(f) up to 2, refcount(vnode) at 3
+[0m[35;40mfs/file.c:117 fput(): fput: 0xcfe11044, 0xcfe87518 ino 39, refcount(f) down to 1, refcount(vnode) at 3
+[0mdirty pframe 0xcfe172d4 in shadow obj
+[*] exit sys_getdents successful
+[*] create vmmap
+[*] create vmmap
+[36;40mfs/vnode.c:121 vref(): vref: 0xcfe131f4, 0xcfe87518 ino 10 up to 6, nrespages=4
+[0m[35;40mfs/file.c:62 fref(): fref: 0xcfe11024, 0xcfe87518 ino 40, refcount(f) up to 2, refcount(vnode) at 2
+[0m[35;40mfs/file.c:62 fref(): fref: 0xcfe11004, 0xcfe87518 ino 40, refcount(f) up to 3, refcount(vnode) at 2
+[0m[35;40mfs/file.c:62 fref(): fref: 0xcfe11004, 0xcfe87518 ino 40, refcount(f) up to 4, refcount(vnode) at 2
+[0m[35;40mfs/file.c:62 fref(): fref: 0xcfe11044, 0xcfe87518 ino 39, refcount(f) up to 2, refcount(vnode) at 3
+[0m[36;40mfs/vnode.c:121 vref(): vref: 0xcfe13080, 0xcfe87518 ino 39 up to 4, nrespages=1
+[0mcheck all file descripts
+[*] handle pagefault 0x80484c9, 0x000004, pid=1
+[*] handle pagefault with pt_map
+[*] handle pagefault 0x8047f3c, 0x000006, pid=1
+pframe alloc mmobj=0xcfe0d094, mmo_nrespages=1
+pframe fill page addr 0xcfe03000
+[*] find in shadow obj
+dirty pframe 0xcfe173f4 in shadow obj
+finish fill page addr 0xcfe03000
+[*] handle pagefault with pt_map
+[*] handle pagefault 0x804f2a4, 0x000006, pid=1
+pframe alloc mmobj=0xcfe0d0f4, mmo_nrespages=1
+pframe fill page addr 0xcfe00000
+[*] find in shadow obj
+dirty pframe 0xcfe1743c in shadow obj
+finish fill page addr 0xcfe00000
+[*] handle pagefault with pt_map
+[*] handle pagefault 0x80490c5, 0x000004, pid=1
+[*] handle pagefault with pt_map
+[*] enter sys_getdents
+[35;40mfs/file.c:62 fref(): fref: 0xcfe11044, 0xcfe87518 ino 39, refcount(f) up to 3, refcount(vnode) at 4
+[0m[35;40mfs/file.c:117 fput(): fput: 0xcfe11044, 0xcfe87518 ino 39, refcount(f) down to 2, refcount(vnode) at 4
+[0mdirty pframe 0xcfe173f4 in shadow obj
+[*] exit sys_getdents successful
+[*] handle pagefault 0x804cfa5, 0x000004, pid=1
+[*] handle pagefault with pt_map
+[*] enter sys_getdents
+[35;40mfs/file.c:62 fref(): fref: 0xcfe11044, 0xcfe87518 ino 39, refcount(f) up to 3, refcount(vnode) at 4
+[0m[35;40mfs/file.c:117 fput(): fput: 0xcfe11044, 0xcfe87518 ino 39, refcount(f) down to 2, refcount(vnode) at 4
+[0mdirty pframe 0xcfe173f4 in shadow obj
+[*] exit sys_getdents successful
+[*] enter sys_getdents
+[35;40mfs/file.c:62 fref(): fref: 0xcfe11044, 0xcfe87518 ino 39, refcount(f) up to 3, refcount(vnode) at 4
+[0m[35;40mfs/file.c:117 fput(): fput: 0xcfe11044, 0xcfe87518 ino 39, refcount(f) down to 2, refcount(vnode) at 4
+[0m[*] do_close file 3 add cfe13080
+[35;40mfs/file.c:117 fput(): fput: 0xcfe11044, 0xcfe87518 ino 39, refcount(f) down to 1, refcount(vnode) at 4
+[0min do_waitpid pid 1 wait for -1
+do wait sched sleep
+sched switch from pid = 1 to pid = 3
+[*] handle pagefault 0x80484c9, 0x000004, pid=3
+[*] handle pagefault with pt_map
+[*] handle pagefault 0x8047f3c, 0x000006, pid=3
+pframe alloc mmobj=0xcfe0d064, mmo_nrespages=1
+pframe fill page addr 0xcfdfe000
+[*] find in shadow obj
+dirty pframe 0xcfe17484 in shadow obj
+finish fill page addr 0xcfdfe000
+[*] handle pagefault with pt_map
+[*] handle pagefault 0x804f2a4, 0x000006, pid=3
+pframe alloc mmobj=0xcfe0d0c4, mmo_nrespages=1
+pframe fill page addr 0xcfdfd000
+[*] find in shadow obj
+dirty pframe 0xcfe174cc in shadow obj
+finish fill page addr 0xcfdfd000
+[*] handle pagefault with pt_map
+[*] handle pagefault 0x80490c5, 0x000004, pid=3
+[*] handle pagefault with pt_map
+[*] do_close file 0 add cfe130fc
+[35;40mfs/file.c:117 fput(): fput: 0xcfe11024, 0xcfe87518 ino 40, refcount(f) down to 1, refcount(vnode) at 2
+[0m[*] do_close file 1 add cfe130fc
+[35;40mfs/file.c:117 fput(): fput: 0xcfe11004, 0xcfe87518 ino 40, refcount(f) down to 3, refcount(vnode) at 2
+[0m[*] do_close file 2 add cfe130fc
+[35;40mfs/file.c:117 fput(): fput: 0xcfe11004, 0xcfe87518 ino 40, refcount(f) down to 2, refcount(vnode) at 2
+[0m[*] in do_open try to open tty0
+[35;40mfs/file.c:64 fref(): fref: 0xcfe11064 up to 1
+[0m[*] in open_namev try to create tty0
+[*] in dir_namev try to resolve relevent tty0
+[36;40mfs/vnode.c:121 vref(): vref: 0xcfe130fc, 0xcfe87518 ino 40 up to 3, nrespages=0
+[0m[*] lookup tty0 find status 0 vnode 40 add cfe130fc
+open namev 1
+[*] in open_namev found the file 
+[*] in open_namev return value 1
+[*] in do_open created file tty0
+[*] in do_open finsih open tty0
+[*] in do_open try to open tty0
+[35;40mfs/file.c:64 fref(): fref: 0xcfe11084 up to 1
+[0m[*] in open_namev try to create tty0
+[*] in dir_namev try to resolve relevent tty0
+[36;40mfs/vnode.c:121 vref(): vref: 0xcfe130fc, 0xcfe87518 ino 40 up to 4, nrespages=0
+[0m[*] lookup tty0 find status 0 vnode 40 add cfe130fc
+open namev 1
+[*] in open_namev found the file 
+[*] in open_namev return value 1
+[*] in do_open created file tty0
+[*] in do_open finsih open tty0
+old file to dup fd 1
+[35;40mfs/file.c:62 fref(): fref: 0xcfe11084, 0xcfe87518 ino 40, refcount(f) up to 2, refcount(vnode) at 4
+[0mnext empty if 2[*] handle pagefault 0x804cfa9, 0x000004, pid=3
+[*] handle pagefault with pt_map
+[*] do_chdir change dir to /
+[36;40mfs/vnode.c:247 vput(): vput: 0xcfe13080, 0xcfe87518 ino 39, down to 3, nrespages = 1
+[0m[*] handle pagefault 0x804ba84, 0x000004, pid=3
+[36;40mfs/vnode.c:121 vref(): vref: 0xcfe131f4, 0xcfe87518 ino 10 up to 7, nrespages=4
+[0mpframe alloc mmobj=0xcfe131fc, mmo_nrespages=5
+pframe fill page addr 0xcfdfc000
+vreadpage
+sched switch from pid = 3 to pid = 3
+finish fill page addr 0xcfdfc000
+[*] handle pagefault with pt_map
+[*] enter sys_write
+[35;40mfs/file.c:62 fref(): fref: 0xcfe11084, 0xcfe87518 ino 40, refcount(f) up to 3, refcount(vnode) at 4
+[0m[35;40mfs/file.c:117 fput(): fput: 0xcfe11084, 0xcfe87518 ino 40, refcount(f) down to 2, refcount(vnode) at 4
+[0m[*] exit sys_write to write char 24
+[*] enter sys_write
+[35;40mfs/file.c:62 fref(): fref: 0xcfe11084, 0xcfe87518 ino 40, refcount(f) up to 3, refcount(vnode) at 4
+[0m[35;40mfs/file.c:117 fput(): fput: 0xcfe11084, 0xcfe87518 ino 40, refcount(f) down to 2, refcount(vnode) at 4
+[0m[*] exit sys_write to write char 4
+[*] enter sys_write
+[35;40mfs/file.c:62 fref(): fref: 0xcfe11084, 0xcfe87518 ino 40, refcount(f) up to 3, refcount(vnode) at 4
+[0m[35;40mfs/file.c:117 fput(): fput: 0xcfe11084, 0xcfe87518 ino 40, refcount(f) down to 2, refcount(vnode) at 4
+[0m[*] exit sys_write to write char 1
+[*] handle pagefault 0x804dcf1, 0x000004, pid=3
+[36;40mfs/vnode.c:121 vref(): vref: 0xcfe131f4, 0xcfe87518 ino 10 up to 8, nrespages=5
+[0mpframe alloc mmobj=0xcfe131fc, mmo_nrespages=6
+pframe fill page addr 0xcfdfb000
+vreadpage
+sched switch from pid = 3 to pid = 3
+finish fill page addr 0xcfdfb000
+[*] handle pagefault with pt_map
+[*] in do_open try to open /dev/zero
+[35;40mfs/file.c:64 fref(): fref: 0xcfe110a4 up to 1
+[0m[*] in open_namev try to create /dev/zero
+[*] in dir_namev try to resolve absolute /dev/zero
+1
+2
+3
+[36;40mfs/vnode.c:121 vref(): vref: 0xcfe13080, 0xcfe87518 ino 39 up to 4, nrespages=1
+[0m[*] lookup dev find status 0 vnode 39 add cfe13080
+4
+7
+[36;40mfs/vnode.c:208 vget(): vget: 0xcfe13270, 0xcfe87518 ino 41 refcount set to 1, nrespages=0
+[0m[*] lookup zero find status 0 vnode 41 add cfe13270
+open namev 1
+[36;40mfs/vnode.c:247 vput(): vput: 0xcfe13080, 0xcfe87518 ino 39, down to 3, nrespages = 1
+[0m[*] in open_namev found the file 
+[*] in open_namev return value 1
+[*] in do_open created file /dev/zero
+[*] in do_open finsih open /dev/zero
+[*] handle pagefault 0x804a001, 0x000004, pid=3
+[36;40mfs/vnode.c:121 vref(): vref: 0xcfe131f4, 0xcfe87518 ino 10 up to 9, nrespages=6
+[0mpframe alloc mmobj=0xcfe131fc, mmo_nrespages=7
+pframe fill page addr 0xcfdfa000
+vreadpage
+sched switch from pid = 3 to pid = 3
+finish fill page addr 0xcfdfa000
+[*] handle pagefault with pt_map
+in do_mmap addr: 00000000, len: 4096, prot: 3, flags: 2, fd: 4, off: 0
+[35;40mfs/file.c:62 fref(): fref: 0xcfe110a4, 0xcfe87518 ino 41, refcount(f) up to 2, refcount(vnode) at 1
+[0m[35;40mfs/file.c:117 fput(): fput: 0xcfe110a4, 0xcfe87518 ino 41, refcount(f) down to 1, refcount(vnode) at 1
+[0m[*] handle pagefault 0xbffff014, 0x000004, pid=3
+pframe alloc mmobj=0xcfe0c064, mmo_nrespages=1
+pframe fill page addr 0xcfdf9000
+[*] dirty anon object page
+finish fill page addr 0xcfdf9000
+[*] handle pagefault with pt_map
+[*] handle pagefault 0xbffff030, 0x000007, pid=3
+pframe alloc mmobj=0xcfe0d124, mmo_nrespages=1
+pframe fill page addr 0xcfdf7000
+search bottom obj
+[*] dirty anon object page
+finish fill page addr 0xcfdf7000
+[*] handle pagefault with pt_map
+[*] handle pagefault 0x8050008, 0x000006, pid=3
+pframe alloc mmobj=0xcfe0d154, mmo_nrespages=1
+pframe fill page addr 0xcfde6000
+search bottom obj
+pframe alloc mmobj=0xcfe0c094, mmo_nrespages=1
+pframe fill page addr 0xcfde5000
+[*] dirty anon object page
+finish fill page addr 0xcfde5000
+[*] dirty anon object page
+finish fill page addr 0xcfde6000
+[*] handle pagefault with pt_map
+[*] handle pagefault 0x8051008, 0x000006, pid=3
+pframe alloc mmobj=0xcfe0d154, mmo_nrespages=2
+pframe fill page addr 0xcfde4000
+search bottom obj
+pframe alloc mmobj=0xcfe0c094, mmo_nrespages=2
+pframe fill page addr 0xcfde3000
+[*] dirty anon object page
+finish fill page addr 0xcfde3000
+[*] dirty anon object page
+finish fill page addr 0xcfde4000
+[*] handle pagefault with pt_map
+in sys execve
+in do execve
+[*] in do_open try to open /bin/sh
+[35;40mfs/file.c:64 fref(): fref: 0xcfe110c4 up to 1
+[0m[*] in open_namev try to create /bin/sh
+[*] in dir_namev try to resolve absolute /bin/sh
+1
+2
+3
+[36;40mfs/vnode.c:208 vget(): vget: 0xcfe132ec, 0xcfe87518 ino 8 refcount set to 1, nrespages=0
+[0m[*] lookup bin find status 0 vnode 8 add cfe132ec
+4
+7
+[36;40mfs/vnode.c:121 vref(): vref: 0xcfe132ec, 0xcfe87518 ino 8 up to 2, nrespages=0
+[0mpframe alloc mmobj=0xcfe132f4, mmo_nrespages=1
+pframe fill page addr 0xcfde2000
+vreadpage
+sched switch from pid = 3 to pid = 3
+finish fill page addr 0xcfde2000
+[36;40mfs/vnode.c:208 vget(): vget: 0xcfe13368, 0xcfe87518 ino 20 refcount set to 1, nrespages=0
+[0m[*] lookup sh find status 0 vnode 20 add cfe13368
+open namev 1
+[36;40mfs/vnode.c:247 vput(): vput: 0xcfe132ec, 0xcfe87518 ino 8, down to 1, nrespages = 1
+[0m[*] in open_namev found the file 
+[*] in open_namev return value 1
+[*] in do_open created file /bin/sh
+[*] in do_open finsih open /bin/sh
+[35;40mfs/file.c:62 fref(): fref: 0xcfe110c4, 0xcfe87518 ino 20, refcount(f) up to 2, refcount(vnode) at 1
+[0m[35;40mfs/file.c:117 fput(): fput: 0xcfe110c4, 0xcfe87518 ino 20, refcount(f) down to 1, refcount(vnode) at 1
+[0m[35;40mfs/file.c:62 fref(): fref: 0xcfe110c4, 0xcfe87518 ino 20, refcount(f) up to 2, refcount(vnode) at 1
+[0mdo read fd = 5
+[35;40mfs/file.c:62 fref(): fref: 0xcfe110c4, 0xcfe87518 ino 20, refcount(f) up to 3, refcount(vnode) at 1
+[0m[36;40mfs/vnode.c:121 vref(): vref: 0xcfe13368, 0xcfe87518 ino 20 up to 2, nrespages=0
+[0mpframe alloc mmobj=0xcfe13370, mmo_nrespages=1
+pframe fill page addr 0xcfde1000
+vreadpage
+sched switch from pid = 3 to pid = 3
+finish fill page addr 0xcfde1000
+[35;40mfs/file.c:117 fput(): fput: 0xcfe110c4, 0xcfe87518 ino 20, refcount(f) down to 2, refcount(vnode) at 2
+[0m[*] create vmmap
+do read fd = 5
+[35;40mfs/file.c:62 fref(): fref: 0xcfe110c4, 0xcfe87518 ino 20, refcount(f) up to 3, refcount(vnode) at 2
+[0m[35;40mfs/file.c:117 fput(): fput: 0xcfe110c4, 0xcfe87518 ino 20, refcount(f) down to 2, refcount(vnode) at 2
+[0m[36;40mfs/vnode.c:121 vref(): vref: 0xcfe13368, 0xcfe87518 ino 20 up to 3, nrespages=1
+[0m[36;40mfs/vnode.c:121 vref(): vref: 0xcfe13368, 0xcfe87518 ino 20 up to 4, nrespages=1
+[0m[36;40mfs/vnode.c:247 vput(): vput: 0xcfe13368, 0xcfe87518 ino 20, down to 3, nrespages = 1
+[0m[36;40mfs/vnode.c:121 vref(): vref: 0xcfe13368, 0xcfe87518 ino 20 up to 4, nrespages=1
+[0mpframe alloc mmobj=0xcfe13370, mmo_nrespages=2
+pframe fill page addr 0xcfddf000
+vreadpage
+sched switch from pid = 3 to pid = 3
+finish fill page addr 0xcfddf000
+pframe alloc mmobj=0xcfe0d184, mmo_nrespages=1
+pframe fill page addr 0xcfdde000
+search bottom obj
+pframe alloc mmobj=0xcfe0c0c4, mmo_nrespages=1
+pframe fill page addr 0xcfddd000
+[*] dirty anon object page
+finish fill page addr 0xcfddd000
+[*] dirty anon object page
+finish fill page addr 0xcfdde000
+dirty pframe 0xcfe17874 in shadow obj
+pframe alloc mmobj=0xcfe0d1b4, mmo_nrespages=1
+pframe fill page addr 0xcfde0000
+search bottom obj
+pframe alloc mmobj=0xcfe0c0f4, mmo_nrespages=1
+pframe fill page addr 0xcfddc000
+[*] dirty anon object page
+finish fill page addr 0xcfddc000
+[*] dirty anon object page
+finish fill page addr 0xcfde0000
+dirty pframe 0xcfe17904 in shadow obj
+[*] vmarea_free vma_mmobj=0xcfe0d064
+clean pframe in shadow obj
+clear dirty pframe 0xcfe17484 in shadow obj
+pframe free 0xcfe0d064, mmo_respages=0
+[*] vmarea_free vma_mmobj=0xcfe131fc
+[36;40mfs/vnode.c:247 vput(): vput: 0xcfe131f4, 0xcfe87518 ino 10, down to 8, nrespages = 7
+[0m[*] vmarea_free vma_mmobj=0xcfe0d0c4
+clean pframe in shadow obj
+clear dirty pframe 0xcfe174cc in shadow obj
+pframe free 0xcfe0d0c4, mmo_respages=0
+[*] vmarea_free vma_mmobj=0xcfe0d154
+clean pframe in shadow obj
+clear dirty pframe 0xcfe1770c in shadow obj
+pframe free 0xcfe0d154, mmo_respages=1
+clean pframe in shadow obj
+clear dirty pframe 0xcfe1767c in shadow obj
+pframe free 0xcfe0d154, mmo_respages=0
+[*] clean anon object page
+pframe free 0xcfe0c094, mmo_respages=1
+[*] clean anon object page
+pframe free 0xcfe0c094, mmo_respages=0
+[*] vmarea_free vma_mmobj=0xcfe0d124
+clean pframe in shadow obj
+clear dirty pframe 0xcfe17634 in shadow obj
+pframe free 0xcfe0d124, mmo_respages=0
+[*] clean anon object page
+pframe free 0xcfe0c064, mmo_respages=0
+[35;40mfs/file.c:117 fput(): fput: 0xcfe110c4, 0xcfe87518 ino 20, refcount(f) down to 1, refcount(vnode) at 4
+[0m[*] do_close file 5 add cfe13368
+[35;40mfs/file.c:117 fput(): fput: 0xcfe110c4, 0xcfe87518 ino 20, refcount(f) down to 0, refcount(vnode) at 4
+[0m[36;40mfs/vnode.c:247 vput(): vput: 0xcfe13368, 0xcfe87518 ino 20, down to 3, nrespages = 2
+[0m[*] handle pagefault 0x804ac63, 0x000004, pid=3
+[36;40mfs/vnode.c:121 vref(): vref: 0xcfe13368, 0xcfe87518 ino 20 up to 4, nrespages=2
+[0mpframe alloc mmobj=0xcfe13370, mmo_nrespages=3
+pframe fill page addr 0xcfdf9000
+vreadpage
+sched switch from pid = 3 to pid = 3
+finish fill page addr 0xcfdf9000
+[*] handle pagefault with pt_map
+[*] handle pagefault 0x8047fdc, 0x000006, pid=3
+[*] handle pagefault with pt_map
+[*] handle pagefault 0x80534e0, 0x000006, pid=3
+[*] handle pagefault with pt_map
+[*] handle pagefault 0x804e754, 0x000004, pid=3
+[36;40mfs/vnode.c:121 vref(): vref: 0xcfe13368, 0xcfe87518 ino 20 up to 5, nrespages=3
+[0mpframe alloc mmobj=0xcfe13370, mmo_nrespages=4
+pframe fill page addr 0xcfddb000
+vreadpage
+sched switch from pid = 3 to pid = 3
+finish fill page addr 0xcfddb000
+[*] handle pagefault with pt_map
+[*] handle pagefault 0x804b9f5, 0x000004, pid=3
+[36;40mfs/vnode.c:121 vref(): vref: 0xcfe13368, 0xcfe87518 ino 20 up to 6, nrespages=4
+[0mpframe alloc mmobj=0xcfe13370, mmo_nrespages=5
+pframe fill page addr 0xcfdf8000
+vreadpage
+sched switch from pid = 3 to pid = 3
+finish fill page addr 0xcfdf8000
+[*] handle pagefault with pt_map
+[*] handle pagefault 0x804f2c1, 0x000004, pid=3
+[36;40mfs/vnode.c:121 vref(): vref: 0xcfe13368, 0xcfe87518 ino 20 up to 7, nrespages=5
+[0mpframe alloc mmobj=0xcfe13370, mmo_nrespages=6
+pframe fill page addr 0xcfdf7000
+vreadpage
+sched switch from pid = 3 to pid = 3
+finish fill page addr 0xcfdf7000
+[*] handle pagefault with pt_map
+[*] handle pagefault 0x80505cf, 0x000004, pid=3
+[36;40mfs/vnode.c:121 vref(): vref: 0xcfe13368, 0xcfe87518 ino 20 up to 8, nrespages=6
+[0mpframe alloc mmobj=0xcfe13370, mmo_nrespages=7
+pframe fill page addr 0xcfdfe000
+vreadpage
+sched switch from pid = 3 to pid = 3
+finish fill page addr 0xcfdfe000
+[*] handle pagefault with pt_map
+[*] handle pagefault 0x8051758, 0x000004, pid=3
+[36;40mfs/vnode.c:121 vref(): vref: 0xcfe13368, 0xcfe87518 ino 20 up to 9, nrespages=7
+[0mpframe alloc mmobj=0xcfe13370, mmo_nrespages=8
+pframe fill page addr 0xcfdfd000
+vreadpage
+sched switch from pid = 3 to pid = 3
+finish fill page addr 0xcfdfd000
+[*] handle pagefault with pt_map
+[*] enter sys_write
+[35;40mfs/file.c:62 fref(): fref: 0xcfe11084, 0xcfe87518 ino 40, refcount(f) up to 3, refcount(vnode) at 4
+[0m[35;40mfs/file.c:117 fput(): fput: 0xcfe11084, 0xcfe87518 ino 40, refcount(f) down to 2, refcount(vnode) at 4
+[0m[*] exit sys_write to write char 10
+[*] handle pagefault 0x8054a04, 0x000006, pid=3
+pframe alloc mmobj=0xcfe0d184, mmo_nrespages=2
+pframe fill page addr 0xcfde6000
+search bottom obj
+pframe alloc mmobj=0xcfe0c0c4, mmo_nrespages=2
+pframe fill page addr 0xcfde5000
+[*] dirty anon object page
+finish fill page addr 0xcfde5000
+[*] dirty anon object page
+finish fill page addr 0xcfde6000
+[*] handle pagefault with pt_map
+do read fd = 0
+[35;40mfs/file.c:62 fref(): fref: 0xcfe11064, 0xcfe87518 ino 40, refcount(f) up to 2, refcount(vnode) at 4
+[0m

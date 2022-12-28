@@ -1,0 +1,474 @@
+/usr/bin/qemu-system-i386
+[31;40mSIGNATURE: 53616c7465645f5f2286438218b129c5e92a09b8043acfabc6fbcfe63a19159722db186089544854f88d49a5867b03ae
+[0m[31;40mtest/kshell/kshell.c:98 kshell_add_command(): Added help command
+[0m[31;40mtest/kshell/kshell.c:98 kshell_add_command(): Added echo command
+[0m[31;40mtest/kshell/kshell.c:98 kshell_add_command(): Added exit command
+[0m[31;40mtest/kshell/kshell.c:98 kshell_add_command(): Added sunghan command
+[0m[31;40mtest/kshell/kshell.c:98 kshell_add_command(): Added deadlock command
+[0m[31;40mtest/kshell/kshell.c:98 kshell_add_command(): Added faber command
+[0m[31;40mtest/kshell/kshell.c:133 kshell_create(): kshell successfully created on TTY 0
+[0m[31;40mtest/kshell/kshell.c:446 kshell_execute_next(): Attempting to execute command 'faber'
+[0m[31;40mproc/faber_test.c:328 faber_thread_test(): 
+>>> Start running faber_thread_test()...
+[0m[31;40mproc/faber_test.c:331 faber_thread_test(): (C.1) start
+[0m[31;40mproc/faber_test.c:332 faber_thread_test(): waitpid any test
+[0m[31;40mproc/faber_test.c:102 wait_for_any(): child (4) exited: 23
+[0m[31;40mproc/faber_test.c:336 faber_thread_test(): waitpid test
+[0m[31;40mproc/faber_test.c:90 wait_for_proc(): waitpid test (5) exited: 32
+[0m[31;40mproc/faber_test.c:342 faber_thread_test(): kthread exit test
+[0m[31;40mproc/faber_test.c:90 wait_for_proc(): kthread exit test (6) exited: 0
+[0m[31;40mproc/faber_test.c:346 faber_thread_test(): many test
+[0m[31;40mproc/faber_test.c:102 wait_for_any(): child (7) exited: 0
+[0m[31;40mproc/faber_test.c:102 wait_for_any(): child (8) exited: 1
+[0m[31;40mproc/faber_test.c:102 wait_for_any(): child (9) exited: 2
+[0m[31;40mproc/faber_test.c:102 wait_for_any(): child (10) exited: 3
+[0m[31;40mproc/faber_test.c:102 wait_for_any(): child (11) exited: 4
+[0m[31;40mproc/faber_test.c:102 wait_for_any(): child (12) exited: 5
+[0m[31;40mproc/faber_test.c:102 wait_for_any(): child (13) exited: 6
+[0m[31;40mproc/faber_test.c:102 wait_for_any(): child (14) exited: 7
+[0m[31;40mproc/faber_test.c:102 wait_for_any(): child (15) exited: 8
+[0m[31;40mproc/faber_test.c:102 wait_for_any(): child (16) exited: 9
+[0m[31;40mproc/faber_test.c:350 faber_thread_test(): (C.1) done
+[0m[31;40mproc/faber_test.c:354 faber_thread_test(): (C.2) start
+[0m[31;40mproc/faber_test.c:355 faber_thread_test(): Context switch test
+[0m[31;40mproc/faber_test.c:90 wait_for_proc(): Context switch (17) exited: 1
+[0m[31;40mproc/faber_test.c:358 faber_thread_test(): (C.2) done
+[0m[31;40mproc/faber_test.c:364 faber_thread_test(): (C.3) start
+[0m[31;40mproc/faber_test.c:365 faber_thread_test(): wake me test
+[0m[31;40mproc/faber_test.c:90 wait_for_proc(): wake me test (18) exited: 0
+[0m[31;40mproc/faber_test.c:374 faber_thread_test(): broadcast me test
+[0m[31;40mproc/faber_test.c:102 wait_for_any(): child (19) exited: 0
+[0m[31;40mproc/faber_test.c:102 wait_for_any(): child (20) exited: 0
+[0m[31;40mproc/faber_test.c:102 wait_for_any(): child (21) exited: 0
+[0m[31;40mproc/faber_test.c:102 wait_for_any(): child (22) exited: 0
+[0m[31;40mproc/faber_test.c:102 wait_for_any(): child (23) exited: 0
+[0m[31;40mproc/faber_test.c:102 wait_for_any(): child (24) exited: 0
+[0m[31;40mproc/faber_test.c:102 wait_for_any(): child (25) exited: 0
+[0m[31;40mproc/faber_test.c:102 wait_for_any(): child (26) exited: 0
+[0m[31;40mproc/faber_test.c:102 wait_for_any(): child (27) exited: 0
+[0m[31;40mproc/faber_test.c:102 wait_for_any(): child (28) exited: 0
+[0m[31;40mproc/faber_test.c:382 faber_thread_test(): (C.3) done
+[0m[31;40mproc/faber_test.c:386 faber_thread_test(): (C.4) start
+[0m[31;40mproc/faber_test.c:387 faber_thread_test(): wake me uncancellable test
+[0m[31;40mproc/faber_test.c:90 wait_for_proc(): wake me uncancellable test (29) exited: 0
+[0m[31;40mproc/faber_test.c:396 faber_thread_test(): broadcast me uncancellable test
+[0m[31;40mproc/faber_test.c:102 wait_for_any(): child (30) exited: 0
+[0m[31;40mproc/faber_test.c:102 wait_for_any(): child (31) exited: 0
+[0m[31;40mproc/faber_test.c:102 wait_for_any(): child (32) exited: 0
+[0m[31;40mproc/faber_test.c:102 wait_for_any(): child (33) exited: 0
+[0m[31;40mproc/faber_test.c:102 wait_for_any(): child (34) exited: 0
+[0m[31;40mproc/faber_test.c:102 wait_for_any(): child (35) exited: 0
+[0m[31;40mproc/faber_test.c:102 wait_for_any(): child (36) exited: 0
+[0m[31;40mproc/faber_test.c:102 wait_for_any(): child (37) exited: 0
+[0m[31;40mproc/faber_test.c:102 wait_for_any(): child (38) exited: 0
+[0m[31;40mproc/faber_test.c:102 wait_for_any(): child (39) exited: 0
+[0m[31;40mproc/faber_test.c:405 faber_thread_test(): (C.4) done
+[0m[31;40mproc/faber_test.c:409 faber_thread_test(): (C.5) start
+[0m[31;40mproc/faber_test.c:410 faber_thread_test(): cancel me test
+[0m[31;40mproc/faber_test.c:90 wait_for_proc(): cancel me test (40) exited: 0
+[0m[31;40mproc/faber_test.c:418 faber_thread_test(): prior cancel me test
+[0m[31;40mproc/faber_test.c:90 wait_for_proc(): prior cancel me test (41) exited: 0
+[0m[31;40mproc/faber_test.c:425 faber_thread_test(): cancel me head test
+[0m[31;40mproc/faber_test.c:102 wait_for_any(): child (42) exited: 0
+[0m[31;40mproc/faber_test.c:102 wait_for_any(): child (43) exited: 0
+[0m[31;40mproc/faber_test.c:434 faber_thread_test(): cancel me tail test
+[0m[31;40mproc/faber_test.c:102 wait_for_any(): child (44) exited: 0
+[0m[31;40mproc/faber_test.c:102 wait_for_any(): child (45) exited: 0
+[0m[31;40mproc/faber_test.c:442 faber_thread_test(): (C.5) done
+[0m[31;40mproc/faber_test.c:446 faber_thread_test(): (C.6) start
+[0m[31;40mproc/faber_test.c:447 faber_thread_test(): Reparenting test
+[0m[31;40mproc/faber_test.c:102 wait_for_any(): child (46) exited: 0
+[0m[31;40mproc/faber_test.c:453 faber_thread_test(): Reparenting stress test
+[0m[31;40mproc/faber_test.c:102 wait_for_any(): child (48) exited: 0
+[0m[31;40mproc/faber_test.c:460 faber_thread_test(): (C.6) done
+[0m[31;40mproc/faber_test.c:466 faber_thread_test(): (C.7) start
+[0m[31;40mproc/faber_test.c:467 faber_thread_test(): show race test
+[0m[31;40mproc/faber_test.c:102 wait_for_any(): child (68) exited: 1
+[0m[31;40mproc/faber_test.c:102 wait_for_any(): child (69) exited: 1
+[0m[31;40mproc/faber_test.c:102 wait_for_any(): child (70) exited: 1
+[0m[31;40mproc/faber_test.c:102 wait_for_any(): child (71) exited: 1
+[0m[31;40mproc/faber_test.c:102 wait_for_any(): child (72) exited: 1
+[0m[31;40mproc/faber_test.c:102 wait_for_any(): child (73) exited: 1
+[0m[31;40mproc/faber_test.c:102 wait_for_any(): child (74) exited: 1
+[0m[31;40mproc/faber_test.c:102 wait_for_any(): child (75) exited: 1
+[0m[31;40mproc/faber_test.c:102 wait_for_any(): child (76) exited: 1
+[0m[31;40mproc/faber_test.c:102 wait_for_any(): child (77) exited: 1
+[0m[31;40mproc/faber_test.c:473 faber_thread_test(): fix race test
+[0m[31;40mproc/faber_test.c:102 wait_for_any(): child (78) exited: 1
+[0m[31;40mproc/faber_test.c:102 wait_for_any(): child (79) exited: 2
+[0m[31;40mproc/faber_test.c:102 wait_for_any(): child (80) exited: 3
+[0m[31;40mproc/faber_test.c:102 wait_for_any(): child (81) exited: 4
+[0m[31;40mproc/faber_test.c:102 wait_for_any(): child (82) exited: 5
+[0m[31;40mproc/faber_test.c:102 wait_for_any(): child (83) exited: 6
+[0m[31;40mproc/faber_test.c:102 wait_for_any(): child (84) exited: 7
+[0m[31;40mproc/faber_test.c:102 wait_for_any(): child (85) exited: 8
+[0m[31;40mproc/faber_test.c:102 wait_for_any(): child (86) exited: 9
+[0m[31;40mproc/faber_test.c:102 wait_for_any(): child (87) exited: 10
+[0m[31;40mproc/faber_test.c:479 faber_thread_test(): fix race test w/cancel
+[0m[31;40mproc/faber_test.c:102 wait_for_any(): child (89) exited: 0
+[0m[31;40mproc/faber_test.c:102 wait_for_any(): child (91) exited: 0
+[0m[31;40mproc/faber_test.c:102 wait_for_any(): child (93) exited: 0
+[0m[31;40mproc/faber_test.c:102 wait_for_any(): child (95) exited: 0
+[0m[31;40mproc/faber_test.c:102 wait_for_any(): child (97) exited: 0
+[0m[31;40mproc/faber_test.c:102 wait_for_any(): child (88) exited: 1
+[0m[31;40mproc/faber_test.c:102 wait_for_any(): child (90) exited: 2
+[0m[31;40mproc/faber_test.c:102 wait_for_any(): child (92) exited: 3
+[0m[31;40mproc/faber_test.c:102 wait_for_any(): child (94) exited: 4
+[0m[31;40mproc/faber_test.c:102 wait_for_any(): child (96) exited: 5
+[0m[31;40mproc/faber_test.c:490 faber_thread_test(): (C.7) done
+[0m[31;40mproc/faber_test.c:494 faber_thread_test(): (C.8) start
+[0m[31;40mproc/faber_test.c:495 faber_thread_test(): kill child procs test
+[0m[31;40mproc/faber_test.c:102 wait_for_any(): child (98) exited: 0
+[0m[31;40mproc/faber_test.c:102 wait_for_any(): child (99) exited: 0
+[0m[31;40mproc/faber_test.c:102 wait_for_any(): child (100) exited: 0
+[0m[31;40mproc/faber_test.c:102 wait_for_any(): child (101) exited: 0
+[0m[31;40mproc/faber_test.c:102 wait_for_any(): child (102) exited: 0
+[0m[31;40mproc/faber_test.c:102 wait_for_any(): child (103) exited: 0
+[0m[31;40mproc/faber_test.c:102 wait_for_any(): child (104) exited: 0
+[0m[31;40mproc/faber_test.c:102 wait_for_any(): child (105) exited: 0
+[0m[31;40mproc/faber_test.c:102 wait_for_any(): child (106) exited: 0
+[0m[31;40mproc/faber_test.c:102 wait_for_any(): child (107) exited: 0
+[0m[31;40mproc/faber_test.c:504 faber_thread_test(): (C.8) done
+[0m[31;40mproc/faber_test.c:508 faber_thread_test(): (C.9) start (no end)
+[0m[31;40mproc/faber_test.c:509 faber_thread_test(): proc kill all test
+[0m[31;40mtest/kshell/kshell.c:446 kshell_execute_next(): Attempting to execute command 'faber'
+[0m[31;40mproc/faber_test.c:328 faber_thread_test(): 
+>>> Start running faber_thread_test()...
+[0m[31;40mproc/faber_test.c:331 faber_thread_test(): (C.1) start
+[0m[31;40mproc/faber_test.c:332 faber_thread_test(): waitpid any test
+[0m[31;40mproc/faber_test.c:102 wait_for_any(): child (119) exited: 23
+[0m[31;40mproc/faber_test.c:336 faber_thread_test(): waitpid test
+[0m[31;40mproc/faber_test.c:90 wait_for_proc(): waitpid test (120) exited: 32
+[0m[31;40mproc/faber_test.c:342 faber_thread_test(): kthread exit test
+[0m[31;40mproc/faber_test.c:90 wait_for_proc(): kthread exit test (121) exited: 0
+[0m[31;40mproc/faber_test.c:346 faber_thread_test(): many test
+[0m[31;40mproc/faber_test.c:102 wait_for_any(): child (122) exited: 0
+[0m[31;40mproc/faber_test.c:102 wait_for_any(): child (123) exited: 1
+[0m[31;40mproc/faber_test.c:102 wait_for_any(): child (124) exited: 2
+[0m[31;40mproc/faber_test.c:102 wait_for_any(): child (125) exited: 3
+[0m[31;40mproc/faber_test.c:102 wait_for_any(): child (126) exited: 4
+[0m[31;40mproc/faber_test.c:102 wait_for_any(): child (127) exited: 5
+[0m[31;40mproc/faber_test.c:102 wait_for_any(): child (128) exited: 6
+[0m[31;40mproc/faber_test.c:102 wait_for_any(): child (129) exited: 7
+[0m[31;40mproc/faber_test.c:102 wait_for_any(): child (130) exited: 8
+[0m[31;40mproc/faber_test.c:102 wait_for_any(): child (131) exited: 9
+[0m[31;40mproc/faber_test.c:350 faber_thread_test(): (C.1) done
+[0m[31;40mproc/faber_test.c:354 faber_thread_test(): (C.2) start
+[0m[31;40mproc/faber_test.c:355 faber_thread_test(): Context switch test
+[0m[31;40mproc/faber_test.c:90 wait_for_proc(): Context switch (132) exited: 6
+[0m[31;40mproc/faber_test.c:358 faber_thread_test(): (C.2) done
+[0m[31;40mproc/faber_test.c:364 faber_thread_test(): (C.3) start
+[0m[31;40mproc/faber_test.c:365 faber_thread_test(): wake me test
+[0m[31;40mproc/faber_test.c:90 wait_for_proc(): wake me test (133) exited: 0
+[0m[31;40mproc/faber_test.c:374 faber_thread_test(): broadcast me test
+[0m[31;40mproc/faber_test.c:102 wait_for_any(): child (134) exited: 0
+[0m[31;40mproc/faber_test.c:102 wait_for_any(): child (135) exited: 0
+[0m[31;40mproc/faber_test.c:102 wait_for_any(): child (136) exited: 0
+[0m[31;40mproc/faber_test.c:102 wait_for_any(): child (137) exited: 0
+[0m[31;40mproc/faber_test.c:102 wait_for_any(): child (138) exited: 0
+[0m[31;40mproc/faber_test.c:102 wait_for_any(): child (139) exited: 0
+[0m[31;40mproc/faber_test.c:102 wait_for_any(): child (140) exited: 0
+[0m[31;40mproc/faber_test.c:102 wait_for_any(): child (141) exited: 0
+[0m[31;40mproc/faber_test.c:102 wait_for_any(): child (142) exited: 0
+[0m[31;40mproc/faber_test.c:102 wait_for_any(): child (143) exited: 0
+[0m[31;40mproc/faber_test.c:382 faber_thread_test(): (C.3) done
+[0m[31;40mproc/faber_test.c:386 faber_thread_test(): (C.4) start
+[0m[31;40mproc/faber_test.c:387 faber_thread_test(): wake me uncancellable test
+[0m[31;40mproc/faber_test.c:90 wait_for_proc(): wake me uncancellable test (144) exited: 0
+[0m[31;40mproc/faber_test.c:396 faber_thread_test(): broadcast me uncancellable test
+[0m[31;40mproc/faber_test.c:102 wait_for_any(): child (145) exited: 0
+[0m[31;40mproc/faber_test.c:102 wait_for_any(): child (146) exited: 0
+[0m[31;40mproc/faber_test.c:102 wait_for_any(): child (147) exited: 0
+[0m[31;40mproc/faber_test.c:102 wait_for_any(): child (148) exited: 0
+[0m[31;40mproc/faber_test.c:102 wait_for_any(): child (149) exited: 0
+[0m[31;40mproc/faber_test.c:102 wait_for_any(): child (150) exited: 0
+[0m[31;40mproc/faber_test.c:102 wait_for_any(): child (151) exited: 0
+[0m[31;40mproc/faber_test.c:102 wait_for_any(): child (152) exited: 0
+[0m[31;40mproc/faber_test.c:102 wait_for_any(): child (153) exited: 0
+[0m[31;40mproc/faber_test.c:102 wait_for_any(): child (154) exited: 0
+[0m[31;40mproc/faber_test.c:405 faber_thread_test(): (C.4) done
+[0m[31;40mproc/faber_test.c:409 faber_thread_test(): (C.5) start
+[0m[31;40mproc/faber_test.c:410 faber_thread_test(): cancel me test
+[0m[31;40mproc/faber_test.c:90 wait_for_proc(): cancel me test (155) exited: 0
+[0m[31;40mproc/faber_test.c:418 faber_thread_test(): prior cancel me test
+[0m[31;40mproc/faber_test.c:90 wait_for_proc(): prior cancel me test (156) exited: 0
+[0m[31;40mproc/faber_test.c:425 faber_thread_test(): cancel me head test
+[0m[31;40mproc/faber_test.c:102 wait_for_any(): child (157) exited: 0
+[0m[31;40mproc/faber_test.c:102 wait_for_any(): child (158) exited: 0
+[0m[31;40mproc/faber_test.c:434 faber_thread_test(): cancel me tail test
+[0m[31;40mproc/faber_test.c:102 wait_for_any(): child (159) exited: 0
+[0m[31;40mproc/faber_test.c:102 wait_for_any(): child (160) exited: 0
+[0m[31;40mproc/faber_test.c:442 faber_thread_test(): (C.5) done
+[0m[31;40mproc/faber_test.c:446 faber_thread_test(): (C.6) start
+[0m[31;40mproc/faber_test.c:447 faber_thread_test(): Reparenting test
+[0m[31;40mproc/faber_test.c:102 wait_for_any(): child (161) exited: 0
+[0m[31;40mproc/faber_test.c:453 faber_thread_test(): Reparenting stress test
+[0m[31;40mproc/faber_test.c:102 wait_for_any(): child (163) exited: 0
+[0m[31;40mproc/faber_test.c:460 faber_thread_test(): (C.6) done
+[0m[31;40mproc/faber_test.c:466 faber_thread_test(): (C.7) start
+[0m[31;40mproc/faber_test.c:467 faber_thread_test(): show race test
+[0m[31;40mproc/faber_test.c:102 wait_for_any(): child (183) exited: 1
+[0m[31;40mproc/faber_test.c:102 wait_for_any(): child (184) exited: 1
+[0m[31;40mproc/faber_test.c:102 wait_for_any(): child (185) exited: 1
+[0m[31;40mproc/faber_test.c:102 wait_for_any(): child (186) exited: 1
+[0m[31;40mproc/faber_test.c:102 wait_for_any(): child (187) exited: 1
+[0m[31;40mproc/faber_test.c:102 wait_for_any(): child (188) exited: 1
+[0m[31;40mproc/faber_test.c:102 wait_for_any(): child (189) exited: 1
+[0m[31;40mproc/faber_test.c:102 wait_for_any(): child (190) exited: 1
+[0m[31;40mproc/faber_test.c:102 wait_for_any(): child (191) exited: 1
+[0m[31;40mproc/faber_test.c:102 wait_for_any(): child (192) exited: 1
+[0m[31;40mproc/faber_test.c:473 faber_thread_test(): fix race test
+[0m[31;40mproc/faber_test.c:102 wait_for_any(): child (193) exited: 1
+[0m[31;40mproc/faber_test.c:102 wait_for_any(): child (194) exited: 2
+[0m[31;40mproc/faber_test.c:102 wait_for_any(): child (195) exited: 3
+[0m[31;40mproc/faber_test.c:102 wait_for_any(): child (196) exited: 4
+[0m[31;40mproc/faber_test.c:102 wait_for_any(): child (197) exited: 5
+[0m[31;40mproc/faber_test.c:102 wait_for_any(): child (198) exited: 6
+[0m[31;40mproc/faber_test.c:102 wait_for_any(): child (199) exited: 7
+[0m[31;40mproc/faber_test.c:102 wait_for_any(): child (200) exited: 8
+[0m[31;40mproc/faber_test.c:102 wait_for_any(): child (201) exited: 9
+[0m[31;40mproc/faber_test.c:102 wait_for_any(): child (202) exited: 10
+[0m[31;40mproc/faber_test.c:479 faber_thread_test(): fix race test w/cancel
+[0m[31;40mproc/faber_test.c:102 wait_for_any(): child (204) exited: 0
+[0m[31;40mproc/faber_test.c:102 wait_for_any(): child (206) exited: 0
+[0m[31;40mproc/faber_test.c:102 wait_for_any(): child (208) exited: 0
+[0m[31;40mproc/faber_test.c:102 wait_for_any(): child (210) exited: 0
+[0m[31;40mproc/faber_test.c:102 wait_for_any(): child (212) exited: 0
+[0m[31;40mproc/faber_test.c:102 wait_for_any(): child (203) exited: 1
+[0m[31;40mproc/faber_test.c:102 wait_for_any(): child (205) exited: 2
+[0m[31;40mproc/faber_test.c:102 wait_for_any(): child (207) exited: 3
+[0m[31;40mproc/faber_test.c:102 wait_for_any(): child (209) exited: 4
+[0m[31;40mproc/faber_test.c:102 wait_for_any(): child (211) exited: 5
+[0m[31;40mproc/faber_test.c:490 faber_thread_test(): (C.7) done
+[0m[31;40mproc/faber_test.c:494 faber_thread_test(): (C.8) start
+[0m[31;40mproc/faber_test.c:495 faber_thread_test(): kill child procs test
+[0m[31;40mproc/faber_test.c:102 wait_for_any(): child (213) exited: 0
+[0m[31;40mproc/faber_test.c:102 wait_for_any(): child (214) exited: 0
+[0m[31;40mproc/faber_test.c:102 wait_for_any(): child (215) exited: 0
+[0m[31;40mproc/faber_test.c:102 wait_for_any(): child (216) exited: 0
+[0m[31;40mproc/faber_test.c:102 wait_for_any(): child (217) exited: 0
+[0m[31;40mproc/faber_test.c:102 wait_for_any(): child (218) exited: 0
+[0m[31;40mproc/faber_test.c:102 wait_for_any(): child (219) exited: 0
+[0m[31;40mproc/faber_test.c:102 wait_for_any(): child (220) exited: 0
+[0m[31;40mproc/faber_test.c:102 wait_for_any(): child (221) exited: 0
+[0m[31;40mproc/faber_test.c:102 wait_for_any(): child (222) exited: 0
+[0m[31;40mproc/faber_test.c:504 faber_thread_test(): (C.8) done
+[0m[31;40mproc/faber_test.c:508 faber_thread_test(): (C.9) start (no end)
+[0m[31;40mproc/faber_test.c:509 faber_thread_test(): proc kill all test
+[0m[31;40mtest/kshell/kshell.c:446 kshell_execute_next(): Attempting to execute command 'sunghan'
+[0m[31;40mproc/sunghan_test.c:147 sunghan_test(): 
+>>> Start running sunghan_test()...
+[0m[31;40mproc/sunghan_test.c:78 add_my_node(): Invoke add_mynode
+[0m[31;40mproc/sunghan_test.c:66 check_sleep(): Thread add goes to sleep (rnd = 3)
+[0m[31;40mproc/sunghan_test.c:103 remove_my_node(): Invoke remove_mynode
+[0m[31;40mproc/sunghan_test.c:66 check_sleep(): Thread remove goes to sleep (rnd = 3)
+[0m[31;40mproc/sunghan_test.c:130 watch_dog(): Watch_dog wake up all sleeping thread
+[0m[31;40mproc/sunghan_test.c:69 check_sleep(): Thread add awake
+[0m[31;40mproc/sunghan_test.c:66 check_sleep(): Thread add goes to sleep (rnd = 1)
+[0m[31;40mproc/sunghan_test.c:69 check_sleep(): Thread remove awake
+[0m[31;40mproc/sunghan_test.c:130 watch_dog(): Watch_dog wake up all sleeping thread
+[0m[31;40mproc/sunghan_test.c:69 check_sleep(): Thread add awake
+[0m[31;40mproc/sunghan_test.c:93 add_my_node(): Add node: 1
+[0m[31;40mproc/sunghan_test.c:71 check_sleep(): Thread add does not go to sleep (rnd = 5)
+[0m[31;40mproc/sunghan_test.c:66 check_sleep(): Thread remove goes to sleep (rnd = 0)
+[0m[31;40mproc/sunghan_test.c:130 watch_dog(): Watch_dog wake up all sleeping thread
+[0m[31;40mproc/sunghan_test.c:69 check_sleep(): Thread remove awake
+[0m[31;40mproc/sunghan_test.c:119 remove_my_node(): Remove node: 0
+[0m[31;40mproc/sunghan_test.c:66 check_sleep(): Thread remove goes to sleep (rnd = 0)
+[0m[31;40mproc/sunghan_test.c:66 check_sleep(): Thread add goes to sleep (rnd = 0)
+[0m[31;40mproc/sunghan_test.c:130 watch_dog(): Watch_dog wake up all sleeping thread
+[0m[31;40mproc/sunghan_test.c:69 check_sleep(): Thread remove awake
+[0m[31;40mproc/sunghan_test.c:69 check_sleep(): Thread add awake
+[0m[31;40mproc/sunghan_test.c:93 add_my_node(): Add node: 1
+[0m[31;40mproc/sunghan_test.c:66 check_sleep(): Thread add goes to sleep (rnd = 2)
+[0m[31;40mproc/sunghan_test.c:71 check_sleep(): Thread remove does not go to sleep (rnd = 7)
+[0m[31;40mproc/sunghan_test.c:119 remove_my_node(): Remove node: 0
+[0m[31;40mproc/sunghan_test.c:66 check_sleep(): Thread remove goes to sleep (rnd = 4)
+[0m[31;40mproc/sunghan_test.c:130 watch_dog(): Watch_dog wake up all sleeping thread
+[0m[31;40mproc/sunghan_test.c:69 check_sleep(): Thread add awake
+[0m[31;40mproc/sunghan_test.c:71 check_sleep(): Thread add does not go to sleep (rnd = 7)
+[0m[31;40mproc/sunghan_test.c:93 add_my_node(): Add node: 1
+[0m[31;40mproc/sunghan_test.c:71 check_sleep(): Thread add does not go to sleep (rnd = 6)
+[0m[31;40mproc/sunghan_test.c:71 check_sleep(): Thread add does not go to sleep (rnd = 7)
+[0m[31;40mproc/sunghan_test.c:93 add_my_node(): Add node: 2
+[0m[31;40mproc/sunghan_test.c:66 check_sleep(): Thread add goes to sleep (rnd = 3)
+[0m[31;40mproc/sunghan_test.c:69 check_sleep(): Thread remove awake
+[0m[31;40mproc/sunghan_test.c:66 check_sleep(): Thread remove goes to sleep (rnd = 4)
+[0m[31;40mproc/sunghan_test.c:130 watch_dog(): Watch_dog wake up all sleeping thread
+[0m[31;40mproc/sunghan_test.c:69 check_sleep(): Thread add awake
+[0m[31;40mproc/sunghan_test.c:69 check_sleep(): Thread remove awake
+[0m[31;40mproc/sunghan_test.c:119 remove_my_node(): Remove node: 1
+[0m[31;40mproc/sunghan_test.c:66 check_sleep(): Thread remove goes to sleep (rnd = 1)
+[0m[31;40mproc/sunghan_test.c:71 check_sleep(): Thread add does not go to sleep (rnd = 9)
+[0m[31;40mproc/sunghan_test.c:93 add_my_node(): Add node: 2
+[0m[31;40mproc/sunghan_test.c:66 check_sleep(): Thread add goes to sleep (rnd = 1)
+[0m[31;40mproc/sunghan_test.c:130 watch_dog(): Watch_dog wake up all sleeping thread
+[0m[31;40mproc/sunghan_test.c:69 check_sleep(): Thread remove awake
+[0m[31;40mproc/sunghan_test.c:71 check_sleep(): Thread remove does not go to sleep (rnd = 5)
+[0m[31;40mproc/sunghan_test.c:119 remove_my_node(): Remove node: 1
+[0m[31;40mproc/sunghan_test.c:66 check_sleep(): Thread remove goes to sleep (rnd = 3)
+[0m[31;40mproc/sunghan_test.c:69 check_sleep(): Thread add awake
+[0m[31;40mproc/sunghan_test.c:71 check_sleep(): Thread add does not go to sleep (rnd = 7)
+[0m[31;40mproc/sunghan_test.c:93 add_my_node(): Add node: 2
+[0m[31;40mproc/sunghan_test.c:71 check_sleep(): Thread add does not go to sleep (rnd = 6)
+[0m[31;40mproc/sunghan_test.c:66 check_sleep(): Thread add goes to sleep (rnd = 2)
+[0m[31;40mproc/sunghan_test.c:130 watch_dog(): Watch_dog wake up all sleeping thread
+[0m[31;40mproc/sunghan_test.c:69 check_sleep(): Thread remove awake
+[0m[31;40mproc/sunghan_test.c:69 check_sleep(): Thread add awake
+[0m[31;40mproc/sunghan_test.c:93 add_my_node(): Add node: 3
+[0m[31;40mproc/sunghan_test.c:66 check_sleep(): Thread add goes to sleep (rnd = 2)
+[0m[31;40mproc/sunghan_test.c:66 check_sleep(): Thread remove goes to sleep (rnd = 0)
+[0m[31;40mproc/sunghan_test.c:130 watch_dog(): Watch_dog wake up all sleeping thread
+[0m[31;40mproc/sunghan_test.c:69 check_sleep(): Thread add awake
+[0m[31;40mproc/sunghan_test.c:69 check_sleep(): Thread remove awake
+[0m[31;40mproc/sunghan_test.c:119 remove_my_node(): Remove node: 2
+[0m[31;40mproc/sunghan_test.c:71 check_sleep(): Thread remove does not go to sleep (rnd = 9)
+[0m[31;40mproc/sunghan_test.c:71 check_sleep(): Thread add does not go to sleep (rnd = 5)
+[0m[31;40mproc/sunghan_test.c:93 add_my_node(): Add node: 3
+[0m[31;40mproc/sunghan_test.c:66 check_sleep(): Thread add goes to sleep (rnd = 2)
+[0m[31;40mproc/sunghan_test.c:71 check_sleep(): Thread remove does not go to sleep (rnd = 9)
+[0m[31;40mproc/sunghan_test.c:119 remove_my_node(): Remove node: 2
+[0m[31;40mproc/sunghan_test.c:66 check_sleep(): Thread remove goes to sleep (rnd = 4)
+[0m[31;40mproc/sunghan_test.c:130 watch_dog(): Watch_dog wake up all sleeping thread
+[0m[31;40mproc/sunghan_test.c:69 check_sleep(): Thread add awake
+[0m[31;40mproc/sunghan_test.c:71 check_sleep(): Thread add does not go to sleep (rnd = 6)
+[0m[31;40mproc/sunghan_test.c:93 add_my_node(): Add node: 3
+[0m[31;40mproc/sunghan_test.c:71 check_sleep(): Thread add does not go to sleep (rnd = 5)
+[0m[31;40mproc/sunghan_test.c:66 check_sleep(): Thread add goes to sleep (rnd = 1)
+[0m[31;40mproc/sunghan_test.c:69 check_sleep(): Thread remove awake
+[0m[31;40mproc/sunghan_test.c:130 watch_dog(): Watch_dog wake up all sleeping thread
+[0m[31;40mproc/sunghan_test.c:69 check_sleep(): Thread add awake
+[0m[31;40mproc/sunghan_test.c:93 add_my_node(): Add node: 4
+[0m[31;40mproc/sunghan_test.c:71 check_sleep(): Thread remove does not go to sleep (rnd = 9)
+[0m[31;40mproc/sunghan_test.c:119 remove_my_node(): Remove node: 3
+[0m[31;40mproc/sunghan_test.c:66 check_sleep(): Thread remove goes to sleep (rnd = 1)
+[0m[31;40mproc/sunghan_test.c:130 watch_dog(): Watch_dog wake up all sleeping thread
+[0m[31;40mproc/sunghan_test.c:69 check_sleep(): Thread remove awake
+[0m[31;40mproc/sunghan_test.c:66 check_sleep(): Thread remove goes to sleep (rnd = 2)
+[0m[31;40mproc/sunghan_test.c:130 watch_dog(): Watch_dog wake up all sleeping thread
+[0m[31;40mproc/sunghan_test.c:69 check_sleep(): Thread remove awake
+[0m[31;40mproc/sunghan_test.c:119 remove_my_node(): Remove node: 2
+[0m[31;40mproc/sunghan_test.c:66 check_sleep(): Thread remove goes to sleep (rnd = 2)
+[0m[31;40mproc/sunghan_test.c:130 watch_dog(): Watch_dog wake up all sleeping thread
+[0m[31;40mproc/sunghan_test.c:69 check_sleep(): Thread remove awake
+[0m[31;40mproc/sunghan_test.c:66 check_sleep(): Thread remove goes to sleep (rnd = 3)
+[0m[31;40mproc/sunghan_test.c:130 watch_dog(): Watch_dog wake up all sleeping thread
+[0m[31;40mproc/sunghan_test.c:69 check_sleep(): Thread remove awake
+[0m[31;40mproc/sunghan_test.c:119 remove_my_node(): Remove node: 1
+[0m[31;40mproc/sunghan_test.c:71 check_sleep(): Thread remove does not go to sleep (rnd = 8)
+[0m[31;40mproc/sunghan_test.c:71 check_sleep(): Thread remove does not go to sleep (rnd = 7)
+[0m[31;40mproc/sunghan_test.c:119 remove_my_node(): Remove node: 0
+[0m[31;40mproc/sunghan_test.c:182 sunghan_test(): sunghan_test() terminated
+[0m[31;40mtest/kshell/kshell.c:446 kshell_execute_next(): Attempting to execute command 'sunghan'
+[0m[31;40mproc/sunghan_test.c:147 sunghan_test(): 
+>>> Start running sunghan_test()...
+[0m[31;40mproc/sunghan_test.c:78 add_my_node(): Invoke add_mynode
+[0m[31;40mproc/sunghan_test.c:66 check_sleep(): Thread add goes to sleep (rnd = 1)
+[0m[31;40mproc/sunghan_test.c:103 remove_my_node(): Invoke remove_mynode
+[0m[31;40mproc/sunghan_test.c:66 check_sleep(): Thread remove goes to sleep (rnd = 3)
+[0m[31;40mproc/sunghan_test.c:130 watch_dog(): Watch_dog wake up all sleeping thread
+[0m[31;40mproc/sunghan_test.c:69 check_sleep(): Thread add awake
+[0m[31;40mproc/sunghan_test.c:71 check_sleep(): Thread add does not go to sleep (rnd = 6)
+[0m[31;40mproc/sunghan_test.c:93 add_my_node(): Add node: 1
+[0m[31;40mproc/sunghan_test.c:71 check_sleep(): Thread add does not go to sleep (rnd = 9)
+[0m[31;40mproc/sunghan_test.c:71 check_sleep(): Thread add does not go to sleep (rnd = 7)
+[0m[31;40mproc/sunghan_test.c:93 add_my_node(): Add node: 2
+[0m[31;40mproc/sunghan_test.c:66 check_sleep(): Thread add goes to sleep (rnd = 4)
+[0m[31;40mproc/sunghan_test.c:69 check_sleep(): Thread remove awake
+[0m[31;40mproc/sunghan_test.c:66 check_sleep(): Thread remove goes to sleep (rnd = 0)
+[0m[31;40mproc/sunghan_test.c:130 watch_dog(): Watch_dog wake up all sleeping thread
+[0m[31;40mproc/sunghan_test.c:69 check_sleep(): Thread add awake
+[0m[31;40mproc/sunghan_test.c:69 check_sleep(): Thread remove awake
+[0m[31;40mproc/sunghan_test.c:119 remove_my_node(): Remove node: 1
+[0m[31;40mproc/sunghan_test.c:66 check_sleep(): Thread remove goes to sleep (rnd = 1)
+[0m[31;40mproc/sunghan_test.c:66 check_sleep(): Thread add goes to sleep (rnd = 2)
+[0m[31;40mproc/sunghan_test.c:130 watch_dog(): Watch_dog wake up all sleeping thread
+[0m[31;40mproc/sunghan_test.c:69 check_sleep(): Thread remove awake
+[0m[31;40mproc/sunghan_test.c:69 check_sleep(): Thread add awake
+[0m[31;40mproc/sunghan_test.c:93 add_my_node(): Add node: 2
+[0m[31;40mproc/sunghan_test.c:71 check_sleep(): Thread add does not go to sleep (rnd = 9)
+[0m[31;40mproc/sunghan_test.c:71 check_sleep(): Thread remove does not go to sleep (rnd = 6)
+[0m[31;40mproc/sunghan_test.c:119 remove_my_node(): Remove node: 1
+[0m[31;40mproc/sunghan_test.c:71 check_sleep(): Thread remove does not go to sleep (rnd = 7)
+[0m[31;40mproc/sunghan_test.c:71 check_sleep(): Thread add does not go to sleep (rnd = 5)
+[0m[31;40mproc/sunghan_test.c:93 add_my_node(): Add node: 2
+[0m[31;40mproc/sunghan_test.c:66 check_sleep(): Thread add goes to sleep (rnd = 1)
+[0m[31;40mproc/sunghan_test.c:66 check_sleep(): Thread remove goes to sleep (rnd = 3)
+[0m[31;40mproc/sunghan_test.c:130 watch_dog(): Watch_dog wake up all sleeping thread
+[0m[31;40mproc/sunghan_test.c:69 check_sleep(): Thread add awake
+[0m[31;40mproc/sunghan_test.c:69 check_sleep(): Thread remove awake
+[0m[31;40mproc/sunghan_test.c:119 remove_my_node(): Remove node: 1
+[0m[31;40mproc/sunghan_test.c:71 check_sleep(): Thread remove does not go to sleep (rnd = 5)
+[0m[31;40mproc/sunghan_test.c:66 check_sleep(): Thread add goes to sleep (rnd = 2)
+[0m[31;40mproc/sunghan_test.c:130 watch_dog(): Watch_dog wake up all sleeping thread
+[0m[31;40mproc/sunghan_test.c:69 check_sleep(): Thread add awake
+[0m[31;40mproc/sunghan_test.c:93 add_my_node(): Add node: 2
+[0m[31;40mproc/sunghan_test.c:66 check_sleep(): Thread add goes to sleep (rnd = 4)
+[0m[31;40mproc/sunghan_test.c:71 check_sleep(): Thread remove does not go to sleep (rnd = 5)
+[0m[31;40mproc/sunghan_test.c:119 remove_my_node(): Remove node: 1
+[0m[31;40mproc/sunghan_test.c:66 check_sleep(): Thread remove goes to sleep (rnd = 1)
+[0m[31;40mproc/sunghan_test.c:130 watch_dog(): Watch_dog wake up all sleeping thread
+[0m[31;40mproc/sunghan_test.c:69 check_sleep(): Thread add awake
+[0m[31;40mproc/sunghan_test.c:71 check_sleep(): Thread add does not go to sleep (rnd = 9)
+[0m[31;40mproc/sunghan_test.c:93 add_my_node(): Add node: 2
+[0m[31;40mproc/sunghan_test.c:66 check_sleep(): Thread add goes to sleep (rnd = 0)
+[0m[31;40mproc/sunghan_test.c:69 check_sleep(): Thread remove awake
+[0m[31;40mproc/sunghan_test.c:66 check_sleep(): Thread remove goes to sleep (rnd = 4)
+[0m[31;40mproc/sunghan_test.c:130 watch_dog(): Watch_dog wake up all sleeping thread
+[0m[31;40mproc/sunghan_test.c:69 check_sleep(): Thread add awake
+[0m[31;40mproc/sunghan_test.c:69 check_sleep(): Thread remove awake
+[0m[31;40mproc/sunghan_test.c:119 remove_my_node(): Remove node: 1
+[0m[31;40mproc/sunghan_test.c:66 check_sleep(): Thread remove goes to sleep (rnd = 4)
+[0m[31;40mproc/sunghan_test.c:71 check_sleep(): Thread add does not go to sleep (rnd = 7)
+[0m[31;40mproc/sunghan_test.c:93 add_my_node(): Add node: 2
+[0m[31;40mproc/sunghan_test.c:66 check_sleep(): Thread add goes to sleep (rnd = 4)
+[0m[31;40mproc/sunghan_test.c:130 watch_dog(): Watch_dog wake up all sleeping thread
+[0m[31;40mproc/sunghan_test.c:69 check_sleep(): Thread remove awake
+[0m[31;40mproc/sunghan_test.c:66 check_sleep(): Thread remove goes to sleep (rnd = 0)
+[0m[31;40mproc/sunghan_test.c:69 check_sleep(): Thread add awake
+[0m[31;40mproc/sunghan_test.c:130 watch_dog(): Watch_dog wake up all sleeping thread
+[0m[31;40mproc/sunghan_test.c:69 check_sleep(): Thread remove awake
+[0m[31;40mproc/sunghan_test.c:119 remove_my_node(): Remove node: 1
+[0m[31;40mproc/sunghan_test.c:66 check_sleep(): Thread remove goes to sleep (rnd = 2)
+[0m[31;40mproc/sunghan_test.c:71 check_sleep(): Thread add does not go to sleep (rnd = 8)
+[0m[31;40mproc/sunghan_test.c:93 add_my_node(): Add node: 2
+[0m[31;40mproc/sunghan_test.c:71 check_sleep(): Thread add does not go to sleep (rnd = 9)
+[0m[31;40mproc/sunghan_test.c:71 check_sleep(): Thread add does not go to sleep (rnd = 6)
+[0m[31;40mproc/sunghan_test.c:93 add_my_node(): Add node: 3
+[0m[31;40mproc/sunghan_test.c:66 check_sleep(): Thread add goes to sleep (rnd = 2)
+[0m[31;40mproc/sunghan_test.c:130 watch_dog(): Watch_dog wake up all sleeping thread
+[0m[31;40mproc/sunghan_test.c:69 check_sleep(): Thread remove awake
+[0m[31;40mproc/sunghan_test.c:71 check_sleep(): Thread remove does not go to sleep (rnd = 6)
+[0m[31;40mproc/sunghan_test.c:119 remove_my_node(): Remove node: 2
+[0m[31;40mproc/sunghan_test.c:71 check_sleep(): Thread remove does not go to sleep (rnd = 9)
+[0m[31;40mproc/sunghan_test.c:66 check_sleep(): Thread remove goes to sleep (rnd = 4)
+[0m[31;40mproc/sunghan_test.c:69 check_sleep(): Thread add awake
+[0m[31;40mproc/sunghan_test.c:130 watch_dog(): Watch_dog wake up all sleeping thread
+[0m[31;40mproc/sunghan_test.c:69 check_sleep(): Thread remove awake
+[0m[31;40mproc/sunghan_test.c:119 remove_my_node(): Remove node: 1
+[0m[31;40mproc/sunghan_test.c:66 check_sleep(): Thread remove goes to sleep (rnd = 4)
+[0m[31;40mproc/sunghan_test.c:66 check_sleep(): Thread add goes to sleep (rnd = 3)
+[0m[31;40mproc/sunghan_test.c:130 watch_dog(): Watch_dog wake up all sleeping thread
+[0m[31;40mproc/sunghan_test.c:69 check_sleep(): Thread remove awake
+[0m[31;40mproc/sunghan_test.c:69 check_sleep(): Thread add awake
+[0m[31;40mproc/sunghan_test.c:93 add_my_node(): Add node: 2
+[0m[31;40mproc/sunghan_test.c:71 check_sleep(): Thread remove does not go to sleep (rnd = 9)
+[0m[31;40mproc/sunghan_test.c:119 remove_my_node(): Remove node: 1
+[0m[31;40mproc/sunghan_test.c:66 check_sleep(): Thread remove goes to sleep (rnd = 4)
+[0m[31;40mproc/sunghan_test.c:130 watch_dog(): Watch_dog wake up all sleeping thread
+[0m[31;40mproc/sunghan_test.c:69 check_sleep(): Thread remove awake
+[0m[31;40mproc/sunghan_test.c:66 check_sleep(): Thread remove goes to sleep (rnd = 2)
+[0m[31;40mproc/sunghan_test.c:130 watch_dog(): Watch_dog wake up all sleeping thread
+[0m[31;40mproc/sunghan_test.c:69 check_sleep(): Thread remove awake
+[0m[31;40mproc/sunghan_test.c:119 remove_my_node(): Remove node: 0
+[0m[31;40mproc/sunghan_test.c:182 sunghan_test(): sunghan_test() terminated
+[0m[31;40mtest/kshell/kshell.c:446 kshell_execute_next(): Attempting to execute command 'deadlock'
+[0m[31;40mproc/sunghan_test.c:196 sunghan_deadlock_test(): 
+>>> Start running sunghan_deadlock_test()...
+[0m[31;40mproc/sunghan_test.c:78 add_my_node(): Invoke add_mynode
+[0m[31;40mproc/sunghan_test.c:66 check_sleep(): Thread add goes to sleep (rnd = 4)
+[0m[31;40mproc/sunghan_test.c:103 remove_my_node(): Invoke remove_mynode
+[0m[31;40mproc/sunghan_test.c:71 check_sleep(): Thread remove does not go to sleep (rnd = 5)
+[0m[31;40mproc/sunghan_test.c:66 check_sleep(): Thread remove goes to sleep (rnd = 3)
+[0m[31;40mproc/sunghan_test.c:69 check_sleep(): Thread add awake
+[0m

@@ -1,0 +1,781 @@
+Only in weenix-1/weenix/: commands.gdb
+diff -r weenix-1/weenix/Config.mk weenix-assignment-3.8.0/weenix/Config.mk
+13c13
+<      DRIVERS=1
+---
+>      DRIVERS=0
+Only in weenix-1/weenix/: disk0.img
+Only in weenix-assignment-3.8.0/weenix/doc/latex: documentation.pdf
+Only in weenix-1/weenix/: inittmp.gdb
+diff -r weenix-1/weenix/kernel/main/kmain.c weenix-assignment-3.8.0/weenix/kernel/main/kmain.c
+79,81d78
+< extern void *faber_thread_test(int, void *);
+< extern void *sunghan_test(int, void *);
+< extern void *sunghan_deadlock_test(int, void *);
+166,226d162
+< #ifdef __DRIVERS__
+< 
+< int do_foo(kshell_t *kshell, int argc, char **argv){
+<         KASSERT(kshell != NULL);
+<         dbg(DBG_TEMP, "Z: do_foo() is invoked, argc = %d, argv = 0x%08x\n",argc, (unsigned int)argv);
+<         dbg_print("curproc pid = %d\n", curproc->p_pid);
+<         return 0;
+< }
+< 
+< int do_faber_test(kshell_t *kshell, int argc, char **argv){
+<         KASSERT(kshell != NULL);
+<         proc_t *testproc = proc_create("testproc");
+<         kthread_t *testthr = kthread_create(testproc, (kthread_func_t) faber_thread_test, 0, NULL);
+< 
+< 
+<         sched_make_runnable(testthr);
+< 
+<         int status;
+< 
+<         int ret_pid;
+<         while((ret_pid = do_waitpid(testproc -> p_pid,0, &status)) != -ECHILD){
+<                 dbg_print("init proc do wait gets pid = %d\n", ret_pid);
+<         }
+<         return 0;
+< }
+< 
+< int do_sunghan_test(kshell_t *kshell, int argc, char **argv){
+<         KASSERT(kshell != NULL);
+<         proc_t *testproc = proc_create("testproc");
+<         kthread_t *testthr = kthread_create(testproc, (kthread_func_t) sunghan_test, 0, NULL);
+< 
+< 
+<         sched_make_runnable(testthr);
+< 
+<         int status;
+< 
+<         int ret_pid;
+<         while((ret_pid = do_waitpid(testproc -> p_pid,0, &status)) != -ECHILD){
+<                 dbg_print("init proc do wait gets pid = %d\n", ret_pid);
+<         }
+<         return 0;
+< }
+< 
+< int do_sunghan_deadlock_test(kshell_t *kshell, int argc, char **argv){
+<         KASSERT(kshell != NULL);
+<         proc_t *testproc = proc_create("testproc");
+<         kthread_t *testthr = kthread_create(testproc, (kthread_func_t) sunghan_deadlock_test, 0, NULL);
+< 
+< 
+<         sched_make_runnable(testthr);
+< 
+<         int status;
+< 
+<         int ret_pid;
+<         while((ret_pid = do_waitpid(testproc -> p_pid,0, &status)) != -ECHILD){
+<                 dbg_print("init proc do wait gets pid = %d\n", ret_pid);
+<         }
+<         return 0;
+< }
+< 
+< #endif
+248,254c184
+<         // NOT_YET_IMPLEMENTED("PROCS: bootstrap");
+<         proc_t *idle = proc_create("idle");
+<         dbg_print("bootstrap idle proess %p\n", idle);
+<         kthread_t *thread = kthread_create(idle, idleproc_run, arg1, arg2);
+<         curproc = idle;
+<         curthr = thread;
+<         context_make_active(&(thread->kt_ctx));
+---
+>         NOT_YET_IMPLEMENTED("PROCS: bootstrap");
+257d186
+< 
+277a207
+> 
+280,283d209
+< 
+<         int id = curproc->p_pid;
+<         dbg_print("current process: %d\n", id);
+<         NOT_YET_IMPLEMENTED("FINSIH INIT_PROC");
+353,358c279,280
+<         // NOT_YET_IMPLEMENTED("PROCS: initproc_create");
+<         // return NULL;
+<         proc_t *init = proc_create("init");
+<         kthread_t *init_thread = kthread_create(init, initproc_run, NULL, NULL);
+<         
+<         return init_thread;
+---
+>         NOT_YET_IMPLEMENTED("PROCS: initproc_create");
+>         return NULL;
+376,414c298,299
+<         dbg_print("initproc_run\n");
+<         //create new proces and new thread
+<         // then call faber test
+<         // proc_t *testproc = proc_create("testproc");
+<         // kthread_t *testthr = kthread_create(testproc, (kthread_func_t) faber_thread_test, 0, NULL);
+< 
+< 
+<         // sched_make_runnable(testthr);
+< 
+<         // int status;
+< 
+<         // int ret_pid;
+<         // while((ret_pid = do_waitpid(testproc -> p_pid,0, &status)) != -ECHILD){
+<         //         dbg_print("init proc do wait gets pid = %d\n", ret_pid);
+<         // }
+<         // // faber_thread_test(arg1, arg2);
+<         // proc_t *proc;
+<         // list_iterate_begin(proc_list(), proc, proc_t, p_list_link){
+<         //         if(proc->p_pid != 0){
+<         //                 dbg_print("proc %d , state: %d, parent: %d\t", proc->p_pid, proc->p_state, proc->p_pproc->p_pid);
+<         //         }
+<         // } list_iterate_end();
+< 
+< 
+<         #ifdef __DRIVERS__
+<                 kshell_add_command("foo", do_foo, "invoke do_foo() to print a message...");
+<                 kshell_add_command("sunghan", do_sunghan_test, "Run sunghan_test().");
+<                 kshell_add_command("deadlock", do_sunghan_deadlock_test, "Run sunghan_deadlock_test().");
+<                 kshell_add_command("faber", do_faber_test, "Run faber_thread_test().");
+<                 
+<                 kshell_t *kshell = kshell_create(0);
+<                 if (NULL == kshell) panic("init: Couldn't create kernel shell\n");
+< 
+<                 while (kshell_execute_next(kshell));
+<                 kshell_destroy(kshell);
+< 
+<         #endif /*__DriIVERS__ */
+<         
+<         dbg_print("\n");
+---
+>         NOT_YET_IMPLEMENTED("PROCS: initproc_run");
+> 
+diff -r weenix-1/weenix/kernel/mm/pframe.c weenix-assignment-3.8.0/weenix/kernel/mm/pframe.c
+623,624d622
+<                 dbg_print("pageoutd_target_met %i\n", (!pageoutd_target_met()));
+<                 dbg_print("list_empty %i \n", !list_empty(&alloc_list));
+626a625
+> 
+642d640
+<                 dbg_print("alloc_waitq size %d\n", alloc_waitq.tq_size);
+657d654
+<                 KASSERT(0);//need to remove
+diff -r weenix-1/weenix/kernel/proc/faber_test.c weenix-assignment-3.8.0/weenix/kernel/proc/faber_test.c
+254,255c254,255
+<         dbg(DBG_TEST, "Mutex cancelled? %d", curproc->p_pid);
+<         do_exit(-1);
+---
+> 	dbg(DBG_TEST, "Mutex cancelled? %d", curproc->p_pid);
+> 	do_exit(-1);
+259d258
+<     dbg_print("l259-switch back to proc %d\n", curproc->p_pid);
+262,265d260
+<     dbg_print("l262-switch back to proc %d\n", curproc->p_pid);
+< 
+< 
+<         
+267,268d261
+<     dbg_print("l265-switch back to proc %d\n", curproc->p_pid);
+< 
+272,273d264
+<     dbg_print("l270-switch back to proc %d\n", curproc->p_pid);
+< 
+277,278d267
+<     dbg_print("l275-switch back to proc %d\n", curproc->p_pid);
+< 
+301d289
+< 
+346,347d333
+< 
+<     dbg(DBG_TEST, "start running wait_for_any()\n");
+348a335
+> 
+353d339
+<     // dbg_print("%d status %d\n", pt.p->p_pid, pt.p->p_state);
+354a341
+> 
+357a345
+> 
+384a373
+> 
+435d423
+<     dbg_print("wakemeque size %d\n", wake_me_q.tq_size);
+438d425
+<     dbg_print("wakemeque size %d\n", wake_me_q.tq_size);
+440d426
+<     dbg_print("wakemeque size %d\n", wake_me_q.tq_size);
+442d427
+<     dbg_print("wakemeque size %d\n", wake_me_q.tq_size);
+447a433
+>     
+457d442
+< 
+diff -r weenix-1/weenix/kernel/proc/kmutex.c weenix-assignment-3.8.0/weenix/kernel/proc/kmutex.c
+31d30
+<  * 
+34,40d32
+< // typedef struct kmutex {
+< //         ktqueue_t       km_waitq;       /* wait queue */
+< //         struct kthread *km_holder;      /* current holder */
+< // } kmutex_t;
+< 
+< 
+< 
+44,48c36
+<         // NOT_YET_IMPLEMENTED("PROCS: kmutex_init");
+< 
+<         list_init(&mtx -> km_waitq.tq_list);
+< 
+<         mtx -> km_holder = NULL; 
+---
+>         NOT_YET_IMPLEMENTED("PROCS: kmutex_init");
+60,70c48
+<         if( mtx -> km_holder != NULL){
+<                 // enqueue m -> queue current thread 
+<         //        mtx.km_waitq.enquque(curthr)
+<                 // thread switch 
+<         //        sched_switch(mtx.km_holder)
+<                sched_sleep_on(&(mtx -> km_waitq));
+<         }
+<         else{
+<                 mtx -> km_holder = curthr;
+<         }
+<         // NOT_YET_IMPLEMENTED("PROCS: kmutex_lock");
+---
+>         NOT_YET_IMPLEMENTED("PROCS: kmutex_lock");
+80,102c58,59
+<         // NOT_YET_IMPLEMENTED("PROCS: kmutex_lock_cancellable");
+<         if(curthr->kt_cancelled){
+<                 sched_make_runnable(curthr);
+<                 return -EINTR;
+<         }
+< 
+<         if( mtx -> km_holder != NULL){
+<                 // enqueue m -> queue current thread 
+<         //        mtx.km_waitq.enquque(curthr)
+<                 // thread switch 
+<         //         if (mtx -> km_holder -> kt_cancelled){
+<         //                 kmutex_unlock(mtx);
+<         //                 return -EINTR;
+<         //         }
+<         //       return sched_cancellable_sleep_on(&(mtx -> km_waitq));
+<                 return sched_cancellable_sleep_on(&(mtx -> km_waitq));
+<                 
+<         }
+<         else{
+<                 mtx -> km_holder = curthr;
+<                 return 0;
+< 
+<         }
+---
+>         NOT_YET_IMPLEMENTED("PROCS: kmutex_lock_cancellable");
+>         return 0;
+121,128c78
+<         // NOT_YET_IMPLEMENTED("PROCS: kmutex_unlock");
+<         if (mtx -> km_waitq.tq_size > 0){
+<                mtx -> km_holder = sched_wakeup_on(&(mtx -> km_waitq));
+<         }
+<         else{
+<                 mtx -> km_holder = NULL;
+<         }
+< 
+---
+>         NOT_YET_IMPLEMENTED("PROCS: kmutex_unlock");
+Only in weenix-1/weenix/kernel/proc: kmutex.S
+diff -r weenix-1/weenix/kernel/proc/kthread.c weenix-assignment-3.8.0/weenix/kernel/proc/kthread.c
+35d34
+< #include "mm/kmalloc.h"
+92,95c91
+<         if (t -> kt_wchan){
+<                 list_remove(&t -> kt_qlink);
+<                 t -> kt_wchan -> tq_size--;
+<         }
+---
+> 
+110,130c106,107
+<         // NOT_YET_IMPLEMENTED("PROCS: kthread_create");
+<         // return NULL;
+<         // dbg_print("in kthread_create\n");
+<         char * stack = alloc_stack();
+< 
+<         // kthread_t *thread = (kthread_t *)kmalloc(sizeof(kthread_t));
+<         kthread_t *thread = (kthread_t *)slab_obj_alloc(kthread_allocator);
+<         thread->kt_kstack = stack;
+<         context_setup(&(thread->kt_ctx), func, arg1, arg2, stack, DEFAULT_STACK_SIZE, p->p_pagedir);
+<         // dbg_print("116return from kthread_create\n");
+<         thread->kt_proc = p;
+<         thread->kt_state = KT_NO_STATE;
+<         thread->kt_wchan = NULL;
+<         thread->kt_cancelled = 0;
+<         // dbg_print("119return from kthread_create\n");
+<         list_init(&thread->kt_plink);
+<         list_insert_head(&p->p_threads, &thread->kt_plink);
+<         // dbg_print("121return from kthread_create\n");
+<         // dbg_print("process address %p\n", (void*)p);
+<         // dbg_print("thread address %p\n", (void*)thread);
+<         return thread;
+---
+>         NOT_YET_IMPLEMENTED("PROCS: kthread_create");
+>         return NULL;
+150,162c127
+<         if(kthr == curthr){
+<                 kthread_exit(retval);
+<         }
+<         // if sleep on we need to move to run
+<         else{
+<                 kthr->kt_cancelled = 1;
+<                 kthr->kt_retval = retval;
+<                 // if(kthr->kt_state == KT_SLEEP_CANCELLABLE){
+<                 //         kthr->kt_state = KT_RUN;
+<                 //         sched_make_runnable(kthr);
+<                 // }
+<                 sched_cancel(kthr);
+<         }
+---
+>         NOT_YET_IMPLEMENTED("PROCS: kthread_cancel");
+183,191c148
+<         // NOT_YET_IMPLEMENTED("PROCS: kthread_exit");
+<         curthr->kt_state = KT_EXITED;
+< 
+<         if (curthr->kt_wchan != NULL){
+<                 // ktqueue_remove(curthr->kt_wchan, curthr);
+<         }
+< 
+<         proc_thread_exited(retval);
+< 
+---
+>         NOT_YET_IMPLEMENTED("PROCS: kthread_exit");
+diff -r weenix-1/weenix/kernel/proc/proc.c weenix-assignment-3.8.0/weenix/kernel/proc/proc.c
+39d38
+< #include "mm/kmalloc.h"
+200d198
+<                         // dbg_print("iter proc %d, cur pid %d\n", p->p_pid, pid);
+225,250c223,224
+<         // dbg_print("in proc_create\n");
+<         // proc_t *process = (proc_t *) kmalloc(sizeof(proc_t));
+<         proc_t *process = (proc_t *) slab_obj_alloc(proc_allocator);
+<         process->p_pagedir = pt_create_pagedir();
+<         strncpy(process->p_comm, name, sizeof(char)*PROC_NAME_LEN);
+<         process->p_state = PROC_RUNNING;
+<         process->p_pproc = curproc;
+<         list_init(&process->p_threads);
+<         list_init(&process->p_children);
+<         list_init(&process->p_list_link);
+<         list_init(&process->p_child_link);
+<         sched_queue_init(&process->p_wait);
+<         // add to parent proc children
+<         if(curproc != NULL){
+<                 list_insert_tail(&curproc->p_children, &process->p_child_link);
+<         }
+<         // dbg_print("next_pid before %d\n", next_pid);
+<         process->p_pid = _proc_getid();
+<         list_insert_tail(proc_list(), &process->p_list_link);
+<         // dbg_print("pid return %d\n", process->p_pid);
+<         // dbg_print("next_pid after %d\n", next_pid);
+<         if(process->p_pid == 1){
+<                 proc_initproc = process;
+<         }
+<         dbg_print("create_proc %d\n", process->p_pid);
+<         return process;
+---
+>         NOT_YET_IMPLEMENTED("PROCS: proc_create");
+>         return NULL;
+280,294c254
+<         // NOT_YET_IMPLEMENTED("PROCS: proc_cleanup");
+< 
+<         // not fully complete need reparenting ...
+<         sched_broadcast_on(&curproc->p_pproc->p_wait);
+<         curproc->p_status = status;
+<         curproc->p_state = PROC_DEAD;
+<         proc_t * child_proc;
+<         list_iterate_begin(&curproc->p_children, child_proc, proc_t, p_child_link) {
+<                 list_remove(&child_proc->p_child_link);
+<                 list_insert_tail(&(proc_initproc->p_children), &child_proc->p_child_link);
+<                 child_proc->p_pproc = proc_initproc;
+<                 // dbg_print("reparent %d\n", child_proc->p_pid);
+< 
+<         } list_iterate_end();
+<         
+---
+>         NOT_YET_IMPLEMENTED("PROCS: proc_cleanup");
+308,320c268
+<         if(p == curproc){
+<                 do_exit(status);
+<         }
+<         else{
+<                 p->p_status = status;
+<                 kthread_t* child_thread;
+<                 list_iterate_begin(&p->p_threads, child_thread, kthread_t, kt_plink) {
+<                         if(child_thread->kt_state !=  KT_EXITED){
+<                                 kthread_cancel(child_thread, (void *)status);
+<                                 dbg_print("kill proc %d\n", child_thread->kt_proc->p_pid);
+<                         }
+<                 } list_iterate_end();
+<         }
+---
+>         NOT_YET_IMPLEMENTED("PROCS: proc_kill");
+331,342c279,280
+< {               
+<         // NOT_YET_IMPLEMENTED("PROCS: proc_kill_all");
+< 
+<         proc_t *p;
+<         list_iterate_begin(&_proc_list, p, proc_t, p_list_link) {
+<                 if (p->p_pid != 0 && p -> p_pid != 1 && p -> p_pid != 2 && p != curproc) {
+<                         proc_kill(p, -1);
+<                 }
+< 
+<         } list_iterate_end();
+<         proc_kill(curproc, -1);
+<         
+---
+> {
+>         NOT_YET_IMPLEMENTED("PROCS: proc_kill_all");
+356,359c294
+<         // NOT_YET_IMPLEMENTED("PROCS: proc_thread_exited");
+<         proc_cleanup((int)retval);
+<         dbg_print("exit proc_thread_exited by proc %d, try to return to proc %d\n", curproc->p_pid, curproc->p_pproc->p_pid);
+<         sched_switch();
+---
+>         NOT_YET_IMPLEMENTED("PROCS: proc_thread_exited");
+380,528c315
+<         // NOT_YET_IMPLEMENTED("PROCS: do_waitpid");
+<         dbg_print("in do_waitpid\n");
+<         if(list_empty(&curproc->p_children)){
+<                 return -ECHILD;
+<         }
+< 
+<         if(pid == -1){
+<                 // give away the cpu to child 
+<                 //TODO before return pid, set next_pid
+<                 while(1){
+<                         proc_t * cur = curproc;
+<                         // When return 
+< 
+<                         proc_t * child_proc;
+<                         pid_t ret = -1;
+<                         list_iterate_begin(&cur->p_children, child_proc, proc_t, p_child_link) {
+<                                 dbg_print("check child proc %d\n", child_proc->p_pid);
+<                                 if(child_proc->p_state == PROC_DEAD){
+<                                         // TODO: how to dispose an exited child process
+<                                         list_remove(&child_proc->p_child_link);
+<                                         pid_t id = child_proc->p_pid;
+<                                         kthread_t * child_proc_child_thread;
+<                                         *status = child_proc->p_status;
+<                                         list_iterate_begin(&child_proc->p_threads, child_proc_child_thread, kthread_t, kt_plink) {
+<                                                 kthread_destroy(child_proc_child_thread);
+<                                         } list_iterate_end();
+<                                         list_remove(&child_proc->p_list_link);
+< 
+<                                         dbg_print("remove proc %d\n", child_proc->p_pid);
+<                                         slab_obj_free(proc_allocator, (void *)child_proc);
+<                                         // proc_t * p;
+<                                         // list_iterate_begin(&_proc_list, p, proc_t, p_list_link) {
+<                                         //         dbg_print("%d\n ", p->p_pid);
+<                                         // } list_iterate_end();
+<                                         // dbg_print("Remove pid %d \n", id);
+<                                         next_pid = MIN(next_pid, id);
+<                                         // dbg_print("next pid = %d\n", next_pid);
+<                                         ret = id;
+<                                 }
+<                         } list_iterate_end();
+< 
+<                         if(ret != -1) return ret;
+<                         sched_sleep_on(&(cur->p_wait));
+<                         dbg_print("proc %d back to do_wait\n", curproc->p_pid);
+< 
+<                 }
+<         }
+<         else{
+<                 KASSERT(pid > 0);
+<                 dbg_print("wait for pid %d\n", pid);
+<                 proc_t *lookup = proc_lookup(pid);
+<                 if(lookup == NULL){
+<                         dbg_print("cannot find pid %d\n", pid);
+< 
+<                         // proc_t * child_proc;
+<                         // list_iterate_begin(&curproc->p_children, child_proc, proc_t, p_child_link) {
+<                         //         dbg_print("check child proc %d\n", child_proc->p_pid);
+<                         //         if(child_proc->p_state == PROC_DEAD){
+<                         //                 // TODO: how to dispose an exited child process
+<                         //                 list_remove(&child_proc->p_child_link);
+<                         //                 pid_t id = child_proc->p_pid;
+<                         //                 kthread_t * child_proc_child_thread;
+<                         //                 *status = child_proc->p_status;
+<                         //                 list_iterate_begin(&child_proc->p_threads, child_proc_child_thread, kthread_t, kt_plink) {
+<                         //                         kthread_destroy(child_proc_child_thread);
+<                         //                 } list_iterate_end();
+<                         //                 list_remove(&child_proc->p_list_link);
+<                         //                 slab_obj_free(proc_allocator, (void *)child_proc);
+<                         //                 dbg_print("remove proc pid %d \n", id);
+<                         //                 next_pid = MIN(next_pid, id);
+<                                         
+<                         //         }
+<                         // } list_iterate_end();
+< 
+<                         return -ECHILD;
+<                 }
+<                 if(lookup->p_pproc->p_pid != curproc->p_pid){
+< 
+<                         // proc_t * child_proc;
+<                         // list_iterate_begin(&curproc->p_children, child_proc, proc_t, p_child_link) {
+<                         //         dbg_print("check child proc %d\n", child_proc->p_pid);
+<                         //         if(child_proc->p_state == PROC_DEAD){
+<                         //                 // TODO: how to dispose an exited child process
+<                         //                 list_remove(&child_proc->p_child_link);
+<                         //                 pid_t id = child_proc->p_pid;
+<                         //                 kthread_t * child_proc_child_thread;
+<                         //                 *status = child_proc->p_status;
+<                         //                 list_iterate_begin(&child_proc->p_threads, child_proc_child_thread, kthread_t, kt_plink) {
+<                         //                         kthread_destroy(child_proc_child_thread);
+<                         //                 } list_iterate_end();
+<                         //                 list_remove(&child_proc->p_list_link);
+<                         //                 slab_obj_free(proc_allocator, (void *)child_proc);
+<                         //                 dbg_print("remove proc pid %d \n", id);
+<                         //                 next_pid = MIN(next_pid, id);
+<                                         
+<                         //         }
+<                         // } list_iterate_end();
+<                         return -ECHILD;
+<                 }
+<                 dbg_print("lookup status %d\n", lookup->p_state - PROC_RUNNING);
+<                 while(lookup->p_state == PROC_RUNNING){
+< 
+<                         proc_t * child_proc;
+<                         list_iterate_begin(&curproc->p_children, child_proc, proc_t, p_child_link) {
+<                                 dbg_print("check child proc %d\n", child_proc->p_pid);
+<                                 if(child_proc->p_state == PROC_DEAD){
+<                                         // TODO: how to dispose an exited child process
+<                                         list_remove(&child_proc->p_child_link);
+<                                         pid_t id = child_proc->p_pid;
+<                                         kthread_t * child_proc_child_thread;
+<                                         *status = child_proc->p_status;
+<                                         list_iterate_begin(&child_proc->p_threads, child_proc_child_thread, kthread_t, kt_plink) {
+<                                                 kthread_destroy(child_proc_child_thread);
+<                                         } list_iterate_end();
+<                                         list_remove(&child_proc->p_list_link);
+<                                         slab_obj_free(proc_allocator, (void *)child_proc);
+<                                         dbg_print("remove proc pid %d \n", id);
+<                                         next_pid = MIN(next_pid, id);
+<                                         
+<                                 }
+<                         } list_iterate_end();
+< 
+<                         sched_sleep_on(&(curproc->p_wait));
+<                         dbg_print("proc %d back to do_wait\n", curproc->p_pid);
+< 
+<                         dbg_print("lookup status %d\n", lookup->p_state - PROC_RUNNING);
+<                 }
+< 
+<                 proc_t * child_proc;
+<                 list_iterate_begin(&curproc->p_children, child_proc, proc_t, p_child_link) {
+<                         dbg_print("check child proc %d\n", child_proc->p_pid);
+<                         if(child_proc->p_state == PROC_DEAD){
+<                                 // TODO: how to dispose an exited child process
+<                                 list_remove(&child_proc->p_child_link);
+<                                 pid_t id = child_proc->p_pid;
+<                                 kthread_t * child_proc_child_thread;
+<                                 *status = child_proc->p_status;
+<                                 list_iterate_begin(&child_proc->p_threads, child_proc_child_thread, kthread_t, kt_plink) {
+<                                         kthread_destroy(child_proc_child_thread);
+<                                 } list_iterate_end();
+<                                 slab_obj_free(proc_allocator, (void *)child_proc);
+<                                 list_remove(&child_proc->p_list_link);
+<                                 dbg_print("remove proc pid %d \n", id);
+<                                 next_pid = MIN(next_pid, id);
+<                                 
+<                         }
+<                 } list_iterate_end();
+<                 return pid;
+<         }
+---
+>         NOT_YET_IMPLEMENTED("PROCS: do_waitpid");
+541,551c328
+<         // NOT_YET_IMPLEMENTED("PROCS: do_exit");
+<         //cancel threads
+<         curproc->p_status = status;
+<         kthread_t* child_thread;
+<         list_iterate_begin(&curproc->p_threads, child_thread, kthread_t, kt_plink) {
+<                 if(child_thread->kt_state !=  KT_EXITED){
+<                         kthread_cancel(child_thread, (void *)status);
+<                 }
+<         } list_iterate_end();
+<         dbg_print("cancel thread of proc %d\n", curproc->p_pid);
+< 
+---
+>         NOT_YET_IMPLEMENTED("PROCS: do_exit");
+diff -r weenix-1/weenix/kernel/proc/sched.c weenix-assignment-3.8.0/weenix/kernel/proc/sched.c
+121,156c121
+<         dbg_print("in cancellable sleep on proc %d\n", curproc->p_pid);
+<         proc_t * cur = curproc;
+<         // dbg_print(" sched sleep current process: %d\n", cur->p_pid);
+<         curthr->kt_state = KT_SLEEP_CANCELLABLE;
+<         curthr->kt_wchan = NULL;
+<         if(curthr->kt_cancelled){
+<                 sched_make_runnable(curthr);
+<                 return -EINTR;
+<         }
+<         ktqueue_enqueue(q, curthr);
+< 
+<         // kthread_t * child_thread;
+<         // list_iterate_begin(&curproc->p_threads, child_thread, kthread_t, kt_plink) {
+<                 // dbg_print("sched thread parent pid %d\n", child_thread->kt_proc->p_pid);
+<                 // child_thread->kt_state = KT_SLEEP_CANCELLABLE;
+<                 // dbg_print("pre_enqueue\n");
+<                 // remove from run queue
+<                 // if(child_thread->kt_wchan != NULL){
+<                 //         list_remove(&child_thread->kt_qlink);
+<                 //         child_thread->kt_wchan->tq_size--;
+<                 //         child_thread->kt_wchan = NULL;
+<                 // }
+<         //         child_thread->kt_wchan = NULL;
+<         //         ktqueue_enqueue(q, child_thread);
+<         // } list_iterate_end();
+< 
+< 
+<         dbg_print("fall into cancellable asleep\n");
+<         sched_switch();
+<         dbg_print("return back to cancelable sleep on\n");
+< 
+<         if(curthr->kt_cancelled){
+<                 return -EINTR;
+<         }
+<         // NOT_YET_IMPLEMENTED("PROCS: sched_cancellable_sleep_on");
+<         // Todo return value not clear
+---
+>         NOT_YET_IMPLEMENTED("PROCS: sched_cancellable_sleep_on");
+172,180c137
+<         kthr->kt_cancelled = 1;
+<         if(kthr->kt_state == KT_SLEEP_CANCELLABLE){
+<                 if(kthr->kt_wchan){
+<                         ktqueue_remove(kthr->kt_wchan, kthr);
+<                 }
+<                 sched_make_runnable(kthr);
+<         }
+<         dbg_print("thread canceled for %d\n", kthr->kt_proc->p_pid);
+< 
+---
+>         NOT_YET_IMPLEMENTED("PROCS: sched_cancel");
+222,250c179
+<         kthread_t * thread;
+< 
+<         int oldIPL;
+<         oldIPL = intr_getipl();
+<         intr_setipl(IPL_HIGH);
+<         while(kt_runq.tq_size == 0){
+<                 intr_setipl(IPL_LOW);
+<                 // NOTE: in the future, need to add HLT
+<                 intr_setipl(IPL_HIGH);
+<         }
+< 
+< 
+<         list_iterate_begin(&kt_runq.tq_list, thread, kthread_t, kt_qlink){
+<                 dbg_print("kt_runq contains %d\n", thread->kt_proc->p_pid);
+<         } list_iterate_end();
+< 
+<         kthread_t *OldThread;
+<         OldThread = curthr;
+<         curthr = ktqueue_dequeue(&kt_runq);
+<         while (curthr->kt_state == KT_EXITED && !sched_queue_empty(&kt_runq)){
+<                 curthr = ktqueue_dequeue(&kt_runq);
+<         }
+< 
+<         curproc = curthr->kt_proc;
+<         curthr->kt_state = KT_RUN;
+<         dbg_print("switch to pid %d\n", curthr->kt_proc->p_pid);
+<         context_switch(&OldThread->kt_ctx, &curthr->kt_ctx);
+<         // NOT_YET_IMPLEMENTED("PROCS: sched_switch");
+<         intr_setipl(oldIPL);
+---
+>         NOT_YET_IMPLEMENTED("PROCS: sched_switch");
+268,281c197,198
+< {       
+<         int oldIPL = intr_getipl();
+<         intr_setipl(IPL_HIGH);
+<         thr->kt_proc->p_state = PROC_RUNNING;
+<         thr->kt_state = KT_RUN;
+<         dbg_print("make runnable proc %d\n", thr->kt_proc->p_pid);
+<         if(thr->kt_wchan != NULL){
+<                 ktqueue_remove(thr->kt_wchan, thr);
+<         }
+< 
+<         thr->kt_wchan = NULL;
+<         ktqueue_enqueue(&kt_runq, thr);
+<         intr_setipl(oldIPL);
+< 
+---
+> {
+>         NOT_YET_IMPLEMENTED("PROCS: sched_make_runnable");
+diff -r weenix-1/weenix/kernel/proc/sched_helper.c weenix-assignment-3.8.0/weenix/kernel/proc/sched_helper.c
+43,63c43
+<         //TODO FINISH sleep on 
+<         proc_t * cur = curproc;
+<         // dbg_print(" sched sleep current process: %d\n", cur->p_pid);
+<         kthread_t * child_thread;
+<         list_iterate_begin(&curproc->p_threads, child_thread, kthread_t, kt_plink) {
+<                 // dbg_print("sched thread parent pid %d\n", child_thread->kt_proc->p_pid);
+<                 child_thread->kt_state = KT_SLEEP;
+<                 // remove from run queue
+<                 // if(child_thread->kt_wchan != NULL){
+<                 //         list_remove(&child_thread->kt_qlink);
+<                 //         child_thread->kt_wchan->tq_size--;
+<                 //         child_thread->kt_wchan = NULL;
+<                 // }
+<                 // Note deque
+<                 child_thread->kt_wchan = NULL;
+<                 ktqueue_enqueue(q, child_thread);
+<         } list_iterate_end();
+<         dbg_print("fall asleep\n");
+<         sched_switch();
+<         // NOT_YET_IMPLEMENTED("PROCS: sched_sleep_on");
+< 
+---
+>         NOT_YET_IMPLEMENTED("PROCS: sched_sleep_on");
+69,75c49,50
+<         kthread_t * thr = ktqueue_dequeue(q);
+<         if(thr->kt_state != KT_RUN){
+<                 dbg_print("wakeup on %d\n", thr->kt_proc->p_pid);
+<                 thr->kt_state = KT_RUN;
+<                 sched_make_runnable(thr);
+<         }
+<         return thr;
+---
+>         NOT_YET_IMPLEMENTED("PROCS: sched_wakeup_on");
+>         return NULL;
+81,100c56
+<         // NOT_YET_IMPLEMENTED("PROCS: sched_broadcast_on");
+< 
+<         // kthread_t* par_proc_thread;
+<         // list_iterate_begin(q, par_proc_thread, kthread_t, kt_plink) {
+<         //         // dbg_print("sched thread parent pid %d\n", child_thread->kt_proc->p_pid);
+<         //         if(par_proc_thread->kt_state != KT_RUN){
+<         //                 dbg_print("broad cast %d \n", curproc->p_pproc->p_pid);
+<         //                 par_proc_thread->kt_state = KT_RUN;
+<         //                 sched_make_runnable(par_proc_thread);
+<         //         }
+<         // } list_iterate_end();
+<         while(q->tq_size != 0){
+<                 kthread_t * thr = ktqueue_dequeue(q);
+<                 if(thr->kt_state != KT_RUN){
+<                         dbg_print("broad cast %d\n", thr->kt_proc->p_pid);
+<                         thr->kt_state = KT_RUN;
+<                 }
+<                 sched_make_runnable(thr);
+<         }
+<         // dbg_print("return from broad cast\n");
+---
+>         NOT_YET_IMPLEMENTED("PROCS: sched_broadcast_on");
+Only in weenix-1/weenix/kernel/proc: sched_helper.S
+diff -r weenix-1/weenix/kernel/proc/sunghan_test.c weenix-assignment-3.8.0/weenix/kernel/proc/sunghan_test.c
+85c85
+< 		dbg_print("add locked\n");
+---
+> 
+111c111
+< 		dbg_print("remove locked\n");
+---
+> 
+diff -r weenix-1/weenix/kernel/test/kshell/kshell.c weenix-assignment-3.8.0/weenix/kernel/test/kshell/kshell.c
+418,419d417
+<         dbg_print("note : going to execute kshell_read\n");
+< 
+423,424d420
+< 
+<         dbg_print("note : finish executing kshell_read\n");
+Only in weenix-1/weenix/tools/fsmaker: api.pyc
+Only in weenix-1/weenix/: .vscode

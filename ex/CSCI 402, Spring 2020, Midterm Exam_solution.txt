@@ -1,0 +1,53 @@
+CS 402, Spring 2020, Midterm Exam
+=================================
+
+      Your Name: Chien-Ming Chen
+  Your USD ID #: 1188767431
+           Date: 03/26/2020
+
+You don't need to "sign" this file or "sign" your question file (PDF) because
+I have already received a signed pledge from you.
+
+You must NOT submit the question file (PDF).
+
+REPLACE "?" with your answers.
+
+If a "short-answer" type question has multiple parts (such as (a) and (b)),
+you must label which answer is for which part (for example, "(a) abc, (b) xyz").
+
+Please remember that multiple choice questions can have one or more correct
+answers.  Please only enter all the correct answer numbers (separated by commas)
+and not enter any of the incorrect answer numbers.
+
+Replace "?" with your answers.
+
+Answer(s) for Q1: 2, 4
+
+Answer(s) for Q2: 2, 3, 4
+
+Answer(s) for Q3: 4, 5
+
+Answer(s) for Q4: 1, 4
+
+Answer(s) for Q5: 1, 2, 4
+
+Answer(s) for Q6: 3
+
+Answer(s) for Q7: 1
+
+Answer(s) for Q8: 4
+
+Answer(s) for Q9: 3, 4
+
+Answer(s) for Q10: 2, 4
+
+Answer(s) for Q11: 4
+
+Answer(s) for Q12: local variables, ebp, eip, function arguments
+
+Answer(s) for Q13: 2, 3, 4, 5
+
+Answer(s) for Q14: 2, 3, 4
+
+Answer(s) for Q15: 5
+

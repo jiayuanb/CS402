@@ -1,0 +1,10 @@
+{
+    "files.associations": {
+        "fcntl.h": "c",
+        "s5fs.h": "c",
+        "errno.h": "c",
+        "tlb.h": "c",
+        "kmalloc.h": "c",
+        "types.h": "c"
+    }
+}

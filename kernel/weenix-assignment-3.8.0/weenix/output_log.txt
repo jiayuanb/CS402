@@ -1,0 +1,1402 @@
+/usr/bin/qemu-system-i386
+[31;40mKernel contained in 1 page tables
+[0m[31;40mPhysical Memory Info: KERNEL_PHYS_BASE: 0x00143000, 144 bytes of info
+[0m[31;40mPhysical Memory Map:
+[0m[31;40m    0x00000000-0x0009fc00: Usable
+[0m[31;40m    0x0009fc00-0x000a0000: Reserved
+[0m[31;40m    0x000f0000-0x00100000: Reserved
+[0m[31;40m    0x00100000-0x0ffe0000: Usable
+[0m[31;40m    0x0ffe0000-0x10000000: Reserved
+[0m[31;40m    0xfffc0000-0x00000000: Reserved
+[0m[31;40mHighest usable physical memory: 0x0ffe0000
+[0m[31;40mAvailable memory: 0x0fe9d000
+[0m[31;40mPage System adding range: 0xc00b4000 to 0xcfe9d000
+[0m[31;40mmm/slab.c:157 _calc_slab_size(): calc_slab_size: minorder 0, waste 0
+[0m[31;40mmm/slab.c:200 _allocator_init(): Initialized new slab allocator:
+[0m[31;40m  Name:          "slab_allocators" (0xc0063244)
+[0m[31;40m  Object Size:   32
+[0m[31;40m  Order:         0
+[0m[31;40m  Slab Capacity: 102
+[0m[31;40mmm/page.c:276 _page_alloc_order(): allocating 1 pages (addr 0xcfe9a000)
+[0m[31;40mmm/slab.c:271 _slab_allocator_grow(): Growing cache "slab_allocators" (0xc0063244), new slab 0xcfe9aff0 (1 pages)
+[0m[31;40mmm/slab.c:313 slab_obj_alloc(): Allocated object 0xcfe9a000 from "slab_allocators" (0xc0063244), slab 0xc0063244, inuse 1
+[0m[31;40mmm/slab.c:157 _calc_slab_size(): calc_slab_size: minorder 0, waste 0
+[0m[31;40mmm/slab.c:200 _allocator_init(): Initialized new slab allocator:
+[0m[31;40m  Name:          "size-64" (0xcfe9a004)
+[0m[31;40m  Object Size:   72
+[0m[31;40m  Order:         0
+[0m[31;40m  Slab Capacity: 51
+[0m[31;40mmm/slab.c:313 slab_obj_alloc(): Allocated object 0xcfe9a028 from "slab_allocators" (0xc0063244), slab 0xc0063244, inuse 2
+[0m[31;40mmm/slab.c:157 _calc_slab_size(): calc_slab_size: minorder 0, waste 48
+[0m[31;40mmm/slab.c:168 _calc_slab_size(): calc_slab_size: replacing with order 4, waste 0
+[0m[31;40mmm/slab.c:200 _allocator_init(): Initialized new slab allocator:
+[0m[31;40m  Name:          "size-128" (0xcfe9a02c)
+[0m[31;40m  Object Size:   136
+[0m[31;40m  Order:         4
+[0m[31;40m  Slab Capacity: 455
+[0m[31;40mmm/slab.c:313 slab_obj_alloc(): Allocated object 0xcfe9a050 from "slab_allocators" (0xc0063244), slab 0xc0063244, inuse 3
+[0m[31;40mmm/slab.c:157 _calc_slab_size(): calc_slab_size: minorder 0, waste 0
+[0m[31;40mmm/slab.c:200 _allocator_init(): Initialized new slab allocator:
+[0m[31;40m  Name:          "size-256" (0xcfe9a054)
+[0m[31;40m  Object Size:   264
+[0m[31;40m  Order:         0
+[0m[31;40m  Slab Capacity: 15
+[0m[31;40mmm/slab.c:313 slab_obj_alloc(): Allocated object 0xcfe9a078 from "slab_allocators" (0xc0063244), slab 0xc0063244, inuse 4
+[0m[31;40mmm/slab.c:157 _calc_slab_size(): calc_slab_size: minorder 0, waste 384
+[0m[31;40mmm/slab.c:168 _calc_slab_size(): calc_slab_size: replacing with order 1, waste 256
+[0m[31;40mmm/slab.c:168 _calc_slab_size(): calc_slab_size: replacing with order 2, waste 0
+[0m[31;40mmm/slab.c:200 _allocator_init(): Initialized new slab allocator:
+[0m[31;40m  Name:          "size-512" (0xcfe9a07c)
+[0m[31;40m  Object Size:   520
+[0m[31;40m  Order:         2
+[0m[31;40m  Slab Capacity: 31
+[0m[31;40mmm/slab.c:313 slab_obj_alloc(): Allocated object 0xcfe9a0a0 from "slab_allocators" (0xc0063244), slab 0xc0063244, inuse 5
+[0m[31;40mmm/slab.c:157 _calc_slab_size(): calc_slab_size: minorder 0, waste 960
+[0m[31;40mmm/slab.c:168 _calc_slab_size(): calc_slab_size: replacing with order 1, waste 896
+[0m[31;40mmm/slab.c:168 _calc_slab_size(): calc_slab_size: replacing with order 2, waste 768
+[0m[31;40mmm/slab.c:168 _calc_slab_size(): calc_slab_size: replacing with order 3, waste 512
+[0m[31;40mmm/slab.c:168 _calc_slab_size(): calc_slab_size: replacing with order 4, waste 0
+[0m[31;40mmm/slab.c:200 _allocator_init(): Initialized new slab allocator:
+[0m[31;40m  Name:          "size-1024" (0xcfe9a0a4)
+[0m[31;40m  Object Size:   1032
+[0m[31;40m  Order:         4
+[0m[31;40m  Slab Capacity: 63
+[0m[31;40mmm/slab.c:313 slab_obj_alloc(): Allocated object 0xcfe9a0c8 from "slab_allocators" (0xc0063244), slab 0xc0063244, inuse 6
+[0m[31;40mmm/slab.c:157 _calc_slab_size(): calc_slab_size: minorder 0, waste 2016
+[0m[31;40mmm/slab.c:168 _calc_slab_size(): calc_slab_size: replacing with order 1, waste 1984
+[0m[31;40mmm/slab.c:168 _calc_slab_size(): calc_slab_size: replacing with order 2, waste 1920
+[0m[31;40mmm/slab.c:168 _calc_slab_size(): calc_slab_size: replacing with order 3, waste 1792
+[0m[31;40mmm/slab.c:168 _calc_slab_size(): calc_slab_size: replacing with order 4, waste 1536
+[0m[31;40mmm/slab.c:200 _allocator_init(): Initialized new slab allocator:
+[0m[31;40m  Name:          "size-2048" (0xcfe9a0cc)
+[0m[31;40m  Object Size:   2056
+[0m[31;40m  Order:         4
+[0m[31;40m  Slab Capacity: 31
+[0m[31;40mmm/slab.c:313 slab_obj_alloc(): Allocated object 0xcfe9a0f0 from "slab_allocators" (0xc0063244), slab 0xc0063244, inuse 7
+[0m[31;40mmm/slab.c:157 _calc_slab_size(): calc_slab_size: minorder 1, waste 4064
+[0m[31;40mmm/slab.c:168 _calc_slab_size(): calc_slab_size: replacing with order 2, waste 4032
+[0m[31;40mmm/slab.c:168 _calc_slab_size(): calc_slab_size: replacing with order 3, waste 3968
+[0m[31;40mmm/slab.c:168 _calc_slab_size(): calc_slab_size: replacing with order 4, waste 3840
+[0m[31;40mmm/slab.c:200 _allocator_init(): Initialized new slab allocator:
+[0m[31;40m  Name:          "size-4096" (0xcfe9a0f4)
+[0m[31;40m  Object Size:   4104
+[0m[31;40m  Order:         4
+[0m[31;40m  Slab Capacity: 15
+[0m[31;40mmm/slab.c:313 slab_obj_alloc(): Allocated object 0xcfe9a118 from "slab_allocators" (0xc0063244), slab 0xc0063244, inuse 8
+[0m[31;40mmm/slab.c:157 _calc_slab_size(): calc_slab_size: minorder 2, waste 8160
+[0m[31;40mmm/slab.c:168 _calc_slab_size(): calc_slab_size: replacing with order 3, waste 8128
+[0m[31;40mmm/slab.c:168 _calc_slab_size(): calc_slab_size: replacing with order 4, waste 8064
+[0m[31;40mmm/slab.c:200 _allocator_init(): Initialized new slab allocator:
+[0m[31;40m  Name:          "size-8192" (0xcfe9a11c)
+[0m[31;40m  Object Size:   8200
+[0m[31;40m  Order:         4
+[0m[31;40m  Slab Capacity: 7
+[0m[31;40mmm/slab.c:313 slab_obj_alloc(): Allocated object 0xcfe9a140 from "slab_allocators" (0xc0063244), slab 0xc0063244, inuse 9
+[0m[31;40mmm/slab.c:157 _calc_slab_size(): calc_slab_size: minorder 3, waste 16352
+[0m[31;40mmm/slab.c:168 _calc_slab_size(): calc_slab_size: replacing with order 4, waste 16320
+[0m[31;40mmm/slab.c:200 _allocator_init(): Initialized new slab allocator:
+[0m[31;40m  Name:          "size-16384" (0xcfe9a144)
+[0m[31;40m  Object Size:   16392
+[0m[31;40m  Order:         4
+[0m[31;40m  Slab Capacity: 3
+[0m[31;40mmm/slab.c:313 slab_obj_alloc(): Allocated object 0xcfe9a168 from "slab_allocators" (0xc0063244), slab 0xc0063244, inuse 10
+[0m[31;40mmm/slab.c:157 _calc_slab_size(): calc_slab_size: minorder 4, waste 32736
+[0m[31;40mmm/slab.c:200 _allocator_init(): Initialized new slab allocator:
+[0m[31;40m  Name:          "size-32768" (0xcfe9a16c)
+[0m[31;40m  Object Size:   32776
+[0m[31;40m  Order:         4
+[0m[31;40m  Slab Capacity: 1
+[0m[31;40mmm/slab.c:313 slab_obj_alloc(): Allocated object 0xcfe9a190 from "slab_allocators" (0xc0063244), slab 0xc0063244, inuse 11
+[0m[31;40mmm/slab.c:157 _calc_slab_size(): calc_slab_size: minorder 5, waste 65504
+[0m[31;40mmm/slab.c:200 _allocator_init(): Initialized new slab allocator:
+[0m[31;40m  Name:          "size-65536" (0xcfe9a194)
+[0m[31;40m  Object Size:   65544
+[0m[31;40m  Order:         5
+[0m[31;40m  Slab Capacity: 1
+[0m[31;40mmm/slab.c:313 slab_obj_alloc(): Allocated object 0xcfe9a1b8 from "slab_allocators" (0xc0063244), slab 0xc0063244, inuse 12
+[0m[31;40mmm/slab.c:157 _calc_slab_size(): calc_slab_size: minorder 6, waste 131040
+[0m[31;40mmm/slab.c:200 _allocator_init(): Initialized new slab allocator:
+[0m[31;40m  Name:          "size-131072" (0xcfe9a1bc)
+[0m[31;40m  Object Size:   131080
+[0m[31;40m  Order:         6
+[0m[31;40m  Slab Capacity: 1
+[0m[31;40mmm/slab.c:313 slab_obj_alloc(): Allocated object 0xcfe9a1e0 from "slab_allocators" (0xc0063244), slab 0xc0063244, inuse 13
+[0m[31;40mmm/slab.c:157 _calc_slab_size(): calc_slab_size: minorder 7, waste 262112
+[0m[31;40mmm/slab.c:200 _allocator_init(): Initialized new slab allocator:
+[0m[31;40m  Name:          "size-262144" (0xcfe9a1e4)
+[0m[31;40m  Object Size:   262152
+[0m[31;40m  Order:         7
+[0m[31;40m  Slab Capacity: 1
+[0m[31;40mmm/slab.c:313 slab_obj_alloc(): Allocated object 0xcfe9a208 from "slab_allocators" (0xc0063244), slab 0xc0063244, inuse 14
+[0m[31;40mmm/slab.c:157 _calc_slab_size(): calc_slab_size: minorder 0, waste 48
+[0m[31;40mmm/slab.c:168 _calc_slab_size(): calc_slab_size: replacing with order 1, waste 40
+[0m[31;40mmm/slab.c:168 _calc_slab_size(): calc_slab_size: replacing with order 2, waste 24
+[0m[31;40mmm/slab.c:168 _calc_slab_size(): calc_slab_size: replacing with order 4, waste 0
+[0m[31;40mmm/slab.c:200 _allocator_init(): Initialized new slab allocator:
+[0m[31;40m  Name:          "pframe" (0xcfe9a20c)
+[0m[31;40m  Object Size:   64
+[0m[31;40m  Order:         4
+[0m[31;40m  Slab Capacity: 910
+[0m[31;40mmm/page.c:276 _page_alloc_order(): allocating 1 pages (addr 0xcfe99000)
+[0m[31;40mmm/slab.c:271 _slab_allocator_grow(): Growing cache "size-64" (0xcfe9a004), new slab 0xcfe99ff0 (1 pages)
+[0m[31;40mmm/slab.c:313 slab_obj_alloc(): Allocated object 0xcfe99000 from "size-64" (0xcfe9a004), slab 0xcfe9a004, inuse 1
+[0m[31;40mmm/page.c:276 _page_alloc_order(): allocating 16 pages (addr 0xcfe84000)
+[0m[31;40mmm/slab.c:271 _slab_allocator_grow(): Growing cache "size-128" (0xcfe9a02c), new slab 0xcfe93ff0 (16 pages)
+[0m[31;40mmm/slab.c:313 slab_obj_alloc(): Allocated object 0xcfe84000 from "size-128" (0xcfe9a02c), slab 0xcfe9a02c, inuse 1
+[0m[31;40mmm/page.c:276 _page_alloc_order(): allocating 16 pages (addr 0xcfe74000)
+[0m[31;40mmm/slab.c:271 _slab_allocator_grow(): Growing cache "size-4096" (0xcfe9a0f4), new slab 0xcfe830f0 (16 pages)
+[0m[31;40mmm/slab.c:313 slab_obj_alloc(): Allocated object 0xcfe74000 from "size-4096" (0xcfe9a0f4), slab 0xcfe9a0f4, inuse 1
+[0m[31;40mmm/slab.c:313 slab_obj_alloc(): Allocated object 0xcfe84090 from "size-128" (0xcfe9a02c), slab 0xcfe9a02c, inuse 2
+[0m[31;40mmm/slab.c:313 slab_obj_alloc(): Allocated object 0xcfe99050 from "size-64" (0xcfe9a004), slab 0xcfe9a004, inuse 2
+[0m[31;40mmm/slab.c:313 slab_obj_alloc(): Allocated object 0xcfe84120 from "size-128" (0xcfe9a02c), slab 0xcfe9a02c, inuse 3
+[0m[31;40mmm/slab.c:313 slab_obj_alloc(): Allocated object 0xcfe841b0 from "size-128" (0xcfe9a02c), slab 0xcfe9a02c, inuse 4
+[0m[31;40mmm/slab.c:313 slab_obj_alloc(): Allocated object 0xcfe84240 from "size-128" (0xcfe9a02c), slab 0xcfe9a02c, inuse 5
+[0m[31;40mmm/slab.c:313 slab_obj_alloc(): Allocated object 0xcfe842d0 from "size-128" (0xcfe9a02c), slab 0xcfe9a02c, inuse 6
+[0m[31;40mmm/slab.c:313 slab_obj_alloc(): Allocated object 0xcfe84360 from "size-128" (0xcfe9a02c), slab 0xcfe9a02c, inuse 7
+[0m[31;40mmm/slab.c:313 slab_obj_alloc(): Allocated object 0xcfe843f0 from "size-128" (0xcfe9a02c), slab 0xcfe9a02c, inuse 8
+[0m[31;40mmm/slab.c:313 slab_obj_alloc(): Allocated object 0xcfe9a230 from "slab_allocators" (0xc0063244), slab 0xc0063244, inuse 15
+[0m[31;40mmm/slab.c:157 _calc_slab_size(): calc_slab_size: minorder 0, waste 0
+[0m[31;40mmm/slab.c:200 _allocator_init(): Initialized new slab allocator:
+[0m[31;40m  Name:          "anon" (0xcfe9a234)
+[0m[31;40m  Object Size:   40
+[0m[31;40m  Order:         0
+[0m[31;40m  Slab Capacity: 85
+[0m[31;40mmm/slab.c:313 slab_obj_alloc(): Allocated object 0xcfe9a258 from "slab_allocators" (0xc0063244), slab 0xc0063244, inuse 16
+[0m[31;40mmm/slab.c:157 _calc_slab_size(): calc_slab_size: minorder 0, waste 0
+[0m[31;40mmm/slab.c:200 _allocator_init(): Initialized new slab allocator:
+[0m[31;40m  Name:          "shadow" (0xcfe9a25c)
+[0m[31;40m  Object Size:   40
+[0m[31;40m  Order:         0
+[0m[31;40m  Slab Capacity: 85
+[0m[31;40mmm/slab.c:313 slab_obj_alloc(): Allocated object 0xcfe9a280 from "slab_allocators" (0xc0063244), slab 0xc0063244, inuse 17
+[0m[31;40mmm/slab.c:157 _calc_slab_size(): calc_slab_size: minorder 0, waste 20
+[0m[31;40mmm/slab.c:168 _calc_slab_size(): calc_slab_size: replacing with order 1, waste 0
+[0m[31;40mmm/slab.c:200 _allocator_init(): Initialized new slab allocator:
+[0m[31;40m  Name:          "vmmap" (0xcfe9a284)
+[0m[31;40m  Object Size:   20
+[0m[31;40m  Order:         1
+[0m[31;40m  Slab Capacity: 292
+[0m[31;40mmm/slab.c:313 slab_obj_alloc(): Allocated object 0xcfe9a2a8 from "slab_allocators" (0xc0063244), slab 0xc0063244, inuse 18
+[0m[31;40mmm/slab.c:157 _calc_slab_size(): calc_slab_size: minorder 0, waste 0
+[0m[31;40mmm/slab.c:200 _allocator_init(): Initialized new slab allocator:
+[0m[31;40m  Name:          "vmarea" (0xcfe9a2ac)
+[0m[31;40m  Object Size:   52
+[0m[31;40m  Order:         0
+[0m[31;40m  Slab Capacity: 68
+[0m[31;40mmm/slab.c:313 slab_obj_alloc(): Allocated object 0xcfe9a2d0 from "slab_allocators" (0xc0063244), slab 0xc0063244, inuse 19
+[0m[31;40mmm/slab.c:157 _calc_slab_size(): calc_slab_size: minorder 0, waste 240
+[0m[31;40mmm/slab.c:168 _calc_slab_size(): calc_slab_size: replacing with order 1, waste 16
+[0m[31;40mmm/slab.c:200 _allocator_init(): Initialized new slab allocator:
+[0m[31;40m  Name:          "proc" (0xcfe9a2d4)
+[0m[31;40m  Object Size:   472
+[0m[31;40m  Order:         1
+[0m[31;40m  Slab Capacity: 17
+[0m[31;40mmm/slab.c:313 slab_obj_alloc(): Allocated object 0xcfe9a2f8 from "slab_allocators" (0xc0063244), slab 0xc0063244, inuse 20
+[0m[31;40mmm/slab.c:157 _calc_slab_size(): calc_slab_size: minorder 0, waste 48
+[0m[31;40mmm/slab.c:168 _calc_slab_size(): calc_slab_size: replacing with order 1, waste 28
+[0m[31;40mmm/slab.c:168 _calc_slab_size(): calc_slab_size: replacing with order 4, waste 0
+[0m[31;40mmm/slab.c:200 _allocator_init(): Initialized new slab allocator:
+[0m[31;40m  Name:          "kthread" (0xcfe9a2fc)
+[0m[31;40m  Object Size:   76
+[0m[31;40m  Order:         4
+[0m[31;40m  Slab Capacity: 780
+[0m[31;40mmm/slab.c:313 slab_obj_alloc(): Allocated object 0xcfe990a0 from "size-64" (0xcfe9a004), slab 0xcfe9a004, inuse 3
+[0m[31;40mmm/slab.c:313 slab_obj_alloc(): Allocated object 0xcfe990f0 from "size-64" (0xcfe9a004), slab 0xcfe9a004, inuse 4
+[0m[31;40mmm/page.c:276 _page_alloc_order(): allocating 1 pages (addr 0xcfe98000)
+[0m[31;40mmm/slab.c:271 _slab_allocator_grow(): Growing cache "size-256" (0xcfe9a054), new slab 0xcfe98ff0 (1 pages)
+[0m[31;40mmm/slab.c:313 slab_obj_alloc(): Allocated object 0xcfe98000 from "size-256" (0xcfe9a054), slab 0xcfe9a054, inuse 1
+[0m[31;40mmm/slab.c:313 slab_obj_alloc(): Allocated object 0xcfe99140 from "size-64" (0xcfe9a004), slab 0xcfe9a004, inuse 5
+[0m[31;40mmm/slab.c:313 slab_obj_alloc(): Allocated object 0xcfe99190 from "size-64" (0xcfe9a004), slab 0xcfe9a004, inuse 6
+[0m[31;40mmm/slab.c:313 slab_obj_alloc(): Allocated object 0xcfe98110 from "size-256" (0xcfe9a054), slab 0xcfe9a054, inuse 2
+[0m[31;40mmm/slab.c:313 slab_obj_alloc(): Allocated object 0xcfe991e0 from "size-64" (0xcfe9a004), slab 0xcfe9a004, inuse 7
+[0m[31;40mmm/slab.c:313 slab_obj_alloc(): Allocated object 0xcfe99230 from "size-64" (0xcfe9a004), slab 0xcfe9a004, inuse 8
+[0m[31;40mmm/slab.c:313 slab_obj_alloc(): Allocated object 0xcfe98220 from "size-256" (0xcfe9a054), slab 0xcfe9a054, inuse 3
+[0m[31;40mmm/slab.c:313 slab_obj_alloc(): Allocated object 0xcfe99280 from "size-64" (0xcfe9a004), slab 0xcfe9a004, inuse 9
+[0m[31;40mmm/slab.c:313 slab_obj_alloc(): Allocated object 0xcfe992d0 from "size-64" (0xcfe9a004), slab 0xcfe9a004, inuse 10
+[0m[31;40mmm/slab.c:313 slab_obj_alloc(): Allocated object 0xcfe84480 from "size-128" (0xcfe9a02c), slab 0xcfe9a02c, inuse 9
+[0m[31;40mmm/page.c:276 _page_alloc_order(): allocating 1 pages (addr 0xcfe97000)
+[0m[31;40mSIGNATURE: 53616c7465645f5f2286438218b129c5e92a09b8043acfabc6fbcfe63a19159722db186089544854f88d49a5867b03ae
+[0m[31;40mmm/page.c:276 _page_alloc_order(): allocating 2 pages (addr 0xcfe94000)
+[0m[31;40mmm/page.c:276 _page_alloc_order(): allocating 2 pages (addr 0xcfe72000)
+[0m[31;40mmm/slab.c:271 _slab_allocator_grow(): Growing cache "proc" (0xcfe9a2d4), new slab 0xcfe73fe0 (2 pages)
+[0m[31;40mmm/slab.c:313 slab_obj_alloc(): Allocated object 0xcfe72000 from "proc" (0xcfe9a2d4), slab 0xcfe9a2d4, inuse 1
+[0m[31;40mmm/page.c:276 _page_alloc_order(): allocating 2 pages (addr 0xcfe70000)
+[0m[*] create vmmap
+[31;40mmm/page.c:276 _page_alloc_order(): allocating 2 pages (addr 0xcfe6e000)
+[0m[31;40mmm/slab.c:271 _slab_allocator_grow(): Growing cache "vmmap" (0xcfe9a284), new slab 0xcfe6fff0 (2 pages)
+[0m[31;40mmm/slab.c:313 slab_obj_alloc(): Allocated object 0xcfe6e000 from "vmmap" (0xcfe9a284), slab 0xcfe9a284, inuse 1
+[0m[31;40mmm/page.c:276 _page_alloc_order(): allocating 16 pages (addr 0xcfe54000)
+[0m[31;40mmm/page.c:276 _page_alloc_order(): allocating 16 pages (addr 0xcfe44000)
+[0m[31;40mmm/slab.c:271 _slab_allocator_grow(): Growing cache "kthread" (0xcfe9a2fc), new slab 0xcfe53ff0 (16 pages)
+[0m[31;40mmm/slab.c:313 slab_obj_alloc(): Allocated object 0xcfe44000 from "kthread" (0xcfe9a2fc), slab 0xcfe9a2fc, inuse 1
+[0m[31;40mmm/slab.c:313 slab_obj_alloc(): Allocated object 0xcfe721e0 from "proc" (0xcfe9a2d4), slab 0xcfe9a2d4, inuse 2
+[0m[31;40mmm/page.c:276 _page_alloc_order(): allocating 2 pages (addr 0xcfe6c000)
+[0m[*] create vmmap
+[31;40mmm/slab.c:313 slab_obj_alloc(): Allocated object 0xcfe6e01c from "vmmap" (0xcfe9a284), slab 0xcfe9a284, inuse 2
+[0m[31;40mmm/page.c:276 _page_alloc_order(): allocating 16 pages (addr 0xcfe34000)
+[0m[31;40mmm/slab.c:313 slab_obj_alloc(): Allocated object 0xcfe44054 from "kthread" (0xcfe9a2fc), slab 0xcfe9a2fc, inuse 2
+[0mfinish creating init proc1
+[31;40mmm/slab.c:313 slab_obj_alloc(): Allocated object 0xcfe99320 from "size-64" (0xcfe9a004), slab 0xcfe9a004, inuse 11
+[0m[31;40mmm/slab.c:313 slab_obj_alloc(): Allocated object 0xcfe99370 from "size-64" (0xcfe9a004), slab 0xcfe9a004, inuse 12
+[0m[31;40mmm/slab.c:313 slab_obj_alloc(): Allocated object 0xcfe993c0 from "size-64" (0xcfe9a004), slab 0xcfe9a004, inuse 13
+[0m[31;40mmm/slab.c:313 slab_obj_alloc(): Allocated object 0xcfe99410 from "size-64" (0xcfe9a004), slab 0xcfe9a004, inuse 14
+[0m[31;40mmm/slab.c:313 slab_obj_alloc(): Allocated object 0xcfe99460 from "size-64" (0xcfe9a004), slab 0xcfe9a004, inuse 15
+[0m[31;40mmm/slab.c:313 slab_obj_alloc(): Allocated object 0xcfe994b0 from "size-64" (0xcfe9a004), slab 0xcfe9a004, inuse 16
+[0m[31;40mmm/slab.c:313 slab_obj_alloc(): Allocated object 0xcfe99500 from "size-64" (0xcfe9a004), slab 0xcfe9a004, inuse 17
+[0m[31;40mmm/slab.c:313 slab_obj_alloc(): Allocated object 0xcfe99550 from "size-64" (0xcfe9a004), slab 0xcfe9a004, inuse 18
+[0m[31;40mmm/slab.c:313 slab_obj_alloc(): Allocated object 0xcfe995a0 from "size-64" (0xcfe9a004), slab 0xcfe9a004, inuse 19
+[0m[31;40mmm/slab.c:313 slab_obj_alloc(): Allocated object 0xcfe995f0 from "size-64" (0xcfe9a004), slab 0xcfe9a004, inuse 20
+[0m[31;40mmm/slab.c:313 slab_obj_alloc(): Allocated object 0xcfe99640 from "size-64" (0xcfe9a004), slab 0xcfe9a004, inuse 21
+[0m[31;40mmm/slab.c:313 slab_obj_alloc(): Allocated object 0xcfe99690 from "size-64" (0xcfe9a004), slab 0xcfe9a004, inuse 22
+[0m[31;40mmm/slab.c:313 slab_obj_alloc(): Allocated object 0xcfe996e0 from "size-64" (0xcfe9a004), slab 0xcfe9a004, inuse 23
+[0m[31;40mmm/slab.c:313 slab_obj_alloc(): Allocated object 0xcfe99730 from "size-64" (0xcfe9a004), slab 0xcfe9a004, inuse 24
+[0m[31;40mmm/slab.c:313 slab_obj_alloc(): Allocated object 0xcfe99780 from "size-64" (0xcfe9a004), slab 0xcfe9a004, inuse 25
+[0m[31;40mmm/slab.c:313 slab_obj_alloc(): Allocated object 0xcfe723c0 from "proc" (0xcfe9a2d4), slab 0xcfe9a2d4, inuse 3
+[0m[31;40mmm/page.c:276 _page_alloc_order(): allocating 2 pages (addr 0xcfe6a000)
+[0m[*] create vmmap
+[31;40mmm/slab.c:313 slab_obj_alloc(): Allocated object 0xcfe6e038 from "vmmap" (0xcfe9a284), slab 0xcfe9a284, inuse 3
+[0m[31;40mmm/page.c:276 _page_alloc_order(): allocating 16 pages (addr 0xcfe24000)
+[0m[31;40mmm/slab.c:313 slab_obj_alloc(): Allocated object 0xcfe440a8 from "kthread" (0xcfe9a2fc), slab 0xcfe9a2fc, inuse 3
+[0m[31;40mmm/slab.c:313 slab_obj_alloc(): Allocated object 0xcfe9a320 from "slab_allocators" (0xc0063244), slab 0xc0063244, inuse 21
+[0m[31;40mmm/slab.c:157 _calc_slab_size(): calc_slab_size: minorder 0, waste 16
+[0m[31;40mmm/slab.c:200 _allocator_init(): Initialized new slab allocator:
+[0m[31;40m  Name:          "file" (0xcfe9a324)
+[0m[31;40m  Object Size:   24
+[0m[31;40m  Order:         0
+[0m[31;40m  Slab Capacity: 127
+[0m[31;40mmm/slab.c:313 slab_obj_alloc(): Allocated object 0xcfe9a348 from "slab_allocators" (0xc0063244), slab 0xc0063244, inuse 22
+[0m[31;40mmm/slab.c:157 _calc_slab_size(): calc_slab_size: minorder 0, waste 112
+[0m[31;40mmm/slab.c:168 _calc_slab_size(): calc_slab_size: replacing with order 2, waste 0
+[0m[31;40mmm/slab.c:200 _allocator_init(): Initialized new slab allocator:
+[0m[31;40m  Name:          "vnode" (0xcfe9a34c)
+[0m[31;40m  Object Size:   116
+[0m[31;40m  Order:         2
+[0m[31;40m  Slab Capacity: 132
+[0m[31;40mmm/slab.c:313 slab_obj_alloc(): Allocated object 0xcfe84510 from "size-128" (0xcfe9a02c), slab 0xcfe9a02c, inuse 10
+[0m[31;40mmm/slab.c:313 slab_obj_alloc(): Allocated object 0xcfe997d0 from "size-64" (0xcfe9a004), slab 0xcfe9a004, inuse 26
+[0m[31;40mmm/page.c:276 _page_alloc_order(): allocating 16 pages (addr 0xcfe14000)
+[0m[31;40mmm/slab.c:271 _slab_allocator_grow(): Growing cache "pframe" (0xcfe9a20c), new slab 0xcfe23ff0 (16 pages)
+[0m[31;40mmm/slab.c:313 slab_obj_alloc(): Allocated object 0xcfe14000 from "pframe" (0xcfe9a20c), slab 0xcfe9a20c, inuse 1
+[0m[31;40mmm/page.c:276 _page_alloc_order(): allocating 1 pages (addr 0xcfe96000)
+[0mpframe alloc mmobj=0xcfe844b8, mmo_nrespages=1
+pframe fill page addr 0xcfe96000
+sched switch from pid = 0 to pid = 2
+sched switch from pid = 2 to pid = 0
+finish fill page addr 0xcfe96000
+[31;40mmm/page.c:276 _page_alloc_order(): allocating 4 pages (addr 0xcfe64000)
+[0m[31;40mmm/slab.c:271 _slab_allocator_grow(): Growing cache "vnode" (0xcfe9a34c), new slab 0xcfe67ff0 (4 pages)
+[0m[31;40mmm/slab.c:313 slab_obj_alloc(): Allocated object 0xcfe64000 from "vnode" (0xcfe9a34c), slab 0xcfe9a34c, inuse 1
+[0m[31;40mmm/slab.c:313 slab_obj_alloc(): Allocated object 0xcfe14048 from "pframe" (0xcfe9a20c), slab 0xcfe9a20c, inuse 2
+[0m[31;40mmm/page.c:276 _page_alloc_order(): allocating 1 pages (addr 0xcfe69000)
+[0mpframe alloc mmobj=0xcfe844b8, mmo_nrespages=2
+pframe fill page addr 0xcfe69000
+sched switch from pid = 0 to pid = 0
+finish fill page addr 0xcfe69000
+[36;40mfs/vnode.c:208 vget(): vget: 0xcfe64004, 0xcfe84518 ino 0 refcount set to 1, nrespages=0
+[0m[31;40mmm/slab.c:313 slab_obj_alloc(): Allocated object 0xcfe9a370 from "slab_allocators" (0xc0063244), slab 0xc0063244, inuse 23
+[0m[31;40mmm/slab.c:157 _calc_slab_size(): calc_slab_size: minorder 0, waste 32
+[0m[31;40mmm/slab.c:168 _calc_slab_size(): calc_slab_size: replacing with order 3, waste 0
+[0m[31;40mmm/slab.c:200 _allocator_init(): Initialized new slab allocator:
+[0m[31;40m  Name:          "pipe" (0xcfe9a374)
+[0m[31;40m  Object Size:   84
+[0m[31;40m  Order:         3
+[0m[31;40m  Slab Capacity: 356
+[0m[31;40mmm/slab.c:313 slab_obj_alloc(): Allocated object 0xcfe99820 from "size-64" (0xcfe9a004), slab 0xcfe9a004, inuse 27
+[0m[31;40mmm/slab.c:313 slab_obj_alloc(): Allocated object 0xcfe845a0 from "size-128" (0xcfe9a02c), slab 0xcfe9a02c, inuse 11
+[0m[31;40mtest/kshell/kshell.c:98 kshell_add_command(): Added help command
+[0m[31;40mmm/slab.c:313 slab_obj_alloc(): Allocated object 0xcfe84630 from "size-128" (0xcfe9a02c), slab 0xcfe9a02c, inuse 12
+[0m[31;40mtest/kshell/kshell.c:98 kshell_add_command(): Added echo command
+[0m[31;40mmm/slab.c:313 slab_obj_alloc(): Allocated object 0xcfe846c0 from "size-128" (0xcfe9a02c), slab 0xcfe9a02c, inuse 13
+[0m[31;40mtest/kshell/kshell.c:98 kshell_add_command(): Added cat command
+[0m[31;40mmm/slab.c:313 slab_obj_alloc(): Allocated object 0xcfe84750 from "size-128" (0xcfe9a02c), slab 0xcfe9a02c, inuse 14
+[0m[31;40mtest/kshell/kshell.c:98 kshell_add_command(): Added ls command
+[0m[31;40mmm/slab.c:313 slab_obj_alloc(): Allocated object 0xcfe847e0 from "size-128" (0xcfe9a02c), slab 0xcfe9a02c, inuse 15
+[0m[31;40mtest/kshell/kshell.c:98 kshell_add_command(): Added cd command
+[0m[31;40mmm/slab.c:313 slab_obj_alloc(): Allocated object 0xcfe84870 from "size-128" (0xcfe9a02c), slab 0xcfe9a02c, inuse 16
+[0m[31;40mtest/kshell/kshell.c:98 kshell_add_command(): Added rm command
+[0m[31;40mmm/slab.c:313 slab_obj_alloc(): Allocated object 0xcfe84900 from "size-128" (0xcfe9a02c), slab 0xcfe9a02c, inuse 17
+[0m[31;40mtest/kshell/kshell.c:98 kshell_add_command(): Added link command
+[0m[31;40mmm/slab.c:313 slab_obj_alloc(): Allocated object 0xcfe84990 from "size-128" (0xcfe9a02c), slab 0xcfe9a02c, inuse 18
+[0m[31;40mtest/kshell/kshell.c:98 kshell_add_command(): Added rmdir command
+[0m[31;40mmm/slab.c:313 slab_obj_alloc(): Allocated object 0xcfe84a20 from "size-128" (0xcfe9a02c), slab 0xcfe9a02c, inuse 19
+[0m[31;40mtest/kshell/kshell.c:98 kshell_add_command(): Added mkdir command
+[0m[31;40mmm/slab.c:313 slab_obj_alloc(): Allocated object 0xcfe84ab0 from "size-128" (0xcfe9a02c), slab 0xcfe9a02c, inuse 20
+[0m[31;40mtest/kshell/kshell.c:98 kshell_add_command(): Added stat command
+[0m[31;40mmm/slab.c:313 slab_obj_alloc(): Allocated object 0xcfe84b40 from "size-128" (0xcfe9a02c), slab 0xcfe9a02c, inuse 21
+[0m[31;40mtest/kshell/kshell.c:98 kshell_add_command(): Added exit command
+[0m[31;40mmm/slab.c:355 slab_obj_free(): Freed object 0xcfe99370 from "size-64" (0xcfe9a004), slab 0xcfe99ff0, inuse 26
+[0m[31;40mmm/slab.c:355 slab_obj_free(): Freed object 0xcfe99320 from "size-64" (0xcfe9a004), slab 0xcfe99ff0, inuse 25
+[0m[31;40mmm/slab.c:355 slab_obj_free(): Freed object 0xcfe993c0 from "size-64" (0xcfe9a004), slab 0xcfe99ff0, inuse 24
+[0m[31;40mmm/slab.c:355 slab_obj_free(): Freed object 0xcfe99410 from "size-64" (0xcfe9a004), slab 0xcfe99ff0, inuse 23
+[0m[31;40mmm/slab.c:355 slab_obj_free(): Freed object 0xcfe99460 from "size-64" (0xcfe9a004), slab 0xcfe99ff0, inuse 22
+[0m[31;40mmm/slab.c:355 slab_obj_free(): Freed object 0xcfe99500 from "size-64" (0xcfe9a004), slab 0xcfe99ff0, inuse 21
+[0m[31;40mmm/slab.c:355 slab_obj_free(): Freed object 0xcfe994b0 from "size-64" (0xcfe9a004), slab 0xcfe99ff0, inuse 20
+[0m[31;40mmm/slab.c:355 slab_obj_free(): Freed object 0xcfe995a0 from "size-64" (0xcfe9a004), slab 0xcfe99ff0, inuse 19
+[0m[31;40mmm/slab.c:355 slab_obj_free(): Freed object 0xcfe995f0 from "size-64" (0xcfe9a004), slab 0xcfe99ff0, inuse 18
+[0m[31;40mmm/slab.c:355 slab_obj_free(): Freed object 0xcfe99550 from "size-64" (0xcfe9a004), slab 0xcfe99ff0, inuse 17
+[0m[31;40mmm/slab.c:355 slab_obj_free(): Freed object 0xcfe99640 from "size-64" (0xcfe9a004), slab 0xcfe99ff0, inuse 16
+[0m[31;40mmm/slab.c:355 slab_obj_free(): Freed object 0xcfe996e0 from "size-64" (0xcfe9a004), slab 0xcfe99ff0, inuse 15
+[0m[31;40mmm/slab.c:355 slab_obj_free(): Freed object 0xcfe99690 from "size-64" (0xcfe9a004), slab 0xcfe99ff0, inuse 14
+[0m[31;40mmm/slab.c:355 slab_obj_free(): Freed object 0xcfe99730 from "size-64" (0xcfe9a004), slab 0xcfe99ff0, inuse 13
+[0m[31;40mmm/slab.c:355 slab_obj_free(): Freed object 0xcfe99780 from "size-64" (0xcfe9a004), slab 0xcfe99ff0, inuse 12
+[0m[36;40mfs/vnode.c:121 vref(): vref: 0xcfe64004, 0xcfe84518 ino 0 up to 2, nrespages=0
+[0mfinish creating init proc2
+[36;40mfs/vnode.c:121 vref(): vref: 0xcfe64004, 0xcfe84518 ino 0 up to 3, nrespages=0
+[0m[*] do_mkdir make dir /dev
+[*] in dir_namev try to resolve absolute /dev
+[31;40mmm/slab.c:313 slab_obj_alloc(): Allocated object 0xcfe14090 from "pframe" (0xcfe9a20c), slab 0xcfe9a20c, inuse 3
+[0m[31;40mmm/page.c:276 _page_alloc_order(): allocating 1 pages (addr 0xcfe68000)
+[0m[36;40mfs/vnode.c:121 vref(): vref: 0xcfe64004, 0xcfe84518 ino 0 up to 4, nrespages=0
+[0mpframe alloc mmobj=0xcfe6400c, mmo_nrespages=1
+pframe fill page addr 0xcfe68000
+vreadpage
+sched switch from pid = 0 to pid = 0
+finish fill page addr 0xcfe68000
+[*] lookup dev find status -2
+[31;40mmm/slab.c:313 slab_obj_alloc(): Allocated object 0xcfe140d8 from "pframe" (0xcfe9a20c), slab 0xcfe9a20c, inuse 4
+[0m[31;40mmm/page.c:276 _page_alloc_order(): allocating 1 pages (addr 0xcfe13000)
+[0mpframe alloc mmobj=0xcfe844b8, mmo_nrespages=3
+pframe fill page addr 0xcfe13000
+sched switch from pid = 0 to pid = 0
+finish fill page addr 0xcfe13000
+[31;40mmm/slab.c:313 slab_obj_alloc(): Allocated object 0xcfe6407c from "vnode" (0xcfe9a34c), slab 0xcfe9a34c, inuse 2
+[0m[36;40mfs/vnode.c:208 vget(): vget: 0xcfe64080, 0xcfe84518 ino 39 refcount set to 1, nrespages=0
+[0m[31;40mmm/slab.c:313 slab_obj_alloc(): Allocated object 0xcfe14120 from "pframe" (0xcfe9a20c), slab 0xcfe9a20c, inuse 5
+[0m[31;40mmm/page.c:276 _page_alloc_order(): allocating 1 pages (addr 0xcfe12000)
+[0m[36;40mfs/vnode.c:121 vref(): vref: 0xcfe64080, 0xcfe84518 ino 39 up to 2, nrespages=0
+[0mpframe alloc mmobj=0xcfe64088, mmo_nrespages=1
+pframe fill page addr 0xcfe12000
+vreadpage
+finish fill page addr 0xcfe12000
+[36;40mfs/vnode.c:247 vput(): vput: 0xcfe64080, 0xcfe84518 ino 39, down to 1, nrespages = 1
+[0m[*] do_mkdir make dir /dev success
+do_mkdir caught here with result 0
+[*] do_mknod make special device /dev/tty0
+[*] in dir_namev try to resolve absolute /dev/tty0
+[36;40mfs/vnode.c:121 vref(): vref: 0xcfe64080, 0xcfe84518 ino 39 up to 2, nrespages=1
+[0m[*] lookup dev find status 0 vnode 39 add cfe64080
+[36;40mfs/vnode.c:247 vput(): vput: 0xcfe64080, 0xcfe84518 ino 39, down to 1, nrespages = 1
+[0m[*] lookup tty0 find status -2
+[31;40mmm/slab.c:313 slab_obj_alloc(): Allocated object 0xcfe640f8 from "vnode" (0xcfe9a34c), slab 0xcfe9a34c, inuse 3
+[0m[36;40mfs/vnode.c:208 vget(): vget: 0xcfe640fc, 0xcfe84518 ino 40 refcount set to 1, nrespages=0
+[0m[36;40mfs/vnode.c:247 vput(): vput: 0xcfe640fc, 0xcfe84518 ino 40, down to 0, nrespages = 0
+[0m[31;40mmm/slab.c:355 slab_obj_free(): Freed object 0xcfe640f8 from "vnode" (0xcfe9a34c), slab 0xcfe67ff0, inuse 2
+[0m[*] do_mknod make special device /dev/zero
+[*] in dir_namev try to resolve absolute /dev/zero
+[36;40mfs/vnode.c:121 vref(): vref: 0xcfe64080, 0xcfe84518 ino 39 up to 2, nrespages=1
+[0m[*] lookup dev find status 0 vnode 39 add cfe64080
+[36;40mfs/vnode.c:247 vput(): vput: 0xcfe64080, 0xcfe84518 ino 39, down to 1, nrespages = 1
+[0m[*] lookup zero find status -2
+[31;40mmm/slab.c:313 slab_obj_alloc(): Allocated object 0xcfe640f8 from "vnode" (0xcfe9a34c), slab 0xcfe9a34c, inuse 3
+[0m[36;40mfs/vnode.c:208 vget(): vget: 0xcfe640fc, 0xcfe84518 ino 41 refcount set to 1, nrespages=0
+[0m[36;40mfs/vnode.c:247 vput(): vput: 0xcfe640fc, 0xcfe84518 ino 41, down to 0, nrespages = 0
+[0m[31;40mmm/slab.c:355 slab_obj_free(): Freed object 0xcfe640f8 from "vnode" (0xcfe9a34c), slab 0xcfe67ff0, inuse 2
+[0m[*] do_mknod make special device /dev/null
+[*] in dir_namev try to resolve absolute /dev/null
+[36;40mfs/vnode.c:121 vref(): vref: 0xcfe64080, 0xcfe84518 ino 39 up to 2, nrespages=1
+[0m[*] lookup dev find status 0 vnode 39 add cfe64080
+[36;40mfs/vnode.c:247 vput(): vput: 0xcfe64080, 0xcfe84518 ino 39, down to 1, nrespages = 1
+[0m[*] lookup null find status -2
+[31;40mmm/slab.c:313 slab_obj_alloc(): Allocated object 0xcfe640f8 from "vnode" (0xcfe9a34c), slab 0xcfe9a34c, inuse 3
+[0m[36;40mfs/vnode.c:208 vget(): vget: 0xcfe640fc, 0xcfe84518 ino 42 refcount set to 1, nrespages=0
+[0m[36;40mfs/vnode.c:247 vput(): vput: 0xcfe640fc, 0xcfe84518 ino 42, down to 0, nrespages = 0
+[0m[31;40mmm/slab.c:355 slab_obj_free(): Freed object 0xcfe640f8 from "vnode" (0xcfe9a34c), slab 0xcfe67ff0, inuse 2
+[0min do_waitpid pid 0 wait for -1
+do wait sched sleep
+sched switch from pid = 0 to pid = 1
+[*] in do_open try to open /dev/tty0
+[31;40mmm/page.c:276 _page_alloc_order(): allocating 1 pages (addr 0xcfe11000)
+[0m[31;40mmm/slab.c:271 _slab_allocator_grow(): Growing cache "file" (0xcfe9a324), new slab 0xcfe11fe0 (1 pages)
+[0m[31;40mmm/slab.c:313 slab_obj_alloc(): Allocated object 0xcfe11000 from "file" (0xcfe9a324), slab 0xcfe9a324, inuse 1
+[0m[*] in open_namev try to create /dev/tty0
+[*] in dir_namev try to resolve absolute /dev/tty0
+[36;40mfs/vnode.c:121 vref(): vref: 0xcfe64080, 0xcfe84518 ino 39 up to 2, nrespages=1
+[0m[*] lookup dev find status 0 vnode 39 add cfe64080
+[31;40mmm/slab.c:313 slab_obj_alloc(): Allocated object 0xcfe640f8 from "vnode" (0xcfe9a34c), slab 0xcfe9a34c, inuse 3
+[0m[36;40mfs/vnode.c:208 vget(): vget: 0xcfe640fc, 0xcfe84518 ino 40 refcount set to 1, nrespages=0
+[0m[*] lookup tty0 find status 0 vnode 40 add cfe640fc
+open namev 1
+[36;40mfs/vnode.c:247 vput(): vput: 0xcfe64080, 0xcfe84518 ino 39, down to 1, nrespages = 1
+[0m[*] in open_namev found the file 
+[*] in open_namev return value 1
+[*] in do_open created file /dev/tty0
+[*] in do_open finsih open /dev/tty0
+[*] in do_open try to open /dev/tty0
+[31;40mmm/slab.c:313 slab_obj_alloc(): Allocated object 0xcfe11020 from "file" (0xcfe9a324), slab 0xcfe9a324, inuse 2
+[0m[*] in open_namev try to create /dev/tty0
+[*] in dir_namev try to resolve absolute /dev/tty0
+[36;40mfs/vnode.c:121 vref(): vref: 0xcfe64080, 0xcfe84518 ino 39 up to 2, nrespages=1
+[0m[*] lookup dev find status 0 vnode 39 add cfe64080
+[36;40mfs/vnode.c:121 vref(): vref: 0xcfe640fc, 0xcfe84518 ino 40 up to 2, nrespages=0
+[0m[*] lookup tty0 find status 0 vnode 40 add cfe640fc
+open namev 1
+[36;40mfs/vnode.c:247 vput(): vput: 0xcfe64080, 0xcfe84518 ino 39, down to 1, nrespages = 1
+[0m[*] in open_namev found the file 
+[*] in open_namev return value 1
+[*] in do_open created file /dev/tty0
+[*] in do_open finsih open /dev/tty0
+[*] in do_open try to open /sbin/init
+[31;40mmm/slab.c:313 slab_obj_alloc(): Allocated object 0xcfe11040 from "file" (0xcfe9a324), slab 0xcfe9a324, inuse 3
+[0m[*] in open_namev try to create /sbin/init
+[*] in dir_namev try to resolve absolute /sbin/init
+[31;40mmm/slab.c:313 slab_obj_alloc(): Allocated object 0xcfe64174 from "vnode" (0xcfe9a34c), slab 0xcfe9a34c, inuse 4
+[0m[36;40mfs/vnode.c:208 vget(): vget: 0xcfe64178, 0xcfe84518 ino 4 refcount set to 1, nrespages=0
+[0m[*] lookup sbin find status 0 vnode 4 add cfe64178
+[31;40mmm/slab.c:313 slab_obj_alloc(): Allocated object 0xcfe14168 from "pframe" (0xcfe9a20c), slab 0xcfe9a20c, inuse 6
+[0m[31;40mmm/page.c:276 _page_alloc_order(): allocating 1 pages (addr 0xcfe10000)
+[0m[36;40mfs/vnode.c:121 vref(): vref: 0xcfe64178, 0xcfe84518 ino 4 up to 2, nrespages=0
+[0mpframe alloc mmobj=0xcfe64180, mmo_nrespages=1
+pframe fill page addr 0xcfe10000
+vreadpage
+sched switch from pid = 1 to pid = 1
+finish fill page addr 0xcfe10000
+[31;40mmm/slab.c:313 slab_obj_alloc(): Allocated object 0xcfe641f0 from "vnode" (0xcfe9a34c), slab 0xcfe9a34c, inuse 5
+[0m[36;40mfs/vnode.c:208 vget(): vget: 0xcfe641f4, 0xcfe84518 ino 10 refcount set to 1, nrespages=0
+[0m[*] lookup init find status 0 vnode 10 add cfe641f4
+open namev 1
+[36;40mfs/vnode.c:247 vput(): vput: 0xcfe64178, 0xcfe84518 ino 4, down to 1, nrespages = 1
+[0m[*] in open_namev found the file 
+[*] in open_namev return value 1
+[*] in do_open created file /sbin/init
+[*] in do_open finsih open /sbin/init
+do read fd = 2
+[31;40mmm/slab.c:313 slab_obj_alloc(): Allocated object 0xcfe141b0 from "pframe" (0xcfe9a20c), slab 0xcfe9a20c, inuse 7
+[0m[31;40mmm/page.c:276 _page_alloc_order(): allocating 1 pages (addr 0xcfe0f000)
+[0m[36;40mfs/vnode.c:121 vref(): vref: 0xcfe641f4, 0xcfe84518 ino 10 up to 2, nrespages=0
+[0mpframe alloc mmobj=0xcfe641fc, mmo_nrespages=1
+pframe fill page addr 0xcfe0f000
+vreadpage
+sched switch from pid = 1 to pid = 1
+finish fill page addr 0xcfe0f000
+[*] create vmmap
+[31;40mmm/slab.c:313 slab_obj_alloc(): Allocated object 0xcfe6e054 from "vmmap" (0xcfe9a284), slab 0xcfe9a284, inuse 4
+[0m[31;40mmm/slab.c:313 slab_obj_alloc(): Allocated object 0xcfe84bd0 from "size-128" (0xcfe9a02c), slab 0xcfe9a02c, inuse 22
+[0mdo read fd = 2
+[*] start vmmap_map
+[31;40mmm/page.c:276 _page_alloc_order(): allocating 1 pages (addr 0xcfe0e000)
+[0m[31;40mmm/slab.c:271 _slab_allocator_grow(): Growing cache "vmarea" (0xcfe9a2ac), new slab 0xcfe0eff0 (1 pages)
+[0m[31;40mmm/slab.c:313 slab_obj_alloc(): Allocated object 0xcfe0e000 from "vmarea" (0xcfe9a2ac), slab 0xcfe9a2ac, inuse 1
+[0m[36;40mfs/vnode.c:121 vref(): vref: 0xcfe641f4, 0xcfe84518 ino 10 up to 3, nrespages=1
+[0m[*] insert a new vmarea to vmmap
+finish vmmap_insert
+[*] exit vmmap_map
+[*] start vmmap_map
+[31;40mmm/slab.c:313 slab_obj_alloc(): Allocated object 0xcfe0e03c from "vmarea" (0xcfe9a2ac), slab 0xcfe9a2ac, inuse 2
+[0m[36;40mfs/vnode.c:121 vref(): vref: 0xcfe641f4, 0xcfe84518 ino 10 up to 4, nrespages=1
+[0m[*] create shadow mmobj
+[31;40mmm/page.c:276 _page_alloc_order(): allocating 1 pages (addr 0xcfe0d000)
+[0m[31;40mmm/slab.c:271 _slab_allocator_grow(): Growing cache "shadow" (0xcfe9a25c), new slab 0xcfe0dff0 (1 pages)
+[0m[31;40mmm/slab.c:313 slab_obj_alloc(): Allocated object 0xcfe0d000 from "shadow" (0xcfe9a25c), slab 0xcfe9a25c, inuse 1
+[0m[*] insert a new vmarea to vmmap
+finish vmmap_insert
+[*] exit vmmap_map
+[*] start vmmap_map
+[36;40mfs/vnode.c:247 vput(): vput: 0xcfe641f4, 0xcfe84518 ino 10, down to 3, nrespages = 1
+[0m[31;40mmm/slab.c:355 slab_obj_free(): Freed object 0xcfe0d000 from "shadow" (0xcfe9a25c), slab 0xcfe0dff0, inuse 0
+[0m[31;40mmm/slab.c:313 slab_obj_alloc(): Allocated object 0xcfe0e078 from "vmarea" (0xcfe9a2ac), slab 0xcfe9a2ac, inuse 3
+[0m[31;40mmm/page.c:276 _page_alloc_order(): allocating 1 pages (addr 0xcfe0c000)
+[0m[31;40mmm/slab.c:271 _slab_allocator_grow(): Growing cache "anon" (0xcfe9a234), new slab 0xcfe0cff0 (1 pages)
+[0m[31;40mmm/slab.c:313 slab_obj_alloc(): Allocated object 0xcfe0c000 from "anon" (0xcfe9a234), slab 0xcfe9a234, inuse 1
+[0m[*] create shadow mmobj
+[31;40mmm/slab.c:313 slab_obj_alloc(): Allocated object 0xcfe0d000 from "shadow" (0xcfe9a25c), slab 0xcfe9a25c, inuse 1
+[0m[*] insert a new vmarea to vmmap
+finish vmmap_insert
+[*] exit vmmap_map
+[31;40mmm/page.c:276 _page_alloc_order(): allocating 1 pages (addr 0xcfe0b000)
+[0m[31;40mmm/slab.c:313 slab_obj_alloc(): Allocated object 0xcfe141f8 from "pframe" (0xcfe9a20c), slab 0xcfe9a20c, inuse 8
+[0m[31;40mmm/page.c:276 _page_alloc_order(): allocating 1 pages (addr 0xcfe0a000)
+[0m[36;40mfs/vnode.c:121 vref(): vref: 0xcfe641f4, 0xcfe84518 ino 10 up to 4, nrespages=1
+[0mpframe alloc mmobj=0xcfe641fc, mmo_nrespages=2
+pframe fill page addr 0xcfe0a000
+vreadpage
+sched switch from pid = 1 to pid = 1
+finish fill page addr 0xcfe0a000
+[*] Enter vmmap_write
+[*] finish vmmap_write checking
+check vma [0x008048, 0x00804f)
+check vma [0x00804f, 0x008050)
+[31;40mmm/slab.c:313 slab_obj_alloc(): Allocated object 0xcfe14240 from "pframe" (0xcfe9a20c), slab 0xcfe9a20c, inuse 9
+[0m[31;40mmm/page.c:276 _page_alloc_order(): allocating 1 pages (addr 0xcfe09000)
+[0m[*] ref shadow obj 0xcfe0d004 to refcount=2
+pframe alloc mmobj=0xcfe0d004, mmo_nrespages=1
+pframe fill page addr 0xcfe09000
+[*] Enter fill shadow page, pf=0xcfe14244
+search bottom obj
+[31;40mmm/slab.c:313 slab_obj_alloc(): Allocated object 0xcfe14288 from "pframe" (0xcfe9a20c), slab 0xcfe9a20c, inuse 10
+[0m[31;40mmm/page.c:276 _page_alloc_order(): allocating 1 pages (addr 0xcfe08000)
+[0mpframe alloc mmobj=0xcfe0c004, mmo_nrespages=1
+pframe fill page addr 0xcfe08000
+[*] fill anon object page pagenum = 0xcfe08000
+[*] dirty anon object page
+finish fill page addr 0xcfe08000
+[*] dirty anon object page
+finish fill page addr 0xcfe09000
+finish lookup
+dirty pframe 0xcfe14244 in shadow obj
+[*] exit vmmap_write successfully
+[31;40mmm/page.c:346 _page_free_order(): page_free: freed 1 pages (addr 0xcfe0b000); 64853 pages currently free
+[0m[31;40mmm/slab.c:313 slab_obj_alloc(): Allocated object 0xcfe99780 from "size-64" (0xcfe9a004), slab 0xcfe9a004, inuse 13
+[0m[*] start vmmap_map
+[31;40mmm/slab.c:313 slab_obj_alloc(): Allocated object 0xcfe0e0b4 from "vmarea" (0xcfe9a2ac), slab 0xcfe9a2ac, inuse 4
+[0m[31;40mmm/slab.c:313 slab_obj_alloc(): Allocated object 0xcfe0c030 from "anon" (0xcfe9a234), slab 0xcfe9a234, inuse 2
+[0m[*] create shadow mmobj
+[31;40mmm/slab.c:313 slab_obj_alloc(): Allocated object 0xcfe0d030 from "shadow" (0xcfe9a25c), slab 0xcfe9a25c, inuse 2
+[0m[*] insert a new vmarea to vmmap
+finish vmmap_insert
+[*] exit vmmap_map
+[31;40mmm/slab.c:313 slab_obj_alloc(): Allocated object 0xcfe99730 from "size-64" (0xcfe9a004), slab 0xcfe9a004, inuse 14
+[0m[*] Enter vmmap_write
+[*] finish vmmap_write checking
+check vma [0x008039, 0x008048)
+[31;40mmm/slab.c:313 slab_obj_alloc(): Allocated object 0xcfe142d0 from "pframe" (0xcfe9a20c), slab 0xcfe9a20c, inuse 11
+[0m[31;40mmm/page.c:276 _page_alloc_order(): allocating 1 pages (addr 0xcfe0b000)
+[0m[*] ref shadow obj 0xcfe0d034 to refcount=2
+pframe alloc mmobj=0xcfe0d034, mmo_nrespages=1
+pframe fill page addr 0xcfe0b000
+[*] Enter fill shadow page, pf=0xcfe142d4
+search bottom obj
+[31;40mmm/slab.c:313 slab_obj_alloc(): Allocated object 0xcfe14318 from "pframe" (0xcfe9a20c), slab 0xcfe9a20c, inuse 12
+[0m[31;40mmm/page.c:276 _page_alloc_order(): allocating 1 pages (addr 0xcfe07000)
+[0mpframe alloc mmobj=0xcfe0c034, mmo_nrespages=1
+pframe fill page addr 0xcfe07000
+[*] fill anon object page pagenum = 0xcfe07000
+[*] dirty anon object page
+finish fill page addr 0xcfe07000
+[*] dirty anon object page
+finish fill page addr 0xcfe0b000
+finish lookup
+dirty pframe 0xcfe142d4 in shadow obj
+[*] exit vmmap_write successfully
+[*] destroy all vmareas
+[31;40mmm/slab.c:355 slab_obj_free(): Freed object 0xcfe6e01c from "vmmap" (0xcfe9a284), slab 0xcfe6fff0, inuse 3
+[0m[31;40mmm/slab.c:355 slab_obj_free(): Freed object 0xcfe84bd0 from "size-128" (0xcfe9a02c), slab 0xcfe93ff0, inuse 21
+[0m[31;40mmm/slab.c:355 slab_obj_free(): Freed object 0xcfe99780 from "size-64" (0xcfe9a004), slab 0xcfe99ff0, inuse 13
+[0m[31;40mmm/slab.c:355 slab_obj_free(): Freed object 0xcfe99730 from "size-64" (0xcfe9a004), slab 0xcfe99ff0, inuse 12
+[0m[*] do_close file 2 add cfe641f4
+[36;40mfs/vnode.c:247 vput(): vput: 0xcfe641f4, 0xcfe84518 ino 10, down to 3, nrespages = 2
+[0m[31;40mmm/slab.c:355 slab_obj_free(): Freed object 0xcfe11040 from "file" (0xcfe9a324), slab 0xcfe11fe0, inuse 2
+[0m[*] handle pagefault 0x804832f, 0x000004, pid=1
+in handle pagefault: 0x804832f, 0xcfe0f000, 0xff52000
+[31;40mmm/page.c:276 _page_alloc_order(): allocating 1 pages (addr 0xcfe06000)
+[0m[*] handle pagefault with pt_map
+[*] handle pagefault 0x8047fcc, 0x000006, pid=1
+in handle pagefault: 0x8047fcc, 0xcfe0b000, 0xff4e000
+[*] handle pagefault with pt_map
+[*] handle pagefault 0x80490c5, 0x000004, pid=1
+[31;40mmm/slab.c:313 slab_obj_alloc(): Allocated object 0xcfe14360 from "pframe" (0xcfe9a20c), slab 0xcfe9a20c, inuse 13
+[0m[31;40mmm/page.c:276 _page_alloc_order(): allocating 1 pages (addr 0xcfe05000)
+[0m[36;40mfs/vnode.c:121 vref(): vref: 0xcfe641f4, 0xcfe84518 ino 10 up to 4, nrespages=2
+[0mpframe alloc mmobj=0xcfe641fc, mmo_nrespages=3
+pframe fill page addr 0xcfe05000
+vreadpage
+sched switch from pid = 1 to pid = 1
+finish fill page addr 0xcfe05000
+in handle pagefault: 0x80490c5, 0xcfe05000, 0xff48000
+[*] handle pagefault with pt_map
+[*] do_close file 0 add cfe640fc
+[36;40mfs/vnode.c:247 vput(): vput: 0xcfe640fc, 0xcfe84518 ino 40, down to 1, nrespages = 0
+[0m[31;40mmm/slab.c:355 slab_obj_free(): Freed object 0xcfe11000 from "file" (0xcfe9a324), slab 0xcfe11fe0, inuse 1
+[0m[*] handle pagefault 0x804f2a4, 0x000006, pid=1
+in handle pagefault: 0x804f2a4, 0xcfe09000, 0xff4c000
+[*] handle pagefault with pt_map
+[*] do_close file 1 add cfe640fc
+[36;40mfs/vnode.c:247 vput(): vput: 0xcfe640fc, 0xcfe84518 ino 40, down to 0, nrespages = 0
+[0m[31;40mmm/slab.c:355 slab_obj_free(): Freed object 0xcfe640f8 from "vnode" (0xcfe9a34c), slab 0xcfe67ff0, inuse 4
+[0m[31;40mmm/slab.c:355 slab_obj_free(): Freed object 0xcfe11020 from "file" (0xcfe9a324), slab 0xcfe11fe0, inuse 0
+[0m[*] handle pagefault 0x804cfd9, 0x000004, pid=1
+[31;40mmm/slab.c:313 slab_obj_alloc(): Allocated object 0xcfe143a8 from "pframe" (0xcfe9a20c), slab 0xcfe9a20c, inuse 14
+[0m[31;40mmm/page.c:276 _page_alloc_order(): allocating 1 pages (addr 0xcfe04000)
+[0m[36;40mfs/vnode.c:121 vref(): vref: 0xcfe641f4, 0xcfe84518 ino 10 up to 5, nrespages=3
+[0mpframe alloc mmobj=0xcfe641fc, mmo_nrespages=4
+pframe fill page addr 0xcfe04000
+vreadpage
+sched switch from pid = 1 to pid = 1
+finish fill page addr 0xcfe04000
+in handle pagefault: 0x804cfd9, 0xcfe04000, 0xff47000
+[*] handle pagefault with pt_map
+[31;40mmm/slab.c:313 slab_obj_alloc(): Allocated object 0xcfe99730 from "size-64" (0xcfe9a004), slab 0xcfe9a004, inuse 13
+[0m[*] in do_open try to open /dev/tty0
+[31;40mmm/slab.c:313 slab_obj_alloc(): Allocated object 0xcfe11020 from "file" (0xcfe9a324), slab 0xcfe9a324, inuse 1
+[0m[*] in open_namev try to create /dev/tty0
+[*] in dir_namev try to resolve absolute /dev/tty0
+[36;40mfs/vnode.c:121 vref(): vref: 0xcfe64080, 0xcfe84518 ino 39 up to 2, nrespages=1
+[0m[*] lookup dev find status 0 vnode 39 add cfe64080
+[31;40mmm/slab.c:313 slab_obj_alloc(): Allocated object 0xcfe640f8 from "vnode" (0xcfe9a34c), slab 0xcfe9a34c, inuse 5
+[0m[36;40mfs/vnode.c:208 vget(): vget: 0xcfe640fc, 0xcfe84518 ino 40 refcount set to 1, nrespages=0
+[0m[*] lookup tty0 find status 0 vnode 40 add cfe640fc
+open namev 1
+[36;40mfs/vnode.c:247 vput(): vput: 0xcfe64080, 0xcfe84518 ino 39, down to 1, nrespages = 1
+[0m[*] in open_namev found the file 
+[*] in open_namev return value 1
+[*] in do_open created file /dev/tty0
+[*] in do_open finsih open /dev/tty0
+[31;40mmm/slab.c:355 slab_obj_free(): Freed object 0xcfe99730 from "size-64" (0xcfe9a004), slab 0xcfe99ff0, inuse 12
+[0m[31;40mmm/slab.c:313 slab_obj_alloc(): Allocated object 0xcfe99730 from "size-64" (0xcfe9a004), slab 0xcfe9a004, inuse 13
+[0m[*] in do_open try to open /dev/tty0
+[31;40mmm/slab.c:313 slab_obj_alloc(): Allocated object 0xcfe11000 from "file" (0xcfe9a324), slab 0xcfe9a324, inuse 2
+[0m[*] in open_namev try to create /dev/tty0
+[*] in dir_namev try to resolve absolute /dev/tty0
+[36;40mfs/vnode.c:121 vref(): vref: 0xcfe64080, 0xcfe84518 ino 39 up to 2, nrespages=1
+[0m[*] lookup dev find status 0 vnode 39 add cfe64080
+[36;40mfs/vnode.c:121 vref(): vref: 0xcfe640fc, 0xcfe84518 ino 40 up to 2, nrespages=0
+[0m[*] lookup tty0 find status 0 vnode 40 add cfe640fc
+open namev 1
+[36;40mfs/vnode.c:247 vput(): vput: 0xcfe64080, 0xcfe84518 ino 39, down to 1, nrespages = 1
+[0m[*] in open_namev found the file 
+[*] in open_namev return value 1
+[*] in do_open created file /dev/tty0
+[*] in do_open finsih open /dev/tty0
+[31;40mmm/slab.c:355 slab_obj_free(): Freed object 0xcfe99730 from "size-64" (0xcfe9a004), slab 0xcfe99ff0, inuse 12
+[0mold file to dup fd 1
+next empty if 2[31;40mmm/slab.c:313 slab_obj_alloc(): Allocated object 0xcfe99730 from "size-64" (0xcfe9a004), slab 0xcfe9a004, inuse 13
+[0m[*] do_chdir change dir to /dev
+[*] in dir_namev try to resolve absolute /dev
+[36;40mfs/vnode.c:121 vref(): vref: 0xcfe64080, 0xcfe84518 ino 39 up to 2, nrespages=1
+[0m[*] lookup dev find status 0 vnode 39 add cfe64080
+[36;40mfs/vnode.c:247 vput(): vput: 0xcfe64004, 0xcfe84518 ino 0, down to 3, nrespages = 1
+[0m[*] do_chdir changed to /dev with 0
+[31;40mmm/slab.c:355 slab_obj_free(): Freed object 0xcfe99730 from "size-64" (0xcfe9a004), slab 0xcfe99ff0, inuse 12
+[0m[31;40mmm/slab.c:313 slab_obj_alloc(): Allocated object 0xcfe99730 from "size-64" (0xcfe9a004), slab 0xcfe9a004, inuse 13
+[0m[*] in do_open try to open /dev
+[31;40mmm/slab.c:313 slab_obj_alloc(): Allocated object 0xcfe11040 from "file" (0xcfe9a324), slab 0xcfe9a324, inuse 3
+[0m[*] in open_namev try to create /dev
+[*] in dir_namev try to resolve absolute /dev
+[36;40mfs/vnode.c:121 vref(): vref: 0xcfe64080, 0xcfe84518 ino 39 up to 3, nrespages=1
+[0m[*] lookup dev find status 0 vnode 39 add cfe64080
+open namev 1
+[*] in open_namev found the file 
+[*] in open_namev return value 1
+[*] in do_open created file /dev
+[*] in do_open finsih open /dev
+[31;40mmm/slab.c:355 slab_obj_free(): Freed object 0xcfe99730 from "size-64" (0xcfe9a004), slab 0xcfe99ff0, inuse 12
+[0m[*] enter sys_getdents
+[*] exit sys_getdents successful
+[*] enter sys_getdents
+[*] exit sys_getdents successful
+[*] enter sys_getdents
+[*] exit sys_getdents successful
+[*] Enter do_fork
+[31;40mmm/slab.c:313 slab_obj_alloc(): Allocated object 0xcfe725a0 from "proc" (0xcfe9a2d4), slab 0xcfe9a2d4, inuse 4
+[0m[31;40mmm/page.c:276 _page_alloc_order(): allocating 2 pages (addr 0xcfe02000)
+[0m[*] create vmmap
+[31;40mmm/slab.c:313 slab_obj_alloc(): Allocated object 0xcfe6e01c from "vmmap" (0xcfe9a284), slab 0xcfe9a284, inuse 4
+[0m[*] do fork create proc pid=3
+[*] create vmmap
+[31;40mmm/slab.c:313 slab_obj_alloc(): Allocated object 0xcfe6e070 from "vmmap" (0xcfe9a284), slab 0xcfe9a284, inuse 5
+[0m[31;40mmm/slab.c:313 slab_obj_alloc(): Allocated object 0xcfe0e0f0 from "vmarea" (0xcfe9a2ac), slab 0xcfe9a2ac, inuse 5
+[0m[31;40mmm/slab.c:313 slab_obj_alloc(): Allocated object 0xcfe0e12c from "vmarea" (0xcfe9a2ac), slab 0xcfe9a2ac, inuse 6
+[0m[31;40mmm/slab.c:313 slab_obj_alloc(): Allocated object 0xcfe0e168 from "vmarea" (0xcfe9a2ac), slab 0xcfe9a2ac, inuse 7
+[0m[*] destroy all vmareas
+[31;40mmm/slab.c:355 slab_obj_free(): Freed object 0xcfe6e01c from "vmmap" (0xcfe9a284), slab 0xcfe6fff0, inuse 4
+[0m[*] do fork finish copying vmmap
+[*] create shadow mmobj
+[31;40mmm/slab.c:313 slab_obj_alloc(): Allocated object 0xcfe0d060 from "shadow" (0xcfe9a25c), slab 0xcfe9a25c, inuse 3
+[0m[*] ref shadow obj 0xcfe0d034 to refcount=3
+[*] create shadow mmobj
+[31;40mmm/slab.c:313 slab_obj_alloc(): Allocated object 0xcfe0d090 from "shadow" (0xcfe9a25c), slab 0xcfe9a25c, inuse 4
+[0m[*] ref shadow obj 0xcfe0d034 to refcount=4
+[36;40mfs/vnode.c:121 vref(): vref: 0xcfe641f4, 0xcfe84518 ino 10 up to 6, nrespages=4
+[0m[*] create shadow mmobj
+[31;40mmm/slab.c:313 slab_obj_alloc(): Allocated object 0xcfe0d0c0 from "shadow" (0xcfe9a25c), slab 0xcfe9a25c, inuse 5
+[0m[*] ref shadow obj 0xcfe0d004 to refcount=3
+[*] create shadow mmobj
+[31;40mmm/slab.c:313 slab_obj_alloc(): Allocated object 0xcfe0d0f0 from "shadow" (0xcfe9a25c), slab 0xcfe9a25c, inuse 6
+[0m[*] ref shadow obj 0xcfe0d004 to refcount=4
+[31;40mmm/page.c:346 _page_free_order(): page_free: freed 1 pages (addr 0xcfe06000); 64847 pages currently free
+[0m[36;40mfs/vnode.c:121 vref(): vref: 0xcfe64080, 0xcfe84518 ino 39 up to 4, nrespages=1
+[0mcheck all file descripts
+[31;40mmm/page.c:276 _page_alloc_order(): allocating 16 pages (addr 0xcfde4000)
+[0m[31;40mmm/slab.c:313 slab_obj_alloc(): Allocated object 0xcfe440fc from "kthread" (0xcfe9a2fc), slab 0xcfe9a2fc, inuse 4
+[0m[*] handle pagefault 0x80484c9, 0x000004, pid=1
+in handle pagefault: 0x80484c9, 0xcfe0f000, 0xff52000
+[31;40mmm/page.c:276 _page_alloc_order(): allocating 1 pages (addr 0xcfe06000)
+[0m[*] handle pagefault with pt_map
+[*] handle pagefault 0x8047f3c, 0x000006, pid=1
+[31;40mmm/slab.c:313 slab_obj_alloc(): Allocated object 0xcfe143f0 from "pframe" (0xcfe9a20c), slab 0xcfe9a20c, inuse 15
+[0m[31;40mmm/page.c:276 _page_alloc_order(): allocating 1 pages (addr 0xcfe01000)
+[0m[*] ref shadow obj 0xcfe0d094 to refcount=2
+pframe alloc mmobj=0xcfe0d094, mmo_nrespages=1
+pframe fill page addr 0xcfe01000
+[*] Enter fill shadow page, pf=0xcfe143f4
+[*] find in shadow obj
+dirty pframe 0xcfe143f4 in shadow obj
+finish fill page addr 0xcfe01000
+in handle pagefault: 0x8047f3c, 0xcfe01000, 0xff44000
+[*] handle pagefault with pt_map
+[*] handle pagefault 0x804f2a4, 0x000006, pid=1
+[31;40mmm/slab.c:313 slab_obj_alloc(): Allocated object 0xcfe14438 from "pframe" (0xcfe9a20c), slab 0xcfe9a20c, inuse 16
+[0m[31;40mmm/page.c:276 _page_alloc_order(): allocating 1 pages (addr 0xcfe00000)
+[0m[*] ref shadow obj 0xcfe0d0f4 to refcount=2
+pframe alloc mmobj=0xcfe0d0f4, mmo_nrespages=1
+pframe fill page addr 0xcfe00000
+[*] Enter fill shadow page, pf=0xcfe1443c
+[*] find in shadow obj
+dirty pframe 0xcfe1443c in shadow obj
+finish fill page addr 0xcfe00000
+in handle pagefault: 0x804f2a4, 0xcfe00000, 0xff43000
+[*] handle pagefault with pt_map
+[*] handle pagefault 0x80490c5, 0x000004, pid=1
+in handle pagefault: 0x80490c5, 0xcfe05000, 0xff48000
+[*] handle pagefault with pt_map
+[*] enter sys_getdents
+[*] exit sys_getdents successful
+[*] handle pagefault 0x804cfa5, 0x000004, pid=1
+in handle pagefault: 0x804cfa5, 0xcfe04000, 0xff47000
+[*] handle pagefault with pt_map
+[*] enter sys_getdents
+[*] exit sys_getdents successful
+[*] enter sys_getdents
+[*] exit sys_getdents successful
+[*] do_close file 3 add cfe64080
+in do_waitpid pid 1 wait for -1
+do wait sched sleep
+sched switch from pid = 1 to pid = 3
+[*] handle pagefault 0x80484c9, 0x000004, pid=3
+in handle pagefault: 0x80484c9, 0xcfe0f000, 0xff52000
+[31;40mmm/page.c:276 _page_alloc_order(): allocating 1 pages (addr 0xcfdff000)
+[0m[*] handle pagefault with pt_map
+[*] handle pagefault 0x8047f3c, 0x000006, pid=3
+[31;40mmm/slab.c:313 slab_obj_alloc(): Allocated object 0xcfe14480 from "pframe" (0xcfe9a20c), slab 0xcfe9a20c, inuse 17
+[0m[31;40mmm/page.c:276 _page_alloc_order(): allocating 1 pages (addr 0xcfdfe000)
+[0m[*] ref shadow obj 0xcfe0d064 to refcount=2
+pframe alloc mmobj=0xcfe0d064, mmo_nrespages=1
+pframe fill page addr 0xcfdfe000
+[*] Enter fill shadow page, pf=0xcfe14484
+[*] find in shadow obj
+dirty pframe 0xcfe14484 in shadow obj
+finish fill page addr 0xcfdfe000
+in handle pagefault: 0x8047f3c, 0xcfdfe000, 0xff41000
+[*] handle pagefault with pt_map
+[*] handle pagefault 0x804f2a4, 0x000006, pid=3
+[31;40mmm/slab.c:313 slab_obj_alloc(): Allocated object 0xcfe144c8 from "pframe" (0xcfe9a20c), slab 0xcfe9a20c, inuse 18
+[0m[31;40mmm/page.c:276 _page_alloc_order(): allocating 1 pages (addr 0xcfdfd000)
+[0m[*] ref shadow obj 0xcfe0d0c4 to refcount=2
+pframe alloc mmobj=0xcfe0d0c4, mmo_nrespages=1
+pframe fill page addr 0xcfdfd000
+[*] Enter fill shadow page, pf=0xcfe144cc
+[*] find in shadow obj
+dirty pframe 0xcfe144cc in shadow obj
+finish fill page addr 0xcfdfd000
+in handle pagefault: 0x804f2a4, 0xcfdfd000, 0xff40000
+[*] handle pagefault with pt_map
+[*] handle pagefault 0x80490c5, 0x000004, pid=3
+in handle pagefault: 0x80490c5, 0xcfe05000, 0xff48000
+[*] handle pagefault with pt_map
+[*] do_close file 0 add cfe640fc
+[*] do_close file 1 add cfe640fc
+[*] do_close file 2 add cfe640fc
+[31;40mmm/slab.c:313 slab_obj_alloc(): Allocated object 0xcfe99730 from "size-64" (0xcfe9a004), slab 0xcfe9a004, inuse 13
+[0m[*] in do_open try to open tty0
+[31;40mmm/slab.c:313 slab_obj_alloc(): Allocated object 0xcfe11060 from "file" (0xcfe9a324), slab 0xcfe9a324, inuse 4
+[0m[*] in open_namev try to create tty0
+[*] in dir_namev try to resolve relevent tty0
+[36;40mfs/vnode.c:121 vref(): vref: 0xcfe640fc, 0xcfe84518 ino 40 up to 3, nrespages=0
+[0m[*] lookup tty0 find status 0 vnode 40 add cfe640fc
+open namev 1
+[*] in open_namev found the file 
+[*] in open_namev return value 1
+[*] in do_open created file tty0
+[*] in do_open finsih open tty0
+[31;40mmm/slab.c:355 slab_obj_free(): Freed object 0xcfe99730 from "size-64" (0xcfe9a004), slab 0xcfe99ff0, inuse 12
+[0m[31;40mmm/slab.c:313 slab_obj_alloc(): Allocated object 0xcfe99730 from "size-64" (0xcfe9a004), slab 0xcfe9a004, inuse 13
+[0m[*] in do_open try to open tty0
+[31;40mmm/slab.c:313 slab_obj_alloc(): Allocated object 0xcfe11080 from "file" (0xcfe9a324), slab 0xcfe9a324, inuse 5
+[0m[*] in open_namev try to create tty0
+[*] in dir_namev try to resolve relevent tty0
+[36;40mfs/vnode.c:121 vref(): vref: 0xcfe640fc, 0xcfe84518 ino 40 up to 4, nrespages=0
+[0m[*] lookup tty0 find status 0 vnode 40 add cfe640fc
+open namev 1
+[*] in open_namev found the file 
+[*] in open_namev return value 1
+[*] in do_open created file tty0
+[*] in do_open finsih open tty0
+[31;40mmm/slab.c:355 slab_obj_free(): Freed object 0xcfe99730 from "size-64" (0xcfe9a004), slab 0xcfe99ff0, inuse 12
+[0mold file to dup fd 1
+next empty if 2[*] handle pagefault 0x804cfa9, 0x000004, pid=3
+in handle pagefault: 0x804cfa9, 0xcfe04000, 0xff47000
+[*] handle pagefault with pt_map
+[31;40mmm/slab.c:313 slab_obj_alloc(): Allocated object 0xcfe99730 from "size-64" (0xcfe9a004), slab 0xcfe9a004, inuse 13
+[0m[*] do_chdir change dir to /
+[36;40mfs/vnode.c:247 vput(): vput: 0xcfe64080, 0xcfe84518 ino 39, down to 3, nrespages = 1
+[0m[31;40mmm/slab.c:355 slab_obj_free(): Freed object 0xcfe99730 from "size-64" (0xcfe9a004), slab 0xcfe99ff0, inuse 12
+[0m[*] handle pagefault 0x804ba84, 0x000004, pid=3
+[31;40mmm/slab.c:313 slab_obj_alloc(): Allocated object 0xcfe14510 from "pframe" (0xcfe9a20c), slab 0xcfe9a20c, inuse 19
+[0m[31;40mmm/page.c:276 _page_alloc_order(): allocating 1 pages (addr 0xcfdfc000)
+[0m[36;40mfs/vnode.c:121 vref(): vref: 0xcfe641f4, 0xcfe84518 ino 10 up to 7, nrespages=4
+[0mpframe alloc mmobj=0xcfe641fc, mmo_nrespages=5
+pframe fill page addr 0xcfdfc000
+vreadpage
+sched switch from pid = 3 to pid = 3
+finish fill page addr 0xcfdfc000
+in handle pagefault: 0x804ba84, 0xcfdfc000, 0xff3f000
+[*] handle pagefault with pt_map
+[*] enter sys_write
+[31;40mmm/page.c:276 _page_alloc_order(): allocating 1 pages (addr 0xcfdfb000)
+[0m[31;40mmm/page.c:346 _page_free_order(): page_free: freed 1 pages (addr 0xcfdfb000); 64824 pages currently free
+[0m[*] exit sys_write to write char 24, write 24
+[*] enter sys_write
+[31;40mmm/page.c:276 _page_alloc_order(): allocating 1 pages (addr 0xcfdfb000)
+[0m[31;40mmm/page.c:346 _page_free_order(): page_free: freed 1 pages (addr 0xcfdfb000); 64824 pages currently free
+[0m[*] exit sys_write to write char 4, write 4
+[*] enter sys_write
+[31;40mmm/page.c:276 _page_alloc_order(): allocating 1 pages (addr 0xcfdfb000)
+[0m[31;40mmm/page.c:346 _page_free_order(): page_free: freed 1 pages (addr 0xcfdfb000); 64824 pages currently free
+[0m[*] exit sys_write to write char 1, write 1
+[*] handle pagefault 0x804dcf1, 0x000004, pid=3
+[31;40mmm/slab.c:313 slab_obj_alloc(): Allocated object 0xcfe14558 from "pframe" (0xcfe9a20c), slab 0xcfe9a20c, inuse 20
+[0m[31;40mmm/page.c:276 _page_alloc_order(): allocating 1 pages (addr 0xcfdfb000)
+[0m[36;40mfs/vnode.c:121 vref(): vref: 0xcfe641f4, 0xcfe84518 ino 10 up to 8, nrespages=5
+[0mpframe alloc mmobj=0xcfe641fc, mmo_nrespages=6
+pframe fill page addr 0xcfdfb000
+vreadpage
+sched switch from pid = 3 to pid = 3
+finish fill page addr 0xcfdfb000
+in handle pagefault: 0x804dcf1, 0xcfdfb000, 0xff3e000
+[*] handle pagefault with pt_map
+[31;40mmm/slab.c:313 slab_obj_alloc(): Allocated object 0xcfe99730 from "size-64" (0xcfe9a004), slab 0xcfe9a004, inuse 13
+[0m[*] in do_open try to open /dev/zero
+[31;40mmm/slab.c:313 slab_obj_alloc(): Allocated object 0xcfe110a0 from "file" (0xcfe9a324), slab 0xcfe9a324, inuse 6
+[0m[*] in open_namev try to create /dev/zero
+[*] in dir_namev try to resolve absolute /dev/zero
+[36;40mfs/vnode.c:121 vref(): vref: 0xcfe64080, 0xcfe84518 ino 39 up to 4, nrespages=1
+[0m[*] lookup dev find status 0 vnode 39 add cfe64080
+[31;40mmm/slab.c:313 slab_obj_alloc(): Allocated object 0xcfe6426c from "vnode" (0xcfe9a34c), slab 0xcfe9a34c, inuse 6
+[0m[36;40mfs/vnode.c:208 vget(): vget: 0xcfe64270, 0xcfe84518 ino 41 refcount set to 1, nrespages=0
+[0m[*] lookup zero find status 0 vnode 41 add cfe64270
+open namev 1
+[36;40mfs/vnode.c:247 vput(): vput: 0xcfe64080, 0xcfe84518 ino 39, down to 3, nrespages = 1
+[0m[*] in open_namev found the file 
+[*] in open_namev return value 1
+[*] in do_open created file /dev/zero
+[*] in do_open finsih open /dev/zero
+[31;40mmm/slab.c:355 slab_obj_free(): Freed object 0xcfe99730 from "size-64" (0xcfe9a004), slab 0xcfe99ff0, inuse 12
+[0m[*] handle pagefault 0x804a001, 0x000004, pid=3
+[31;40mmm/slab.c:313 slab_obj_alloc(): Allocated object 0xcfe145a0 from "pframe" (0xcfe9a20c), slab 0xcfe9a20c, inuse 21
+[0m[31;40mmm/page.c:276 _page_alloc_order(): allocating 1 pages (addr 0xcfdfa000)
+[0m[36;40mfs/vnode.c:121 vref(): vref: 0xcfe641f4, 0xcfe84518 ino 10 up to 9, nrespages=6
+[0mpframe alloc mmobj=0xcfe641fc, mmo_nrespages=7
+pframe fill page addr 0xcfdfa000
+vreadpage
+sched switch from pid = 3 to pid = 3
+finish fill page addr 0xcfdfa000
+in handle pagefault: 0x804a001, 0xcfdfa000, 0xff3d000
+[*] handle pagefault with pt_map
+[*] start vmmap_map
+[31;40mmm/slab.c:313 slab_obj_alloc(): Allocated object 0xcfe0e1a4 from "vmarea" (0xcfe9a2ac), slab 0xcfe9a2ac, inuse 8
+[0m[31;40mmm/slab.c:313 slab_obj_alloc(): Allocated object 0xcfe0c060 from "anon" (0xcfe9a234), slab 0xcfe9a234, inuse 3
+[0m[*] create shadow mmobj
+[31;40mmm/slab.c:313 slab_obj_alloc(): Allocated object 0xcfe0d120 from "shadow" (0xcfe9a25c), slab 0xcfe9a25c, inuse 7
+[0m[*] insert a new vmarea to vmmap
+finish vmmap_insert
+[*] exit vmmap_map
+[*] handle pagefault 0xbffff014, 0x000004, pid=3
+[*] lookup anon object page
+[31;40mmm/slab.c:313 slab_obj_alloc(): Allocated object 0xcfe145e8 from "pframe" (0xcfe9a20c), slab 0xcfe9a20c, inuse 22
+[0m[31;40mmm/page.c:276 _page_alloc_order(): allocating 1 pages (addr 0xcfdf9000)
+[0mpframe alloc mmobj=0xcfe0c064, mmo_nrespages=1
+pframe fill page addr 0xcfdf9000
+[*] fill anon object page pagenum = 0xcfdf9000
+[*] dirty anon object page
+finish fill page addr 0xcfdf9000
+in handle pagefault: 0xbffff014, 0xcfdf9000, 0xff3c000
+[31;40mmm/page.c:276 _page_alloc_order(): allocating 1 pages (addr 0xcfdf8000)
+[0m[*] handle pagefault with pt_map
+[*] handle pagefault 0xbffff030, 0x000007, pid=3
+[31;40mmm/slab.c:313 slab_obj_alloc(): Allocated object 0xcfe14630 from "pframe" (0xcfe9a20c), slab 0xcfe9a20c, inuse 23
+[0m[31;40mmm/page.c:276 _page_alloc_order(): allocating 1 pages (addr 0xcfdf7000)
+[0m[*] ref shadow obj 0xcfe0d124 to refcount=2
+pframe alloc mmobj=0xcfe0d124, mmo_nrespages=1
+pframe fill page addr 0xcfdf7000
+[*] Enter fill shadow page, pf=0xcfe14634
+search bottom obj
+[*] dirty anon object page
+finish fill page addr 0xcfdf7000
+in handle pagefault: 0xbffff030, 0xcfdf7000, 0xff3a000
+[*] handle pagefault with pt_map
+[*] handle pagefault 0x8050008, 0x000006, pid=3
+[31;40mmm/slab.c:313 slab_obj_alloc(): Allocated object 0xcfe14678 from "pframe" (0xcfe9a20c), slab 0xcfe9a20c, inuse 24
+[0m[31;40mmm/page.c:276 _page_alloc_order(): allocating 1 pages (addr 0xcfdf6000)
+[0m[*] ref shadow obj 0xcfe0d0c4 to refcount=3
+pframe alloc mmobj=0xcfe0d0c4, mmo_nrespages=2
+pframe fill page addr 0xcfdf6000
+[*] Enter fill shadow page, pf=0xcfe1467c
+search bottom obj
+[31;40mmm/slab.c:313 slab_obj_alloc(): Allocated object 0xcfe146c0 from "pframe" (0xcfe9a20c), slab 0xcfe9a20c, inuse 25
+[0m[31;40mmm/page.c:276 _page_alloc_order(): allocating 1 pages (addr 0xcfdf5000)
+[0mpframe alloc mmobj=0xcfe0c004, mmo_nrespages=2
+pframe fill page addr 0xcfdf5000
+[*] fill anon object page pagenum = 0xcfdf5000
+[*] dirty anon object page
+finish fill page addr 0xcfdf5000
+[*] dirty anon object page
+finish fill page addr 0xcfdf6000
+in handle pagefault: 0x8050008, 0xcfdf6000, 0xff39000
+[*] handle pagefault with pt_map
+[*] handle pagefault 0x8051008, 0x000006, pid=3
+[31;40mmm/slab.c:313 slab_obj_alloc(): Allocated object 0xcfe14708 from "pframe" (0xcfe9a20c), slab 0xcfe9a20c, inuse 26
+[0m[31;40mmm/page.c:276 _page_alloc_order(): allocating 1 pages (addr 0xcfdf4000)
+[0m[*] ref shadow obj 0xcfe0d0c4 to refcount=4
+pframe alloc mmobj=0xcfe0d0c4, mmo_nrespages=3
+pframe fill page addr 0xcfdf4000
+[*] Enter fill shadow page, pf=0xcfe1470c
+search bottom obj
+[31;40mmm/slab.c:313 slab_obj_alloc(): Allocated object 0xcfe14750 from "pframe" (0xcfe9a20c), slab 0xcfe9a20c, inuse 27
+[0m[31;40mmm/page.c:276 _page_alloc_order(): allocating 1 pages (addr 0xcfde3000)
+[0mpframe alloc mmobj=0xcfe0c004, mmo_nrespages=3
+pframe fill page addr 0xcfde3000
+[*] fill anon object page pagenum = 0xcfde3000
+[*] dirty anon object page
+finish fill page addr 0xcfde3000
+[*] dirty anon object page
+finish fill page addr 0xcfdf4000
+in handle pagefault: 0x8051008, 0xcfdf4000, 0xff37000
+[*] handle pagefault with pt_map
+in sys execve
+[31;40mmm/slab.c:313 slab_obj_alloc(): Allocated object 0xcfe99730 from "size-64" (0xcfe9a004), slab 0xcfe9a004, inuse 13
+[0m[31;40mmm/slab.c:313 slab_obj_alloc(): Allocated object 0xcfe99780 from "size-64" (0xcfe9a004), slab 0xcfe9a004, inuse 14
+[0m[31;40mmm/slab.c:313 slab_obj_alloc(): Allocated object 0xcfe99690 from "size-64" (0xcfe9a004), slab 0xcfe9a004, inuse 15
+[0m[31;40mmm/slab.c:355 slab_obj_free(): Freed object 0xcfe99780 from "size-64" (0xcfe9a004), slab 0xcfe99ff0, inuse 14
+[0m[31;40mmm/slab.c:313 slab_obj_alloc(): Allocated object 0xcfe99780 from "size-64" (0xcfe9a004), slab 0xcfe9a004, inuse 15
+[0m[31;40mmm/slab.c:313 slab_obj_alloc(): Allocated object 0xcfe996e0 from "size-64" (0xcfe9a004), slab 0xcfe9a004, inuse 16
+[0m[31;40mmm/slab.c:355 slab_obj_free(): Freed object 0xcfe99780 from "size-64" (0xcfe9a004), slab 0xcfe99ff0, inuse 15
+[0min do execve
+[*] in do_open try to open /bin/sh
+[31;40mmm/slab.c:313 slab_obj_alloc(): Allocated object 0xcfe110c0 from "file" (0xcfe9a324), slab 0xcfe9a324, inuse 7
+[0m[*] in open_namev try to create /bin/sh
+[*] in dir_namev try to resolve absolute /bin/sh
+[31;40mmm/slab.c:313 slab_obj_alloc(): Allocated object 0xcfe642e8 from "vnode" (0xcfe9a34c), slab 0xcfe9a34c, inuse 7
+[0m[36;40mfs/vnode.c:208 vget(): vget: 0xcfe642ec, 0xcfe84518 ino 8 refcount set to 1, nrespages=0
+[0m[*] lookup bin find status 0 vnode 8 add cfe642ec
+[31;40mmm/slab.c:313 slab_obj_alloc(): Allocated object 0xcfe14798 from "pframe" (0xcfe9a20c), slab 0xcfe9a20c, inuse 28
+[0m[31;40mmm/page.c:276 _page_alloc_order(): allocating 1 pages (addr 0xcfde2000)
+[0m[36;40mfs/vnode.c:121 vref(): vref: 0xcfe642ec, 0xcfe84518 ino 8 up to 2, nrespages=0
+[0mpframe alloc mmobj=0xcfe642f4, mmo_nrespages=1
+pframe fill page addr 0xcfde2000
+vreadpage
+sched switch from pid = 3 to pid = 3
+finish fill page addr 0xcfde2000
+[31;40mmm/slab.c:313 slab_obj_alloc(): Allocated object 0xcfe64364 from "vnode" (0xcfe9a34c), slab 0xcfe9a34c, inuse 8
+[0m[36;40mfs/vnode.c:208 vget(): vget: 0xcfe64368, 0xcfe84518 ino 20 refcount set to 1, nrespages=0
+[0m[*] lookup sh find status 0 vnode 20 add cfe64368
+open namev 1
+[36;40mfs/vnode.c:247 vput(): vput: 0xcfe642ec, 0xcfe84518 ino 8, down to 1, nrespages = 1
+[0m[*] in open_namev found the file 
+[*] in open_namev return value 1
+[*] in do_open created file /bin/sh
+[*] in do_open finsih open /bin/sh
+do read fd = 5
+[31;40mmm/slab.c:313 slab_obj_alloc(): Allocated object 0xcfe147e0 from "pframe" (0xcfe9a20c), slab 0xcfe9a20c, inuse 29
+[0m[31;40mmm/page.c:276 _page_alloc_order(): allocating 1 pages (addr 0xcfde1000)
+[0m[36;40mfs/vnode.c:121 vref(): vref: 0xcfe64368, 0xcfe84518 ino 20 up to 2, nrespages=0
+[0mpframe alloc mmobj=0xcfe64370, mmo_nrespages=1
+pframe fill page addr 0xcfde1000
+vreadpage
+sched switch from pid = 3 to pid = 3
+finish fill page addr 0xcfde1000
+[*] create vmmap
+[31;40mmm/slab.c:313 slab_obj_alloc(): Allocated object 0xcfe6e01c from "vmmap" (0xcfe9a284), slab 0xcfe9a284, inuse 5
+[0m[31;40mmm/slab.c:313 slab_obj_alloc(): Allocated object 0xcfe84bd0 from "size-128" (0xcfe9a02c), slab 0xcfe9a02c, inuse 22
+[0mdo read fd = 5
+[*] start vmmap_map
+[31;40mmm/slab.c:313 slab_obj_alloc(): Allocated object 0xcfe0e1e0 from "vmarea" (0xcfe9a2ac), slab 0xcfe9a2ac, inuse 9
+[0m[36;40mfs/vnode.c:121 vref(): vref: 0xcfe64368, 0xcfe84518 ino 20 up to 3, nrespages=1
+[0m[*] insert a new vmarea to vmmap
+finish vmmap_insert
+[*] exit vmmap_map
+[*] start vmmap_map
+[31;40mmm/slab.c:313 slab_obj_alloc(): Allocated object 0xcfe0e21c from "vmarea" (0xcfe9a2ac), slab 0xcfe9a2ac, inuse 10
+[0m[36;40mfs/vnode.c:121 vref(): vref: 0xcfe64368, 0xcfe84518 ino 20 up to 4, nrespages=1
+[0m[*] create shadow mmobj
+[31;40mmm/slab.c:313 slab_obj_alloc(): Allocated object 0xcfe0d150 from "shadow" (0xcfe9a25c), slab 0xcfe9a25c, inuse 8
+[0m[*] insert a new vmarea to vmmap
+finish vmmap_insert
+[*] exit vmmap_map
+[*] start vmmap_map
+[36;40mfs/vnode.c:247 vput(): vput: 0xcfe64368, 0xcfe84518 ino 20, down to 3, nrespages = 1
+[0m[31;40mmm/slab.c:355 slab_obj_free(): Freed object 0xcfe0d150 from "shadow" (0xcfe9a25c), slab 0xcfe0dff0, inuse 7
+[0m[31;40mmm/slab.c:313 slab_obj_alloc(): Allocated object 0xcfe0e258 from "vmarea" (0xcfe9a2ac), slab 0xcfe9a2ac, inuse 11
+[0m[31;40mmm/slab.c:313 slab_obj_alloc(): Allocated object 0xcfe0c090 from "anon" (0xcfe9a234), slab 0xcfe9a234, inuse 4
+[0m[*] create shadow mmobj
+[31;40mmm/slab.c:313 slab_obj_alloc(): Allocated object 0xcfe0d150 from "shadow" (0xcfe9a25c), slab 0xcfe9a25c, inuse 8
+[0m[*] insert a new vmarea to vmmap
+finish vmmap_insert
+[*] exit vmmap_map
+[31;40mmm/page.c:276 _page_alloc_order(): allocating 1 pages (addr 0xcfde0000)
+[0m[31;40mmm/slab.c:313 slab_obj_alloc(): Allocated object 0xcfe14828 from "pframe" (0xcfe9a20c), slab 0xcfe9a20c, inuse 30
+[0m[31;40mmm/page.c:276 _page_alloc_order(): allocating 1 pages (addr 0xcfddf000)
+[0m[36;40mfs/vnode.c:121 vref(): vref: 0xcfe64368, 0xcfe84518 ino 20 up to 4, nrespages=1
+[0mpframe alloc mmobj=0xcfe64370, mmo_nrespages=2
+pframe fill page addr 0xcfddf000
+vreadpage
+sched switch from pid = 3 to pid = 3
+finish fill page addr 0xcfddf000
+[*] Enter vmmap_write
+[*] finish vmmap_write checking
+check vma [0x008048, 0x008053)
+check vma [0x008053, 0x008055)
+[31;40mmm/slab.c:313 slab_obj_alloc(): Allocated object 0xcfe14870 from "pframe" (0xcfe9a20c), slab 0xcfe9a20c, inuse 31
+[0m[31;40mmm/page.c:276 _page_alloc_order(): allocating 1 pages (addr 0xcfdde000)
+[0m[*] ref shadow obj 0xcfe0d154 to refcount=2
+pframe alloc mmobj=0xcfe0d154, mmo_nrespages=1
+pframe fill page addr 0xcfdde000
+[*] Enter fill shadow page, pf=0xcfe14874
+search bottom obj
+[31;40mmm/slab.c:313 slab_obj_alloc(): Allocated object 0xcfe148b8 from "pframe" (0xcfe9a20c), slab 0xcfe9a20c, inuse 32
+[0m[31;40mmm/page.c:276 _page_alloc_order(): allocating 1 pages (addr 0xcfddd000)
+[0mpframe alloc mmobj=0xcfe0c094, mmo_nrespages=1
+pframe fill page addr 0xcfddd000
+[*] fill anon object page pagenum = 0xcfddd000
+[*] dirty anon object page
+finish fill page addr 0xcfddd000
+[*] dirty anon object page
+finish fill page addr 0xcfdde000
+finish lookup
+dirty pframe 0xcfe14874 in shadow obj
+[*] exit vmmap_write successfully
+[31;40mmm/page.c:346 _page_free_order(): page_free: freed 1 pages (addr 0xcfde0000); 64810 pages currently free
+[0m[31;40mmm/slab.c:313 slab_obj_alloc(): Allocated object 0xcfe99780 from "size-64" (0xcfe9a004), slab 0xcfe9a004, inuse 16
+[0m[*] start vmmap_map
+[31;40mmm/slab.c:313 slab_obj_alloc(): Allocated object 0xcfe0e294 from "vmarea" (0xcfe9a2ac), slab 0xcfe9a2ac, inuse 12
+[0m[31;40mmm/slab.c:313 slab_obj_alloc(): Allocated object 0xcfe0c0c0 from "anon" (0xcfe9a234), slab 0xcfe9a234, inuse 5
+[0m[*] create shadow mmobj
+[31;40mmm/slab.c:313 slab_obj_alloc(): Allocated object 0xcfe0d180 from "shadow" (0xcfe9a25c), slab 0xcfe9a25c, inuse 9
+[0m[*] insert a new vmarea to vmmap
+finish vmmap_insert
+[*] exit vmmap_map
+[31;40mmm/slab.c:313 slab_obj_alloc(): Allocated object 0xcfe99640 from "size-64" (0xcfe9a004), slab 0xcfe9a004, inuse 17
+[0m[*] Enter vmmap_write
+[*] finish vmmap_write checking
+check vma [0x008039, 0x008048)
+[31;40mmm/slab.c:313 slab_obj_alloc(): Allocated object 0xcfe14900 from "pframe" (0xcfe9a20c), slab 0xcfe9a20c, inuse 33
+[0m[31;40mmm/page.c:276 _page_alloc_order(): allocating 1 pages (addr 0xcfde0000)
+[0m[*] ref shadow obj 0xcfe0d184 to refcount=2
+pframe alloc mmobj=0xcfe0d184, mmo_nrespages=1
+pframe fill page addr 0xcfde0000
+[*] Enter fill shadow page, pf=0xcfe14904
+search bottom obj
+[31;40mmm/slab.c:313 slab_obj_alloc(): Allocated object 0xcfe14948 from "pframe" (0xcfe9a20c), slab 0xcfe9a20c, inuse 34
+[0m[31;40mmm/page.c:276 _page_alloc_order(): allocating 1 pages (addr 0xcfddc000)
+[0mpframe alloc mmobj=0xcfe0c0c4, mmo_nrespages=1
+pframe fill page addr 0xcfddc000
+[*] fill anon object page pagenum = 0xcfddc000
+[*] dirty anon object page
+finish fill page addr 0xcfddc000
+[*] dirty anon object page
+finish fill page addr 0xcfde0000
+finish lookup
+dirty pframe 0xcfe14904 in shadow obj
+[*] exit vmmap_write successfully
+[31;40mmm/page.c:346 _page_free_order(): page_free: freed 1 pages (addr 0xcfdff000); 64809 pages currently free
+[0m[31;40mmm/page.c:346 _page_free_order(): page_free: freed 1 pages (addr 0xcfdf8000); 64810 pages currently free
+[0m[*] destroy all vmareas
+[*] vmarea_free vma_mmobj=0xcfe0d064
+clean pframe in shadow obj
+clear dirty pframe 0xcfe14484 in shadow obj
+[31;40mmm/page.c:346 _page_free_order(): page_free: freed 1 pages (addr 0xcfdfe000); 64811 pages currently free
+[0m[31;40mmm/slab.c:355 slab_obj_free(): Freed object 0xcfe14480 from "pframe" (0xcfe9a20c), slab 0xcfe23ff0, inuse 33
+[0mpframe free 0xcfe0d064, mmo_respages=0
+[31;40mmm/slab.c:355 slab_obj_free(): Freed object 0xcfe0d060 from "shadow" (0xcfe9a25c), slab 0xcfe0dff0, inuse 8
+[0m[31;40mmm/slab.c:355 slab_obj_free(): Freed object 0xcfe0e0f0 from "vmarea" (0xcfe9a2ac), slab 0xcfe0eff0, inuse 11
+[0m[*] vmarea_free vma_mmobj=0xcfe641fc
+[36;40mfs/vnode.c:247 vput(): vput: 0xcfe641f4, 0xcfe84518 ino 10, down to 8, nrespages = 7
+[0m[31;40mmm/slab.c:355 slab_obj_free(): Freed object 0xcfe0e12c from "vmarea" (0xcfe9a2ac), slab 0xcfe0eff0, inuse 10
+[0m[*] vmarea_free vma_mmobj=0xcfe0d0c4
+clean pframe in shadow obj
+clear dirty pframe 0xcfe1470c in shadow obj
+[31;40mmm/page.c:346 _page_free_order(): page_free: freed 1 pages (addr 0xcfdf4000); 64812 pages currently free
+[0m[31;40mmm/slab.c:355 slab_obj_free(): Freed object 0xcfe14708 from "pframe" (0xcfe9a20c), slab 0xcfe23ff0, inuse 32
+[0mpframe free 0xcfe0d0c4, mmo_respages=2
+clean pframe in shadow obj
+clear dirty pframe 0xcfe1467c in shadow obj
+[31;40mmm/page.c:346 _page_free_order(): page_free: freed 1 pages (addr 0xcfdf6000); 64813 pages currently free
+[0m[31;40mmm/slab.c:355 slab_obj_free(): Freed object 0xcfe14678 from "pframe" (0xcfe9a20c), slab 0xcfe23ff0, inuse 31
+[0mpframe free 0xcfe0d0c4, mmo_respages=1
+clean pframe in shadow obj
+clear dirty pframe 0xcfe144cc in shadow obj
+[31;40mmm/page.c:346 _page_free_order(): page_free: freed 1 pages (addr 0xcfdfd000); 64814 pages currently free
+[0m[31;40mmm/slab.c:355 slab_obj_free(): Freed object 0xcfe144c8 from "pframe" (0xcfe9a20c), slab 0xcfe23ff0, inuse 30
+[0mpframe free 0xcfe0d0c4, mmo_respages=0
+[31;40mmm/slab.c:355 slab_obj_free(): Freed object 0xcfe0d0c0 from "shadow" (0xcfe9a25c), slab 0xcfe0dff0, inuse 7
+[0m[31;40mmm/slab.c:355 slab_obj_free(): Freed object 0xcfe0e168 from "vmarea" (0xcfe9a2ac), slab 0xcfe0eff0, inuse 9
+[0m[*] vmarea_free vma_mmobj=0xcfe0d124
+clean pframe in shadow obj
+clear dirty pframe 0xcfe14634 in shadow obj
+[31;40mmm/page.c:346 _page_free_order(): page_free: freed 1 pages (addr 0xcfdf7000); 64815 pages currently free
+[0m[31;40mmm/slab.c:355 slab_obj_free(): Freed object 0xcfe14630 from "pframe" (0xcfe9a20c), slab 0xcfe23ff0, inuse 29
+[0mpframe free 0xcfe0d124, mmo_respages=0
+[*] anon_put mmobj 0xcfe0c064, nrespages=1, refcount=2
+[*] anon put check mmo_respages empty=0
+[*] clean anon object page
+[*] anon_put call pframe_free to pf_addr=0xcfdf9000
+[31;40mmm/page.c:346 _page_free_order(): page_free: freed 1 pages (addr 0xcfdf9000); 64816 pages currently free
+[0m[31;40mmm/slab.c:355 slab_obj_free(): Freed object 0xcfe145e8 from "pframe" (0xcfe9a20c), slab 0xcfe23ff0, inuse 28
+[0mpframe free 0xcfe0c064, mmo_respages=0
+[*] anon_put mmobj 0xcfe0c064, nrespages=0, refcount=1
+[*] anon put check mmo_respages empty=1
+[*] anon_put remove mmobj_t
+[*] anon_put remove mmobj_t
+[31;40mmm/slab.c:355 slab_obj_free(): Freed object 0xcfe0d120 from "shadow" (0xcfe9a25c), slab 0xcfe0dff0, inuse 6
+[0m[31;40mmm/slab.c:355 slab_obj_free(): Freed object 0xcfe0e1a4 from "vmarea" (0xcfe9a2ac), slab 0xcfe0eff0, inuse 8
+[0m[31;40mmm/slab.c:355 slab_obj_free(): Freed object 0xcfe6e070 from "vmmap" (0xcfe9a284), slab 0xcfe6fff0, inuse 4
+[0m[31;40mmm/slab.c:355 slab_obj_free(): Freed object 0xcfe84bd0 from "size-128" (0xcfe9a02c), slab 0xcfe93ff0, inuse 21
+[0m[31;40mmm/slab.c:355 slab_obj_free(): Freed object 0xcfe99780 from "size-64" (0xcfe9a004), slab 0xcfe99ff0, inuse 16
+[0m[31;40mmm/slab.c:355 slab_obj_free(): Freed object 0xcfe99640 from "size-64" (0xcfe9a004), slab 0xcfe99ff0, inuse 15
+[0m[*] do_close file 5 add cfe64368
+[36;40mfs/vnode.c:247 vput(): vput: 0xcfe64368, 0xcfe84518 ino 20, down to 3, nrespages = 2
+[0m[31;40mmm/slab.c:355 slab_obj_free(): Freed object 0xcfe110c0 from "file" (0xcfe9a324), slab 0xcfe11fe0, inuse 6
+[0m[31;40mmm/slab.c:355 slab_obj_free(): Freed object 0xcfe99730 from "size-64" (0xcfe9a004), slab 0xcfe99ff0, inuse 14
+[0m[31;40mmm/slab.c:355 slab_obj_free(): Freed object 0xcfe99690 from "size-64" (0xcfe9a004), slab 0xcfe99ff0, inuse 13
+[0m[31;40mmm/slab.c:355 slab_obj_free(): Freed object 0xcfe996e0 from "size-64" (0xcfe9a004), slab 0xcfe99ff0, inuse 12
+[0m[*] handle pagefault 0x804ac63, 0x000004, pid=3
+[31;40mmm/slab.c:313 slab_obj_alloc(): Allocated object 0xcfe145e8 from "pframe" (0xcfe9a20c), slab 0xcfe9a20c, inuse 29
+[0m[31;40mmm/page.c:276 _page_alloc_order(): allocating 1 pages (addr 0xcfdfd000)
+[0m[36;40mfs/vnode.c:121 vref(): vref: 0xcfe64368, 0xcfe84518 ino 20 up to 4, nrespages=2
+[0mpframe alloc mmobj=0xcfe64370, mmo_nrespages=3
+pframe fill page addr 0xcfdfd000
+vreadpage
+sched switch from pid = 3 to pid = 3
+finish fill page addr 0xcfdfd000
+in handle pagefault: 0x804ac63, 0xcfdfd000, 0xff40000
+[31;40mmm/page.c:276 _page_alloc_order(): allocating 1 pages (addr 0xcfdf4000)
+[0m[*] handle pagefault with pt_map
+[*] handle pagefault 0x8047fdc, 0x000006, pid=3
+in handle pagefault: 0x8047fdc, 0xcfde0000, 0xff23000
+[*] handle pagefault with pt_map
+[*] handle pagefault 0x80534e0, 0x000006, pid=3
+in handle pagefault: 0x80534e0, 0xcfdde000, 0xff21000
+[*] handle pagefault with pt_map
+[*] handle pagefault 0x804e754, 0x000004, pid=3
+[31;40mmm/slab.c:313 slab_obj_alloc(): Allocated object 0xcfe14630 from "pframe" (0xcfe9a20c), slab 0xcfe9a20c, inuse 30
+[0m[31;40mmm/page.c:276 _page_alloc_order(): allocating 1 pages (addr 0xcfdf9000)
+[0m[36;40mfs/vnode.c:121 vref(): vref: 0xcfe64368, 0xcfe84518 ino 20 up to 5, nrespages=3
+[0mpframe alloc mmobj=0xcfe64370, mmo_nrespages=4
+pframe fill page addr 0xcfdf9000
+vreadpage
+sched switch from pid = 3 to pid = 3
+finish fill page addr 0xcfdf9000
+in handle pagefault: 0x804e754, 0xcfdf9000, 0xff3c000
+[*] handle pagefault with pt_map
+[*] handle pagefault 0x804b9f5, 0x000004, pid=3
+[31;40mmm/slab.c:313 slab_obj_alloc(): Allocated object 0xcfe144c8 from "pframe" (0xcfe9a20c), slab 0xcfe9a20c, inuse 31
+[0m[31;40mmm/page.c:276 _page_alloc_order(): allocating 1 pages (addr 0xcfdf8000)
+[0m[36;40mfs/vnode.c:121 vref(): vref: 0xcfe64368, 0xcfe84518 ino 20 up to 6, nrespages=4
+[0mpframe alloc mmobj=0xcfe64370, mmo_nrespages=5
+pframe fill page addr 0xcfdf8000
+vreadpage
+sched switch from pid = 3 to pid = 3
+finish fill page addr 0xcfdf8000
+in handle pagefault: 0x804b9f5, 0xcfdf8000, 0xff3b000
+[*] handle pagefault with pt_map
+[*] handle pagefault 0x804f2c1, 0x000004, pid=3
+[31;40mmm/slab.c:313 slab_obj_alloc(): Allocated object 0xcfe14678 from "pframe" (0xcfe9a20c), slab 0xcfe9a20c, inuse 32
+[0m[31;40mmm/page.c:276 _page_alloc_order(): allocating 1 pages (addr 0xcfdf7000)
+[0m[36;40mfs/vnode.c:121 vref(): vref: 0xcfe64368, 0xcfe84518 ino 20 up to 7, nrespages=5
+[0mpframe alloc mmobj=0xcfe64370, mmo_nrespages=6
+pframe fill page addr 0xcfdf7000
+vreadpage
+sched switch from pid = 3 to pid = 3
+finish fill page addr 0xcfdf7000
+in handle pagefault: 0x804f2c1, 0xcfdf7000, 0xff3a000
+[*] handle pagefault with pt_map
+[*] handle pagefault 0x80505cf, 0x000004, pid=3
+[31;40mmm/slab.c:313 slab_obj_alloc(): Allocated object 0xcfe14708 from "pframe" (0xcfe9a20c), slab 0xcfe9a20c, inuse 33
+[0m[31;40mmm/page.c:276 _page_alloc_order(): allocating 1 pages (addr 0xcfdf6000)
+[0m[36;40mfs/vnode.c:121 vref(): vref: 0xcfe64368, 0xcfe84518 ino 20 up to 8, nrespages=6
+[0mpframe alloc mmobj=0xcfe64370, mmo_nrespages=7
+pframe fill page addr 0xcfdf6000
+vreadpage
+sched switch from pid = 3 to pid = 3
+finish fill page addr 0xcfdf6000
+in handle pagefault: 0x80505cf, 0xcfdf6000, 0xff39000
+[*] handle pagefault with pt_map
+[*] handle pagefault 0x8051758, 0x000004, pid=3
+[31;40mmm/slab.c:313 slab_obj_alloc(): Allocated object 0xcfe14480 from "pframe" (0xcfe9a20c), slab 0xcfe9a20c, inuse 34
+[0m[31;40mmm/page.c:276 _page_alloc_order(): allocating 1 pages (addr 0xcfdff000)
+[0m[36;40mfs/vnode.c:121 vref(): vref: 0xcfe64368, 0xcfe84518 ino 20 up to 9, nrespages=7
+[0mpframe alloc mmobj=0xcfe64370, mmo_nrespages=8
+pframe fill page addr 0xcfdff000
+vreadpage
+sched switch from pid = 3 to pid = 3
+finish fill page addr 0xcfdff000
+in handle pagefault: 0x8051758, 0xcfdff000, 0xff42000
+[*] handle pagefault with pt_map
+[*] enter sys_write
+[31;40mmm/page.c:276 _page_alloc_order(): allocating 1 pages (addr 0xcfdfe000)
+[0m[31;40mmm/page.c:346 _page_free_order(): page_free: freed 1 pages (addr 0xcfdfe000); 64809 pages currently free
+[0m[*] exit sys_write to write char 10, write 10
+[*] handle pagefault 0x8054a04, 0x000006, pid=3
+[31;40mmm/slab.c:313 slab_obj_alloc(): Allocated object 0xcfe14990 from "pframe" (0xcfe9a20c), slab 0xcfe9a20c, inuse 35
+[0m[31;40mmm/page.c:276 _page_alloc_order(): allocating 1 pages (addr 0xcfdfe000)
+[0m[*] ref shadow obj 0xcfe0d154 to refcount=3
+pframe alloc mmobj=0xcfe0d154, mmo_nrespages=2
+pframe fill page addr 0xcfdfe000
+[*] Enter fill shadow page, pf=0xcfe14994
+search bottom obj
+[31;40mmm/slab.c:313 slab_obj_alloc(): Allocated object 0xcfe149d8 from "pframe" (0xcfe9a20c), slab 0xcfe9a20c, inuse 36
+[0m[31;40mmm/page.c:276 _page_alloc_order(): allocating 1 pages (addr 0xcfddb000)
+[0mpframe alloc mmobj=0xcfe0c094, mmo_nrespages=2
+pframe fill page addr 0xcfddb000
+[*] fill anon object page pagenum = 0xcfddb000
+[*] dirty anon object page
+finish fill page addr 0xcfddb000
+[*] dirty anon object page
+finish fill page addr 0xcfdfe000
+in handle pagefault: 0x8054a04, 0xcfdfe000, 0xff41000
+[*] handle pagefault with pt_map
+[31;40mmm/page.c:276 _page_alloc_order(): allocating 1 pages (addr 0xcfdda000)
+[0mdo read fd = 0
+sched switch from pid = 3 to pid = 3
+[*] Enter vmmap_write
+[*] finish vmmap_write checking
+check vma [0x008039, 0x008048)
+check vma [0x008048, 0x008053)
+check vma [0x008053, 0x008055)
+finish lookup
+dirty pframe 0xcfe14874 in shadow obj
+[*] exit vmmap_write successfully
+[31;40mmm/page.c:346 _page_free_order(): page_free: freed 1 pages (addr 0xcfdda000); 64807 pages currently free
+[0m[*] handle pagefault 0x8049ba0, 0x000004, pid=3
+[31;40mmm/slab.c:313 slab_obj_alloc(): Allocated object 0xcfe14a20 from "pframe" (0xcfe9a20c), slab 0xcfe9a20c, inuse 37
+[0m[31;40mmm/page.c:276 _page_alloc_order(): allocating 1 pages (addr 0xcfdda000)
+[0m[36;40mfs/vnode.c:121 vref(): vref: 0xcfe64368, 0xcfe84518 ino 20 up to 10, nrespages=8
+[0mpframe alloc mmobj=0xcfe64370, mmo_nrespages=9
+pframe fill page addr 0xcfdda000
+vreadpage
+sched switch from pid = 3 to pid = 3
+finish fill page addr 0xcfdda000
+in handle pagefault: 0x8049ba0, 0xcfdda000, 0xff1d000
+[*] handle pagefault with pt_map
+do_exit curproc pid=3
+[36;40mfs/vnode.c:247 vput(): vput: 0xcfe640fc, 0xcfe84518 ino 40, down to 3, nrespages = 0
+[0m[31;40mmm/slab.c:355 slab_obj_free(): Freed object 0xcfe11060 from "file" (0xcfe9a324), slab 0xcfe11fe0, inuse 5
+[0m[36;40mfs/vnode.c:247 vput(): vput: 0xcfe640fc, 0xcfe84518 ino 40, down to 2, nrespages = 0
+[0m[31;40mmm/slab.c:355 slab_obj_free(): Freed object 0xcfe11080 from "file" (0xcfe9a324), slab 0xcfe11fe0, inuse 4
+[0m[36;40mfs/vnode.c:247 vput(): vput: 0xcfe64080, 0xcfe84518 ino 39, down to 2, nrespages = 1
+[0m[31;40mmm/slab.c:355 slab_obj_free(): Freed object 0xcfe11040 from "file" (0xcfe9a324), slab 0xcfe11fe0, inuse 3
+[0m[36;40mfs/vnode.c:247 vput(): vput: 0xcfe64270, 0xcfe84518 ino 41, down to 0, nrespages = 0
+[0m[31;40mmm/slab.c:355 slab_obj_free(): Freed object 0xcfe6426c from "vnode" (0xcfe9a34c), slab 0xcfe67ff0, inuse 7
+[0m[31;40mmm/slab.c:355 slab_obj_free(): Freed object 0xcfe110a0 from "file" (0xcfe9a324), slab 0xcfe11fe0, inuse 2
+[0mfinish cleaning up all open files, next clean p_cwd
+[36;40mfs/vnode.c:247 vput(): vput: 0xcfe64004, 0xcfe84518 ino 0, down to 2, nrespages = 1
+[0m[*] destroy all vmareas
+[*] vmarea_free vma_mmobj=0xcfe0d184
+clean pframe in shadow obj
+clear dirty pframe 0xcfe14904 in shadow obj
+[31;40mmm/page.c:346 _page_free_order(): page_free: freed 1 pages (addr 0xcfde0000); 64807 pages currently free
+[0m[31;40mmm/slab.c:355 slab_obj_free(): Freed object 0xcfe14900 from "pframe" (0xcfe9a20c), slab 0xcfe23ff0, inuse 36
+[0mpframe free 0xcfe0d184, mmo_respages=0
+[*] anon_put mmobj 0xcfe0c0c4, nrespages=1, refcount=2
+[*] anon put check mmo_respages empty=0
+[*] clean anon object page
+[*] anon_put call pframe_free to pf_addr=0xcfddc000
+[31;40mmm/page.c:346 _page_free_order(): page_free: freed 1 pages (addr 0xcfddc000); 64808 pages currently free
+[0m[31;40mmm/slab.c:355 slab_obj_free(): Freed object 0xcfe14948 from "pframe" (0xcfe9a20c), slab 0xcfe23ff0, inuse 35
+[0mpframe free 0xcfe0c0c4, mmo_respages=0
+[*] anon_put mmobj 0xcfe0c0c4, nrespages=0, refcount=1
+[*] anon put check mmo_respages empty=1
+[*] anon_put remove mmobj_t
+[*] anon_put remove mmobj_t
+[31;40mmm/slab.c:355 slab_obj_free(): Freed object 0xcfe0d180 from "shadow" (0xcfe9a25c), slab 0xcfe0dff0, inuse 5
+[0m[31;40mmm/slab.c:355 slab_obj_free(): Freed object 0xcfe0e294 from "vmarea" (0xcfe9a2ac), slab 0xcfe0eff0, inuse 7
+[0m[*] vmarea_free vma_mmobj=0xcfe64370
+[36;40mfs/vnode.c:247 vput(): vput: 0xcfe64368, 0xcfe84518 ino 20, down to 9, nrespages = 9
+[0m[31;40mmm/slab.c:355 slab_obj_free(): Freed object 0xcfe0e1e0 from "vmarea" (0xcfe9a2ac), slab 0xcfe0eff0, inuse 6
+[0m[*] vmarea_free vma_mmobj=0xcfe0d154
+clean pframe in shadow obj
+clear dirty pframe 0xcfe14994 in shadow obj
+[31;40mmm/page.c:346 _page_free_order(): page_free: freed 1 pages (addr 0xcfdfe000); 64809 pages currently free
+[0m[31;40mmm/slab.c:355 slab_obj_free(): Freed object 0xcfe14990 from "pframe" (0xcfe9a20c), slab 0xcfe23ff0, inuse 34
+[0mpframe free 0xcfe0d154, mmo_respages=1
+clean pframe in shadow obj
+clear dirty pframe 0xcfe14874 in shadow obj
+[31;40mmm/page.c:346 _page_free_order(): page_free: freed 1 pages (addr 0xcfdde000); 64810 pages currently free
+[0m[31;40mmm/slab.c:355 slab_obj_free(): Freed object 0xcfe14870 from "pframe" (0xcfe9a20c), slab 0xcfe23ff0, inuse 33
+[0mpframe free 0xcfe0d154, mmo_respages=0
+[*] anon_put mmobj 0xcfe0c094, nrespages=2, refcount=3
+[*] anon put check mmo_respages empty=0
+[*] clean anon object page
+[*] anon_put call pframe_free to pf_addr=0xcfddb000
+[31;40mmm/page.c:346 _page_free_order(): page_free: freed 1 pages (addr 0xcfddb000); 64811 pages currently free
+[0m[31;40mmm/slab.c:355 slab_obj_free(): Freed object 0xcfe149d8 from "pframe" (0xcfe9a20c), slab 0xcfe23ff0, inuse 32
+[0mpframe free 0xcfe0c094, mmo_respages=1
+[*] anon_put mmobj 0xcfe0c094, nrespages=1, refcount=2
+[*] anon put check mmo_respages empty=0
+[*] clean anon object page
+[*] anon_put call pframe_free to pf_addr=0xcfddd000
+[31;40mmm/page.c:346 _page_free_order(): page_free: freed 1 pages (addr 0xcfddd000); 64812 pages currently free
+[0m[31;40mmm/slab.c:355 slab_obj_free(): Freed object 0xcfe148b8 from "pframe" (0xcfe9a20c), slab 0xcfe23ff0, inuse 31
+[0mpframe free 0xcfe0c094, mmo_respages=0
+[*] anon_put mmobj 0xcfe0c094, nrespages=0, refcount=1
+[*] anon put check mmo_respages empty=1
+[*] anon_put remove mmobj_t
+[*] anon_put remove mmobj_t
+[*] anon_put remove mmobj_t
+[31;40mmm/slab.c:355 slab_obj_free(): Freed object 0xcfe0d150 from "shadow" (0xcfe9a25c), slab 0xcfe0dff0, inuse 4
+[0m[31;40mmm/slab.c:355 slab_obj_free(): Freed object 0xcfe0e258 from "vmarea" (0xcfe9a2ac), slab 0xcfe0eff0, inuse 5
+[0m[31;40mmm/slab.c:355 slab_obj_free(): Freed object 0xcfe6e01c from "vmmap" (0xcfe9a284), slab 0xcfe6fff0, inuse 3
+[0msched switch from pid = 3 to pid = 1
+come back to do wait
+[31;40mmm/page.c:346 _page_free_order(): page_free: freed 16 pages (addr 0xcfde4000); 64828 pages currently free
+[0m[31;40mmm/slab.c:355 slab_obj_free(): Freed object 0xcfe440fc from "kthread" (0xcfe9a2fc), slab 0xcfe53ff0, inuse 3
+[0m[31;40mmm/slab.c:355 slab_obj_free(): Freed object 0xcfe725a0 from "proc" (0xcfe9a2d4), slab 0xcfe73fe0, inuse 3
+[0m[*] Enter vmmap_write
+[*] finish vmmap_write checking
+check vma [0x008039, 0x008048)
+finish lookup
+dirty pframe 0xcfe143f4 in shadow obj
+[*] exit vmmap_write successfully
+[*] handle pagefault 0x8047f5c, 0x000006, pid=1
+in handle pagefault: 0x8047f5c, 0xcfe01000, 0xff44000
+[*] handle pagefault with pt_map
+[*] handle pagefault 0x804f2a4, 0x000006, pid=1
+in handle pagefault: 0x804f2a4, 0xcfe00000, 0xff43000
+[*] handle pagefault with pt_map
+in do_waitpid pid 1 wait for -1
+[*] handle pagefault 0x804ba84, 0x000004, pid=1
+in handle pagefault: 0x804ba84, 0xcfdfc000, 0xff3f000
+[*] handle pagefault with pt_map
+[*] enter sys_write
+[31;40mmm/page.c:276 _page_alloc_order(): allocating 1 pages (addr 0xcfddb000)
+[0m[31;40mmm/page.c:346 _page_free_order(): page_free: freed 1 pages (addr 0xcfddb000); 64828 pages currently free
+[0m[*] exit sys_write to write char 29, write 29
+do_exit curproc pid=1
+[36;40mfs/vnode.c:247 vput(): vput: 0xcfe640fc, 0xcfe84518 ino 40, down to 1, nrespages = 0
+[0m[31;40mmm/slab.c:355 slab_obj_free(): Freed object 0xcfe11020 from "file" (0xcfe9a324), slab 0xcfe11fe0, inuse 1
+[0m[36;40mfs/vnode.c:247 vput(): vput: 0xcfe640fc, 0xcfe84518 ino 40, down to 0, nrespages = 0
+[0m[31;40mmm/slab.c:355 slab_obj_free(): Freed object 0xcfe640f8 from "vnode" (0xcfe9a34c), slab 0xcfe67ff0, inuse 6
+[0m[31;40mmm/slab.c:355 slab_obj_free(): Freed object 0xcfe11000 from "file" (0xcfe9a324), slab 0xcfe11fe0, inuse 0
+[0mfinish cleaning up all open files, next clean p_cwd
+[36;40mfs/vnode.c:247 vput(): vput: 0xcfe64080, 0xcfe84518 ino 39, down to 1, nrespages = 1
+[0m[*] destroy all vmareas
+[*] vmarea_free vma_mmobj=0xcfe0d094
+clean pframe in shadow obj
+clear dirty pframe 0xcfe143f4 in shadow obj
+[31;40mmm/page.c:346 _page_free_order(): page_free: freed 1 pages (addr 0xcfe01000); 64829 pages currently free
+[0m[31;40mmm/slab.c:355 slab_obj_free(): Freed object 0xcfe143f0 from "pframe" (0xcfe9a20c), slab 0xcfe23ff0, inuse 30
+[0mpframe free 0xcfe0d094, mmo_respages=0
+[31;40mmm/slab.c:355 slab_obj_free(): Freed object 0xcfe0d090 from "shadow" (0xcfe9a25c), slab 0xcfe0dff0, inuse 3
+[0m[31;40mmm/slab.c:355 slab_obj_free(): Freed object 0xcfe0e0b4 from "vmarea" (0xcfe9a2ac), slab 0xcfe0eff0, inuse 4
+[0m[*] vmarea_free vma_mmobj=0xcfe641fc
+[36;40mfs/vnode.c:247 vput(): vput: 0xcfe641f4, 0xcfe84518 ino 10, down to 7, nrespages = 7
+[0m[31;40mmm/slab.c:355 slab_obj_free(): Freed object 0xcfe0e000 from "vmarea" (0xcfe9a2ac), slab 0xcfe0eff0, inuse 3
+[0m[*] vmarea_free vma_mmobj=0xcfe0d0f4
+clean pframe in shadow obj
+clear dirty pframe 0xcfe1443c in shadow obj
+[31;40mmm/page.c:346 _page_free_order(): page_free: freed 1 pages (addr 0xcfe00000); 64830 pages currently free
+[0m[31;40mmm/slab.c:355 slab_obj_free(): Freed object 0xcfe14438 from "pframe" (0xcfe9a20c), slab 0xcfe23ff0, inuse 29
+[0mpframe free 0xcfe0d0f4, mmo_respages=0
+[31;40mmm/slab.c:355 slab_obj_free(): Freed object 0xcfe0d0f0 from "shadow" (0xcfe9a25c), slab 0xcfe0dff0, inuse 2
+[0m[31;40mmm/slab.c:355 slab_obj_free(): Freed object 0xcfe0e078 from "vmarea" (0xcfe9a2ac), slab 0xcfe0eff0, inuse 2
+[0m[31;40mmm/slab.c:355 slab_obj_free(): Freed object 0xcfe6e054 from "vmmap" (0xcfe9a284), slab 0xcfe6fff0, inuse 2
+[0msched switch from pid = 1 to pid = 0
+come back to do wait
+[31;40mmm/page.c:346 _page_free_order(): page_free: freed 16 pages (addr 0xcfe34000); 64846 pages currently free
+[0m[31;40mmm/slab.c:355 slab_obj_free(): Freed object 0xcfe44054 from "kthread" (0xcfe9a2fc), slab 0xcfe53ff0, inuse 2
+[0m[31;40mmm/slab.c:355 slab_obj_free(): Freed object 0xcfe721e0 from "proc" (0xcfe9a2d4), slab 0xcfe73fe0, inuse 2
+[0mreturn to idlo
+weenix: vfs shutdown...
+curproc p_cwd cfe64004
+[36;40mfs/vnode.c:247 vput(): vput: 0xcfe64004, 0xcfe84518 ino 0, down to 1, nrespages = 1
+[0mpanic in fs/vnode.c:353 vfs_is_in_use(): assertion failed: ((vn->vn_fs->fs_root == vn) && (1 <= refs)) || ((vn->vn_fs->fs_root != vn) && (0 <= refs))
+Kernel Halting.
+

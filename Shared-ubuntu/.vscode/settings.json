@@ -1,0 +1,8 @@
+{
+    "files.associations": {
+        "*.ejs": "html",
+        "string.h": "c",
+        "setjmp.h": "c",
+        "packetarrivalthread.h": "c"
+    }
+}
